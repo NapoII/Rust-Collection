@@ -1,35 +1,15 @@
 
-# Rust-Collection
 
+# [Rust-Collection](https://napoii.github.io/Rust-Collection/)
 
 [![downloads/total](https://img.shields.io/github/downloads/NapoII/Rust-Collection/total)](https://github.com/NapoII/Rust-Collection/archive/refs/heads/main.zip) [![github/repo-size](https://img.shields.io/github/repo-size/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/archive/refs/heads/main.zip) [![github/license](https://img.shields.io/github/license/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/blob/main/LICENSE) [![github/last-commit](https://img.shields.io/github/downloads/NapoII/Rust-Collection/total)](https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic) [![github/issues_open](https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic)](https://img.shields.io/github/issues-raw/NapoII/Rust-Collection) [![github/stars](https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social)](https://github.com/NapoII/Rust-Collection/stargazers) [![discord](https://img.shields.io/discord/190307701169979393)](https://discord.gg/knTKtKVfnr)
 
+[Rust-Collection](https://napoii.github.io/Rust-Collection/)
+https://napoii.github.io/Rust-Collection/
 
 This website is a comprehensive collection of links related to the game Rust. Here you will find a variety of useful resources, guides and community servers that can help you better understand the game and improve your skills.
-## 📝 Table of Contents
-+ [Demo / Working](#demo)
-+ [Install](#usage)
-+ [How it works](#Use)
-+ [Lizenz](#Lizenz)
-## 🎥 Demo / Working <a name = "demo"></a>
-coming soon...
-Rust-Collection
-## 💻 Install <a name = "usage"></a>
-```cmd
-git clone https://github.com/NapoII/Rust-Collection
 
-pip install -r requirements.txt
-```
-## 💭 How it works <a name = "Use"></a>
-
-start Rust-Collection
-.py directly from the folder or run in cmd:
-```cmd
-cd <local path of Rust-Collection
->
-python Rust-Collection
-.py
-```
+[Rust-Collection](https://napoii.github.io/Rust-Collection/)
 
 ## 📚 Lizenz <a name = "Lizenz"></a>
 MIT License
