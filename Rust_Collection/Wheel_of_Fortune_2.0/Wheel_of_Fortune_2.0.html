@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  body {
+    display: flex;
+    justify-content: right;
+  }
+  #target:hover {
+    color: orange;
+    cursor: pointer;
+  }
+</style>
+<head>
+<style>
+body {background-color: beige;}
+h1   {color: blue;}
+div    {
+  color: #454545;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin: 5px;
+  font-family: Georgia, sans-serif;
+}
+p    {
+  color: black;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+div.image {
+    content:url(https://raw.githubusercontent.com/NapoII/Rust-Online-Tools/main/Wheel_of_Fortune_2.0/wheel_raw_hxkquz.png);
+    height:250px;
+    max-width: 250vw;
+ }
+ #myTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+ }
+ #myTable th, #myTable td {
+    text-align: left;
+    padding: 8px;
+ }
+ #myTable tr:nth-child(even){background-color: #f2f2f2}
+ #myTable th {
+    background-color: #4CAF50;
+    color: white;
+ }
+</style>
+</head>
+<body>
+  <div>
+    <button id="rotate-left">&larr;</button>
+    <button id="rotate-right">&rarr;</button>
+  </div>
+  
+  <div id="target", class="image">
+    <script src="rotate.js">
+      function rotateWheel(angle) {
+  var rotation = angle;
+  angle += rotation;
+  updateGraphics();
+  wheel.style.webkitTransform = "rotate(" + (angle + rotation) + "deg)";
+}
+document.getElementById("rotate-left").addEventListener("click", function() {
+  rotateWheel(-90);
+});
+
+document.getElementById("rotate-right").addEventListener("click", function() {
+  rotateWheel(90);
+});
+
+    </script>
+  </div>
+  <div>
+    <strong>CURRENT SCRAP:</strong> <br>
+    <input id="currScrap" type="number" min="0" step="1" onchange="clearBets()"><br><br>
+    <strong>CURRENT POSITION:</strong><br>
+    <p id="currPos">0</p>
+    <p id="currCol">RED</p>
+    <button id="calcButton" onclick="calcButtonClicked()">Calculate Bet</button><br><br>
+    <strong>KELLY BET AMOUNT:</strong><br>
+    <p id="betAmt">0</p>
+    <strong>COLOR TO BET ON:</strong><br>
+    <p id="betAdvice">NONE</p>
+    <input type="checkbox" id="doScrapCalc" name="Calculate Scrap Automatically?" checked>
+    <label for="doScrapCalc">Calculate Scrap Automatically?</label><br><br>
+  </div>
+  <div id="directions">
+    <strong> DIRECTIONS </strong>
+    <p>
+      First, input your current scrap in the text box. <br>
+      Next, spin the wheel so that it's oriented the same as it is in game. <br>
+      So, the spot under the red triangle in game is pointed north on this page.<br>
+      Make sure the you have the right spot selected by verifying the CURRENT POSITION's color.<br>
+      Hit "Calculate Bet".<br>
+      The bet optimal bet amount and color will be calculated.<br>
+      Bet that amount on that color in game.<br><br>
+      After the wheel spins, rotate this wheel to the correct position again and calculate.<br><br>
+      Your scrap will update automatically. <br>
+    </p>
+  </div>
+
+  <div id="table-container">
+    <button id="download-btn">Download Table</button>
+  <table>
+  <tr>
+    <th>Scrap</th>
+    <th>Position</th>
+    <th>Position Field</th>
+    <th>Bet</th>
+    <th>Prediction</th>
+  </tr>
+</table>
+</div>
+<script>
+  function downloadTable() {
+  var csv = convertTableToCSV();
+  var filename = "table.csv";
+  var link = document.createElement("a");
+  link.setAttribute("href", "data:text/csv;charset=utf-8," + encodeURIComponent(csv));
+  link.setAttribute("download", filename);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+
+  // Download Table Funktion
+  document.getElementById('download-btn').addEventListener('click', function() {
+    // Selektieren Sie die Tabelle und erstellen Sie eine Kopie davon
+    var table = document.querySelector('table');
+    var clone = table.cloneNode(true);
+    
+    // Fügen Sie einen neuen Abschnitt hinzu, um den geklonten Tisch zu platzieren
+    var tableContainer = document.getElementById('table-container');
+    var downloadContainer = document.createElement('div');
+    downloadContainer.appendChild(clone);
+    tableContainer.appendChild(downloadContainer);
+    
+    // Konvertieren Sie die Tabelle in CSV-Format
+    var csvRows = [];
+    var rows = clone.querySelectorAll('tr');
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll('td, th');
+        for (var j = 0; j < cols.length; j++) 
+            row.push(cols[j].innerText);
+        csvRows.push(row.join(';'));
+    }
+    var csv = csvRows.join('\n');
+    
+    // Erstellen Sie einen Download-Link für die CSV-Datei
+    var blob = new Blob([csv], {type: "text/csv;charset=utf-8;"});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "table.csv";
+    a.click();
+    
+    // Entfernen Sie den temporären Download-Container und geben Sie den ursprünglichen Tisch zurück
+    tableContainer.removeChild(downloadContainer);
+    tableContainer.appendChild(table);
+});
+
+</script>
+
+</body>
+</html>

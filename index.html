@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webseiten Liste</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+  <div class="card" id="countdown-card" onclick="openLink('https://just-wiped.net/')">
+    <img src="img/nuke.png" alt="Bild 4">
+    <div class="content">
+      <h2>Force Wipe</h2>
+      <p id="countdown"></p>
+    </div>
+  </div>
+
+  <body>
+    <div class="card" onclick="openLink('https://napoii.github.io/Rust-Online-Tools/diesel_calc/diesel_calc.html')">
+      <img src="img/diesel_barrel.png" alt="Bild 1">
+      <div class="content">
+        <h2>Diesel Calc</h2>
+        <p>Calculates how much you can generate in resoscen and boom with diesel.</p>
+      </div>
+    </div>
+
+  <div class="card" onclick="openLink('https://www.rustbreeder.com/')">
+    <img src="img/clone.hemp.png" alt="clone.hemp.png">
+    <div class="content">
+      <h2>Clone Calc</h2>
+      <p>Find the cross bread combination for your god seed</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="openLink('https://www.rustrician.io/')">
+    <img src="img/wiretool.png" alt="Bild 3">
+    <div class="content">
+      <h2>Electrical planer</h2>
+      <p>Create your circuit diagram for Rust online.</p>
+    </div>
+  </div>
+  
+  <div class="card" onclick="openLink('https://twitch.facepunch.com/#drops')">
+    <img src="img/twitch-logo.png" alt="Bild 3">
+    <div class="content">
+      <h2>Twitch Drops</h2>
+      <p>Pick up your Free Rust Skins at Evnts</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="openLink('https://www.battlemetrics.com/')">
+    <div class="content">
+      <h2>Battlemetrics</h2>
+      <p>Get all the information about your server or their enemies.</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="openLink('https://steamcommunity.com/sharedfiles/filedetails/?id=2493654016')">
+    <img src="img/bind.png" alt="Bild 3">
+    <div class="content">
+      <h2>Must-have Extra Bind</h2>
+      <p>collecting some Must Have Console Command that every Rust player needs to know.</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="openLink('https://steamcommunity.com/sharedfiles/filedetails/?id=2375732344')">
+    <img src="img/cb.png" alt="Bild 3">
+    <div class="content">
+      <h2>Must have Electronic Circuits</h2>
+      <p>Collection of must-have Electronic Circuits for Rust.</p>
+    </div>
+  </div>
+  
+  <div class="card" onclick="openLink('https://steamcommunity.com/sharedfiles/filedetails/?id=2856737562')">
+    <img src="img/cam.png" alt="Bild 3">
+    <div class="content">
+      <h2>Rust Cinematic Guide</h2>
+      <p>The best way to learn and use the Cinematic system..</p>
+    </div>
+  </div>
+
+  <div class="image-banner-container">
+    
+    <br></br>
+    <div class=""image-banner-container">
+      <p>If you know any Rust tools or information that should be on this page, just write to me.</p>
+      <a href="https://github.com/NapoII/Rust-Online-Tools/"><img src="https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Online-Tools&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Online-Tools%2F" alt="website"></a>
+      <a href="https://img.shields.io/github/issues-raw/NapoII/Rust-Online-Tools"><img src="https://img.shields.io/github/issues/NapoII/Rust-Online-Tools?style=plastic" alt="github/issues_open"></a>
+      <a href="https://github.com/NapoII/Rust-Online-Tools/stargazers"><img src="https://img.shields.io/github/stars/NapoII/Rust-Online-Tools?style=social" alt="github/stars"></a>
+      <a href="https://discord.gg/knTKtKVfnr"><img src="https://img.shields.io/discord/190307701169979393" alt="discord"></a>
+      </div>
+  </div>
+
+
+
+  <script>
+    function openLink(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+  <script>
+    // Function to calculate the countdown
+    function calculateCountdown() {
+      const now = new Date();
+      const firstThursday = new Date(now.getFullYear(), now.getMonth(), 1);
+      const daysUntilThursday = (4 - firstThursday.getDay() + 7) % 7;
+      firstThursday.setDate(1 + daysUntilThursday);
+      firstThursday.setHours(20);
+      firstThursday.setMinutes(0);
+      firstThursday.setSeconds(0);
+  
+      const difference = firstThursday - now;
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / (1000 * 60)) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+  
+      const countdownText = `${days} days<br>${hours} hours<br>${minutes} minutes`;
+      document.getElementById("countdown").innerHTML = countdownText;
+    }
+  
+    // Function to update the countdown every second
+    function updateCountdown() {
+      calculateCountdown();
+      setTimeout(updateCountdown, 1000);
+    }
+  
+    // Update the countdown when the page is loaded
+    updateCountdown();
+  </script>
+  
+</body>
+
+</body>
+
+</html>

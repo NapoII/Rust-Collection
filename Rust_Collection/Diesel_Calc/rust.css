@@ -1,0 +1,137 @@
+/* Define the 'Rust' font from rust.ttf in the same folder */
+@font-face {
+  font-family: 'Rust';
+  src: url('Rust.ttf') format('truetype');
+}
+
+/* Global styles */
+:root {
+  --bg1: #0D0D0D; /* Background color 1 */
+  --bg2: #272322; /* Background color 2 */
+  --font: #A4A5A7; /* Font color */
+  --modulBg: #5B5756; /* Modul background color */
+  --h: #D93E30; /* Heading color */
+}
+
+body {
+  background-color: var(--bg1); /* Background color for the body */
+  color: var(--font); /* Font color for the body */
+  font-family: 'Rust', Arial, sans-serif; /* Use 'Rust' font, then fallback to Arial and sans-serif */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--h); /* Heading color for all heading elements */
+}
+
+.center {
+  text-align: center; /* Center-align the content with class 'center' */
+}
+
+/* Styling for the calculator section */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px; /* Add margin to the top of the calculator section */
+}
+
+/* Styling for the modules */
+.modul {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  color: var(--font);
+  background-color: var(--modulBg);
+}
+
+/* Styling for the results section */
+.results {
+  display: flex;
+  margin-top: 20px; /* Add margin to the top of the result section */
+}
+
+/* Styling for individual result windows */
+.result {
+  flex: 1;
+  
+  background-color: rgba(91, 87, 86, 0.1); /* Transparent background */
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 20px; /* Add margin between the result windows */
+}
+
+/* Add more spacing between the result windows */
+.results .result:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Align images and numbers in the result div */
+.result-item {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  margin-bottom: 10px; /* Add some margin between result items */
+}
+
+.result-item img {
+  margin-right: 5000px; /* Add margin to the right side of the image */
+  height: 24px; /* Adjust the height of the image as needed */
+  width: 24px; /* Adjust the width of the image as needed */
+  display: block; /* Ensure images are block elements to prevent alignment issues */
+}
+
+/* Set Arial font for numbers inside the result windows and make them bold */
+.result-item span {
+  font-family: Arial, sans-serif;
+  font-weight: bold; /* Make the numbers bold */
+  margin-right: 5px; /* Add margin to the right side of the text */
+    margin-right: 5px; /* Add margin to the right side of the text */
+}
+
+/* Add margin to the Calculate button, "Enter a value" label, and input field */
+.calculator button,
+.calculator label,
+.calculator input {
+  margin-top: 10px;
+}
+
+/* Vertically center the text within the images */
+.calculation-item {
+  display: flex;
+  align-items: center; /* Vertically center items */
+}
+
+/* Define code styles for the copy_code class */
+.copy_code {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: #5C5857;
+  text-align: center; /* Center-align the text inside the .copy_code elements */
+  padding: 5px;
+  background-color: #231D1D;
+  white-space: pre-wrap;
+  flex: 29;
+  padding:1px;
+  border-radius: 5px;
+  margin-right: 20px; /* Add margin between the result windows */
+  margin-right: 20px;
+  margin-top: 1px;
+}
+
+/* Optional: Add a bit of margin to the copied text to separate it from other elements */
+.copy_code::before {
+  content: "";
+  display: block;
+  height: 10px;
+  display: flex;
+  margin-top: 20px; /* Add margin to the top of the result section */
+}
+
+#3C3837
+
+h2 {
+  margin-top: 25px; /* Add margin to the top of h2 */
+  margin-bottom: 1px; /* Add margin to the bottom of h2 */
+  color: var(--h); /* Heading color for h2 element */
+}

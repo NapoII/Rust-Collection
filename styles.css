@@ -1,0 +1,69 @@
+:root {
+  --bg1: #0D0D0D; /* Background color 1 */
+  --bg2: #272322; /* Background color 2 */
+  --font: #A4A5A7; /* Font color */
+  --modulBg: rgba(91, 87, 86, 0.15); /* Transparenter Hintergrund der Karten */
+  --h: #D93E30; /* Heading color */
+}
+
+body {
+  background-color: var(--bg1);
+  color: var(--font);
+  font-family: "Rust", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  background-color: var(--modulBg);
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block; /* Neues Attribut */
+  margin: auto; /* Neues Attribut */
+}
+
+
+.card .content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card h2 {
+  color: var(--h);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+/* Füge diese CSS-Regel hinzu, um die Image-Container nebeneinander anzuordnen */
+.image-banner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Zentriert die Image-Container horizontal */
+  align-items: flex-end; /* Platzierung der Image-Container am Boden der Seite */
+  margin-right: 10px; /* Hier kannst du den gewünschten Abstand anpassen */
+  margin-right: 0;
+  display: flex;
+  background-color: var(--modulBg);
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
