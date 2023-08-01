@@ -1,5 +1,3 @@
-[![github/NapoII](https://raw.githubusercontent.com/NapoII/Rust-Collection
-/main/README_img/Readme_top.png)](https://github.com/NapoII)
 
 # Rust-Collection
 
