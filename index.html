@@ -9,6 +9,15 @@
 </head>
 <body>
 
+  <div class="card">
+    <div class="content">
+      <h2>Rust-Labs</h2>
+      <p>Search for things in Rust</p>
+      <input type="text" id="searchInput" placeholder="Enter your search term">
+      <button onclick="performSearch()">Search</button>
+    </div>
+  </div>
+
 <div class="card" id="countdown-card" onclick="openLink('https://just-wiped.net/')">
   <img src="img/nuke.png" alt="Bild 4">
   <div class="content">
@@ -38,6 +47,22 @@
     <div class="content">
       <h2>Clone Calc</h2>
       <p>Find the cross bread combination for your god seed</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="openLink('https://rustmaps.com/')">
+    <img src="img/map.png" alt="Bild 3">
+    <div class="content">
+      <h2>Rust Maps</h2>
+      <p>Plan your action and keep notes</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="openLink('https://rustlabs.com/')">
+    <img src="img/lab.png" alt="labs">
+    <div class="content">
+      <h2>Rust-Labs</h2>
+      <p>Search for things in Rust</p>
     </div>
   </div>
 
@@ -135,6 +160,19 @@
   
     // Update the countdown when the page is loaded
     updateCountdown();
+
+
+    function performSearch() {
+  var searchInput = document.getElementById('searchInput').value;
+  if (searchInput) {
+    var url = 'https://rustlabs.com/' + encodeURIComponent(searchInput);
+    openLink(url);
+  }
+}
+
+function openLink(url) {
+  window.location.href = url;
+}
   </script>
   
 </body>
