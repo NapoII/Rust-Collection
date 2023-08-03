@@ -1,4 +1,4 @@
-fetch('raid.csv')
+fetch('Rust-Collection/Rust_Collection/Raid_Calc/raid.csv')
     .then(response => response.text())
     .then(data => {
       const rows = data.trim().split('\n');
