@@ -47,7 +47,6 @@
       const g_metal_fragments = inputValue * 5000;
       const g_time_min = inputValue * 2;
 
-      console.log("g_sulfur_ore:", g_sulfur_ore);
 
       // Boom Calc Giant Excavator
       const g_gun_powder = (g_sulfur_ore / 20)*10;
@@ -57,17 +56,16 @@
       const g_satchel_charge = g_sulfur_ore / 480;
       const g_explosive_ammo = g_sulfur_ore / 50;
 
-      console.log("g_c4:", g_c4);
 
       // Quarry
       const q_hqm = inputValue * 50;
       const q_sulfur_ore = inputValue * 1000;
-      const q_Stones = inputValue * 1000;
-      const q_Metal_Fragments = inputValue * 5000;
+      const q_Stones = inputValue * 5000;
+      const q_Metal_Fragments = inputValue * 1000;
       const q_crude_oil = inputValue * 60;
       const q_low_grade_fuel = inputValue * 170;
       const q_low_grade_fuel_ges = q_low_grade_fuel +(q_crude_oil*3);
-      const q_time_min = inputValue * 2;
+      const q_time_min = (inputValue * 130)/60;
 
       // Boom Calc Quarry
       const q_gun_powder = (q_sulfur_ore / 20)*10;
