@@ -1,4 +1,4 @@
-fetch('Rust-Collection/Rust_Collection/Raid_Calc/raid.csv')
+fetch('https://raw.githubusercontent.com/NapoII/Rust-Collection/main/Rust_Collection/Raid_Calc/raid.CSV')
     .then(response => response.text())
     .then(data => {
       const rows = data.trim().split('\n');
