@@ -78,19 +78,22 @@
       const q_explosive_ammo = q_sulfur_ore / 50;
 
       // Generate the text for "copy-text_g" and "copy-text_q"
-      const g_text = `From ${inputValue.toLocaleString()} Diesel in the Giant Excavator:\nSulfur: ${g_sulfur_ore.toLocaleString(undefined, {
+      const g_text = `From ${inputValue.toLocaleString()} Diesel in the Giant Excavator you get:| \n ${g_sulfur_ore.toLocaleString(undefined, {
         maximumFractionDigits: 0
-      })}\nGun Powder: ${g_gun_powder.toLocaleString(undefined, { maximumFractionDigits: 0 })}\nRockets: ${g_Rocket.toLocaleString(
+      })} Sulfur | \n${g_gun_powder.toLocaleString(undefined, { maximumFractionDigits: 0 })} Gun Powder | \n ${g_Rocket.toLocaleString(
         undefined,
         { maximumFractionDigits: 0 }
-      )}\nSatchel: ${g_satchel_charge.toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
+      )} Rockets | \n${g_satchel_charge.toLocaleString(undefined, { maximumFractionDigits: 0 })} Satchels `;
 
-      const q_text = `From ${inputValue.toLocaleString()} Diesel in the Quarry:\nSulfur: ${q_sulfur_ore.toLocaleString(undefined, {
-        maximumFractionDigits: 0
-      })}\nGun Powder: ${q_gun_powder.toLocaleString(undefined, { maximumFractionDigits: 0 })}\nRockets: ${q_Rocket.toLocaleString(
-        undefined,
-        { maximumFractionDigits: 0 }
-      )}\nSatchel: ${q_satchel_charge.toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
+
+      const q_text = `From ${inputValue.toLocaleString()} Diesel in the Sulfur Quarry you get:| \n ${q_sulfur_ore.toLocaleString(undefined, {
+  maximumFractionDigits: 0
+})} Sulfur | \n${q_gun_powder.toLocaleString(undefined, { maximumFractionDigits: 0 })} Gun Powder | \n ${q_Rocket.toLocaleString(
+  undefined,
+  { maximumFractionDigits: 0 }
+)} Rockets | \n${q_satchel_charge.toLocaleString(undefined, { maximumFractionDigits: 0 })} Satchels `;
+
+
 
       // Display the text in respective divs
       document.getElementById("copy-text_g").textContent = g_text;
