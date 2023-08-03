@@ -47,6 +47,8 @@
       const g_metal_fragments = inputValue * 5000;
       const g_time_min = inputValue * 2;
 
+      console.log("g_sulfur_ore:", g_sulfur_ore);
+
       // Boom Calc Giant Excavator
       const g_gun_powder = (g_sulfur_ore / 20)*10;
       const g_explosives = g_sulfur_ore / 110;
@@ -54,6 +56,8 @@
       const g_c4 = g_sulfur_ore / 2200;
       const g_satchel_charge = g_sulfur_ore / 480;
       const g_explosive_ammo = g_sulfur_ore / 50;
+
+      console.log("g_c4:", g_c4);
 
       // Quarry
       const q_hqm = inputValue * 50;
@@ -150,27 +154,27 @@ document.getElementById("calculation1").innerHTML = `
   <h2>Boom</h2>
   <div class="calculation-item">
     <img src="img/gun.powder.png" alt="gun.powder">
-    <span>&nbsp;${g_gun_powder.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(g_gun_powder).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
   <div class="calculation-item">
     <img src="img/explosives.png" alt="explosives">
-    <span>&nbsp;${g_explosives.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(g_explosives).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
   <div class="calculation-item">
     <img src="img/rocket.png" alt="rocket">
-    <span>&nbsp;${g_Rocket.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(g_Rocket).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
   <div class="calculation-item">
     <img src="img/c4.png" alt="c4">
-    <span>&nbsp;${g_c4.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(g_c4).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
   <div class="calculation-item">
     <img src="img/satchel.charge.png" alt="satchel.charge">
-    <span>&nbsp;${g_satchel_charge.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(g_satchel_charge).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
   <div class="calculation-item">
     <img src="img/ammo.rifle.explosive.png" alt="ammo.rifle.explosive">
-    <span>&nbsp;${g_explosive_ammo.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(g_explosive_ammo).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
 `;
 
@@ -178,27 +182,27 @@ document.getElementById("calculation2").innerHTML = `
   <h2>Boom</h2>
   <div class="calculation-item">
     <img src="img/gun.powder.png" alt="gun.powder">
-    <span>&nbsp;${q_gun_powder.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(q_gun_powder).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
   <div class="calculation-item">
     <img src="img/explosives.png" alt="explosives">
-    <span>&nbsp;${q_explosives.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(q_explosives).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
   <div class="calculation-item">
     <img src="img/rocket.png" alt="rocket">
-    <span>&nbsp;${q_Rocket.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(q_Rocket).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
   <div class="calculation-item">
     <img src="img/c4.png" alt="c4">
-    <span>&nbsp;${q_c4.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(q_c4).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
   <div class="calculation-item">
     <img src="img/satchel.charge.png" alt="satchel.charge">
-    <span>&nbsp;${q_satchel_charge.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(q_satchel_charge).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
   <div class="calculation-item">
     <img src="img/ammo.rifle.explosive.png" alt="ammo.rifle.explosive">
-    <span>&nbsp;${q_explosive_ammo.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+    <span>&nbsp;${Math.floor(q_explosive_ammo).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
   </div>
 `;
     }
