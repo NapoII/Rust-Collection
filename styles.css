@@ -1,24 +1,25 @@
+/* Define the 'Rust' font from rust.ttf in the same folder */
+@font-face {
+  font-family: 'Rust';
+  src: url('Rust.ttf') format('truetype');
+}
+
 :root {
   --bg1: #0D0D0D; /* Background color 1 */
   --bg2: #272322; /* Background color 2 */
   --font: #A4A5A7; /* Font color */
-  --modulBg: rgba(91, 87, 86, 0.15); /* Transparenter Hintergrund der Karten */
+  --modulBg: rgba(91, 87, 86, 0.15); /* Transparent background of the cards */
   --h: #D93E30; /* Heading color */
-}
-
-@font-face {
-  font-family: 'Rust'; /* Name der Schriftart für die Verwendung in CSS */
-  src: url('/Rust.ttf') format('truetype'); /* Pfad zur Schriftart-Datei */
 }
 
 body {
   background-color: var(--bg1);
-  font-family: 'Rust', sans-serif; 
-  color: var(--font);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
   padding: 20px;
+  color: var(--font); /* Font color for the body */
+  font-family: 'Rust', Arial, sans-serif; /* Use 'Rust' font, then fallback to Arial and sans-serif */
 }
 
 .card {
@@ -29,7 +30,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 300px; /* Passe die Höhe nach Bedarf an */
+  height: 300px; /* Adjust the height as needed */
 }
 
 .card .background-image {
@@ -40,7 +41,7 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0.2; /* Transparenz des Hintergrundbildes anpassen */
+  opacity: 0.2; /* Adjust the transparency of the background image */
 }
 
 .card .content {
@@ -50,13 +51,13 @@ body {
   z-index: 1;
 }
 
-/* Füge diese CSS-Regel hinzu, um die Image-Container nebeneinander anzuordnen */
+/* Add this CSS rule to arrange the image containers side by side */
 .image-banner-container {
   display: flex;
   flex-direction: row;
-  justify-content: center; /* Zentriert die Image-Container horizontal */
-  align-items: flex-end; /* Platzierung der Image-Container am Boden der Seite */
-  margin-right: 10px; /* Hier kannst du den gewünschten Abstand anpassen */
+  justify-content: center; /* Centres the image containers horizontally */
+  align-items: flex-end; /* Placement of the image containers at the bottom of the page */
+  margin-right: 10px; /* Here you can adjust the desired distance */
   margin-right: 0;
   display: flex;
   background-color: var(--modulBg);
