@@ -8,7 +8,7 @@
   --bg1: #0D0D0D; /* Background color 1 */
   --bg2: #272322; /* Background color 2 */
   --font: #A4A5A7; /* Font color */
-  --modulBg: rgba(91, 87, 86, 0.15); /* Transparent background of the cards */
+  --modulBg: rgba(15, 14, 14, 1); /* Transparent background of the cards */
   --h: #D93E30; /* Heading color */
 }
 
