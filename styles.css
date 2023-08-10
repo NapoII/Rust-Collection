@@ -27,13 +27,20 @@ body {
   background-color: var(--modulBg);
   border-radius: 10px;
   overflow: hidden;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  height: 300px; /* Adjust the height as needed */
+  height: 300px;
+  margin-top: 20px;
+  position: relative;  
+  perspective: 1000px; 
+  transform-style: preserve-3d; 
 }
 
-.card .background-image {
+.card:hover {
+  transform: scale(1.35) rotateX(375deg) rotateY(15deg); 
+  transition: transform 0.9s ease; 
+}
+
+.background-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -41,49 +48,81 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0.2; /* Adjust the transparency of the background image */
+  opacity: 0.2;
+  z-index: -1;
 }
 
-.card .content {
-  padding: 20px;
-  text-align: center;
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
   position: relative;
   z-index: 1;
 }
 
-/* Add this CSS rule to arrange the image containers side by side */
-.image-banner-container {
+.top-section {
+  flex: 1;
   display: flex;
-  flex-direction: row;
-  justify-content: center; /* Centres the image containers horizontally */
-  align-items: flex-end; /* Placement of the image containers at the bottom of the page */
-  margin-right: 10px; /* Here you can adjust the desired distance */
-  margin-right: 0;
-  display: flex;
-  background-color: var(--modulBg);
-  border-radius: 10px;
-  overflow: hidden;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  color: var(--h);
+}
+
+.bottom-section {
+  flex: 2;
+  padding: 20px;
   text-align: center;
 }
 
+.top-section h2 {
+  text-align: center;
+  margin: 0;
+}
+
+
+.card-info {
+  font-size: 10px; /* Kleiner Schriftgrad */
+  color: var(--font); /* Farbe des Texts */
+  opacity: 0.5;
+}
+
+.top-section .card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+}
+
+.bottom-section .card-info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+}
+
+
 input[type="text"] {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   margin-top: 10px;
-  background: var(--bg1);
-  color: var(--font);
-  border: none;
-  border-radius: 5px;
+  opacity: 0.7;
+  
 }
 
 button {
-  padding: 10px 20px;
-  background: var(--h);
+  background-color: var(--h);
   color: white;
   border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
+  opacity: 0.7;
+}
+
+button:hover {
+  background-color: darken(var(--h), 90%);
 }
