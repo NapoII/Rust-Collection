@@ -363,7 +363,7 @@ function calculateCountdown() {
   const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((difference / (1000 * 60)) % 60);
 
-  const countdownText = `${days} days<br>${hours} hours<br>${minutes} minutes <hr> ${nextMonth.toDateString()}`;
+  const countdownText = `${nextMonth.toDateString()} <hr>  ${days} days<br>${hours} hours<br>${minutes} minutes`;
   const countdownElement = document.getElementById("countdown");
   countdownElement.innerHTML = countdownText;
 }
