@@ -31,13 +31,15 @@ body {
   height: 300px;
   margin-top: 20px;
   position: relative;  
-  perspective: 1000px; 
-  transform-style: preserve-3d; 
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Include box-shadow in the transition */
 }
 
 .card:hover {
-  transform: scale(1.35) rotateX(375deg) rotateY(15deg); 
-  transition: transform 0.9s ease; 
+  transform: scale(1.35) rotateX(375deg) rotateY(15deg);
+  box-shadow: 0 0 50px rgba(223, 62, 48, 0.7); /* Add a red glow with some transparency */
+  z-index: 1; /* Bring the hovered card above other cards */
 }
 
 .background-image {
