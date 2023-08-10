@@ -342,31 +342,32 @@
     }
   </script>
   <script>
-    // Function to calculate the countdown
-    function calculateCountdown() {
+
+function calculateCountdown() {
   const now = new Date();
-  const firstThursday = new Date(now.getFullYear(), now.getMonth(), 1);
-  const daysUntilThursday = (4 - firstThursday.getDay() + 7) % 7;
-  firstThursday.setDate(1 + daysUntilThursday);
-  firstThursday.setHours(20);
-  firstThursday.setMinutes(0);
-  firstThursday.setSeconds(0);
+  const nextMonth = new Date(now);
+  nextMonth.setMonth(nextMonth.getMonth() + 1);
+  nextMonth.setDate(1);
 
-  let difference = firstThursday - now;
-
-  if (difference <= 0) {
-    // Der erste Donnerstag ist bereits erreicht oder vorbei, also für nächsten Monat setzen
-    firstThursday.setMonth(firstThursday.getMonth() + 1);
-    difference = firstThursday - now;
+  while (nextMonth.getDay() !== 4) { // Find the first Thursday of next month
+    nextMonth.setDate(nextMonth.getDate() + 1);
   }
+
+  nextMonth.setHours(20);
+  nextMonth.setMinutes(0);
+  nextMonth.setSeconds(0);
+
+  const difference = nextMonth - now;
 
   const days = Math.floor(difference / (1000 * 60 * 60 * 24));
   const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((difference / (1000 * 60)) % 60);
 
-  const countdownText = `${days} days<br>${hours} hours<br>${minutes} minutes`;
-  document.getElementById("countdown").innerHTML = countdownText;
+  const countdownText = `${days} days<br>${hours} hours<br>${minutes} minutes <hr> ${nextMonth.toDateString()}`;
+  const countdownElement = document.getElementById("countdown");
+  countdownElement.innerHTML = countdownText;
 }
+
 
 // Die Funktion alle Sekunde aufrufen, um den Countdown zu aktualisieren
 setInterval(calculateCountdown, 1000);
