@@ -6,10 +6,15 @@
   --h: #D93E30; /* Heading color */
 }
 
+@font-face {
+  font-family: 'Rust'; /* Name der Schriftart für die Verwendung in CSS */
+  src: url('/Rust.ttf') format('truetype'); /* Pfad zur Schriftart-Datei */
+}
+
 body {
   background-color: var(--bg1);
+  font-family: 'Rust', sans-serif; 
   color: var(--font);
-  font-family: "Rust", sans-serif;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
