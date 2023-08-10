@@ -118,23 +118,33 @@
   <script>
     // Function to calculate the countdown
     function calculateCountdown() {
-      const now = new Date();
-      const firstThursday = new Date(now.getFullYear(), now.getMonth(), 1);
-      const daysUntilThursday = (4 - firstThursday.getDay() + 7) % 7;
-      firstThursday.setDate(1 + daysUntilThursday);
-      firstThursday.setHours(20);
-      firstThursday.setMinutes(0);
-      firstThursday.setSeconds(0);
-  
-      const difference = firstThursday - now;
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((difference / (1000 * 60)) % 60);
-      const seconds = Math.floor((difference / 1000) % 60);
-  
-      const countdownText = `${days} days<br>${hours} hours<br>${minutes} minutes`;
-      document.getElementById("countdown").innerHTML = countdownText;
-    }
+  const now = new Date();
+  const firstThursday = new Date(now.getFullYear(), now.getMonth(), 1);
+  const daysUntilThursday = (4 - firstThursday.getDay() + 7) % 7;
+  firstThursday.setDate(1 + daysUntilThursday);
+  firstThursday.setHours(20);
+  firstThursday.setMinutes(0);
+  firstThursday.setSeconds(0);
+
+  let difference = firstThursday - now;
+
+  if (difference <= 0) {
+    // Der erste Donnerstag ist bereits erreicht oder vorbei, also für nächsten Monat setzen
+    firstThursday.setMonth(firstThursday.getMonth() + 1);
+    difference = firstThursday - now;
+  }
+
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((difference / (1000 * 60)) % 60);
+
+  const countdownText = `${days} days<br>${hours} hours<br>${minutes} minutes`;
+  document.getElementById("countdown").innerHTML = countdownText;
+}
+
+// Die Funktion alle Sekunde aufrufen, um den Countdown zu aktualisieren
+setInterval(calculateCountdown, 1000);
+
   
     // Function to update the countdown every second
     function updateCountdown() {
@@ -160,7 +170,5 @@ function openLink(url) {
   </script>
   
 </body>
-
 </body>
-
 </html>
