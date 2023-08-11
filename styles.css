@@ -37,8 +37,9 @@ body {
 }
 
 .card:hover {
-  transform: scale(1.35) rotateX(15deg) rotateY(15deg);
-  box-shadow: 0 0 50px rgba(223, 62, 48, 0.7); /* Add a red glow with some transparency */
+  /* transform: scale(1.35) rotateX(15deg) rotateY(15deg);*/
+  transform: scale(1.20);
+  box-shadow: 0 0 30px rgba(223, 62, 48, 0.7); /* Add a red glow with some transparency */
   z-index: 1; /* Bring the hovered card above other cards */
 }
 

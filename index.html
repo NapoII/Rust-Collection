@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="eng">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="Rust-Collection">
-  <meta property="og:description" content="A collection of Rust tools and instructions for professionals and beginners alike.">
+  <meta property="og:description"
+    content="A collection of Rust tools and instructions for professionals and beginners alike.">
   <meta property="og:image" content="https://raw.githubusercontent.com/NapoII/Rust-Collection/main/img/thumbn.png">
   <meta property="og:url" content="https://napoii.github.io/Rust-Collection/">
   <title>Rust-Collection</title>
   <link rel="stylesheet" href="styles.css">
+
+  <script src="/javascript/calculateWipeCountdown.js"></script>
+  <script src="/javascript/openLink.js"></script>
+  <script src="/javascript/performSearch.js"></script>
+  <script src="/javascript/calculateThursdayCountdown.js"></script>
+
+  <script>
+
+    // Call the function every second to update the countdown.
+    setInterval(calculateWipeCountdown, 1000);
+    setInterval(calculateThursdayCountdown, 1000);
+    // Update the countdown when the page is loaded
+    updateWipeCountdown();
+    calculateThursdayCountdown();
+
+  </script>
 </head>
+
+
 <body>
 
 
@@ -35,7 +54,7 @@
       </div>
     </div>
   </div>
-  
+
 
   <div class="card" id="countdown-card" onclick="openLink('https://just-wiped.net/')">
     <div class="background-image" style="background-image: url('img/nuke.png');"></div>
@@ -77,8 +96,7 @@
       </div>
     </div>
   </div>
-  
-  
+
 
   <div class="card" onclick="openLink('Rust_Collection/Diesel_Calc/diesel_calc.html')">
     <div class="background-image" style="background-image: url('img/diesel_barrel.png');"></div>
@@ -99,8 +117,8 @@
       </div>
     </div>
   </div>
-  
-  
+
+
   <div class="card" onclick="openLink('https://www.rustbreeder.com/')">
     <div class="background-image" style="background-image: url('img/clone.hemp.png');"></div>
     <div class="content">
@@ -120,7 +138,7 @@
       </div>
     </div>
   </div>
-  
+
 
   <div class="card" onclick="openLink('https://rusttips.com/rust-aim-training/')">
     <div class="background-image" style="background-image: url('img/aim.png');"></div>
@@ -162,8 +180,8 @@
       </div>
     </div>
   </div>
-  
-  
+
+
   <div class="card" onclick="openLink('https://www.rustrician.io/')">
     <div class="background-image" style="background-image: url('img/wiretool.png');"></div>
     <div class="content">
@@ -183,8 +201,8 @@
       </div>
     </div>
   </div>
-  
-  
+
+
   <div class="card" onclick="openLink('https://twitch.facepunch.com/#drops')">
     <div class="background-image" style="background-image: url('img/twitch-logo.png');"></div>
     <div class="content">
@@ -204,8 +222,7 @@
       </div>
     </div>
   </div>
-  
-  
+
 
   <div class="card" onclick="openLink('https://www.battlemetrics.com/')">
     <div class="background-image" style="background-image: url('img/BM.png');"></div>
@@ -247,8 +264,7 @@
       </div>
     </div>
   </div>
-  
-  
+
 
   <div class="card" onclick="openLink('https://steamcommunity.com/sharedfiles/filedetails/?id=2375732344')">
     <div class="background-image" style="background-image: url('img/cb.png');"></div>
@@ -269,8 +285,8 @@
       </div>
     </div>
   </div>
-  
-  
+
+
   <div class="card" onclick="openLink('https://rust.facepunch.com/changes')">
     <div class="background-image" style="background-image: url('img/update.png');"></div>
     <div class="content">
@@ -290,8 +306,7 @@
       </div>
     </div>
   </div>
-  
-  
+
 
   <div class="card" onclick="openLink('https://commits.facepunch.com/r/rust_reboot')">
     <div class="background-image" style="background-image: url('img/git.png');"></div>
@@ -312,7 +327,28 @@
       </div>
     </div>
   </div>
-  
+
+
+  <div class="card" id="countdown-card" onclick="openLink('https://www.reddit.com/user/Rusty-Helper-Bot/?sort=new')">
+    <div class="background-image" style="background-image: url('img/skins.png');"></div>
+    <div class="content">
+      <div class="top-section">
+        <h2>New Skins in Store</h2>
+        <div class="card-info">
+          <hr>
+          Event
+        </div>
+      </div>
+      <div class="bottom-section">
+        <p id="ThursdayCountdown"></p>
+        <div class="card-info">
+          <hr>
+          15
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="card" onclick="openLink('https://github.com/NapoII/Rust-Collection')">
     <div class="background-image" style="background-image: url('img/github.png');"></div>
@@ -326,76 +362,25 @@
       </div>
       <div class="bottom-section">
         <p>If you know any Rust tools or information that should be on this page, just write to me.</p>
-        <a href="https://github.com/NapoII/Rust-Collection/"><img src="https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F" alt="website"></a>
-        <a href="https://img.shields.io/github/issues-raw/NapoII/Rust-Collection"><img src="https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic" alt="github/issues_open"></a>
-        <a href="https://github.com/NapoII/Rust-Collection/stargazers"><img src="https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social" alt="github/stars"></a>
-        <a href="https://discord.gg/knTKtKVfnr"><img src="https://img.shields.io/discord/190307701169979393" alt="discord"></a>
+        <a href="https://github.com/NapoII/Rust-Collection/"><img
+            src="https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F"
+            alt="website"></a>
+        <a href="https://img.shields.io/github/issues-raw/NapoII/Rust-Collection"><img
+            src="https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic"
+            alt="github/issues_open"></a>
+        <a href="https://github.com/NapoII/Rust-Collection/stargazers"><img
+            src="https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social" alt="github/stars"></a>
+        <a href="https://discord.gg/knTKtKVfnr"><img src="https://img.shields.io/discord/190307701169979393"
+            alt="discord"></a>
         <div class="card-info">
           <hr>
-          15
+          16
         </div>
       </div>
     </div>
   </div>
-  
-
-  
-  <script>
-    function openLink(url) {
-      window.open(url, '_blank');
-    }
 
 
-function calculateCountdown() {
-  const now = new Date();
-  const nextMonth = new Date(now);
-  nextMonth.setMonth(nextMonth.getMonth() + 1);
-  nextMonth.setDate(1);
-
-  while (nextMonth.getDay() !== 4) { // Find the first Thursday of next month
-    nextMonth.setDate(nextMonth.getDate() + 1);
-  }
-
-  nextMonth.setHours(20);
-  nextMonth.setMinutes(0);
-  nextMonth.setSeconds(0);
-
-  const difference = nextMonth - now;
-
-  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((difference / (1000 * 60)) % 60);
-
-  const countdownText = `${nextMonth.toDateString()} <hr>  ${days} days<br>${hours} hours<br>${minutes} minutes`;
-  const countdownElement = document.getElementById("countdown");
-  countdownElement.innerHTML = countdownText;
-}
-
-
-// Die Funktion alle Sekunde aufrufen, um den Countdown zu aktualisieren
-setInterval(calculateCountdown, 1000);
-
-  
-    // Function to update the countdown every second
-    function updateCountdown() {
-      calculateCountdown();
-      setTimeout(updateCountdown, 1000);
-    }
-  
-    // Update the countdown when the page is loaded
-    updateCountdown();
-
-
-    function performSearch() {
-  var searchInput = document.getElementById('searchInput').value;
-  if (searchInput) {
-    var url = 'https://rustlabs.com/search=' + encodeURIComponent(searchInput);
-    openLink(url);
-  }
-}
-
-  </script>
-  
 </body>
-</body>
+
 </html>
