@@ -135,3 +135,18 @@ h2 {
   margin-bottom: 1px; /* Add margin to the bottom of h2 */
   color: var(--h); /* Heading color for h2 element */
 }
+
+#backToTopButton {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: var(--h);
+  color: var(--font);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1; /* Ensure the button is always visible */
+  font-family: 'Rust', Arial, sans-serif;
+}

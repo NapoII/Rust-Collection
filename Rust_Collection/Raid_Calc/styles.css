@@ -11,7 +11,7 @@
   --font: #A4A5A7; /* Font color */
   --modulBg: rgba(91, 87, 86, 0.15); /* Transparenter Hintergrund der Karten */
   --h: #D93E30; /* Heading color */
-  --font-size: 30px; /* Schriftgröße */
+  --font-size: 30px; /* Font size */
 }
 
 body {
@@ -192,4 +192,19 @@ td img {
   max-width: 100px; /* Beispiel: Setze die maximale Breite der Bilder */
   height: auto; /* Automatische Höhe, um das Seitenverhältnis zu wahren */
   margin: 0 10px; /* Abstand zwischen den Bildern */
+}
+
+#backToTopButton {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: var(--h);
+  color: var(--font);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1; /* Ensure the button is always visible */
+  font-family: 'Rust', Arial, sans-serif;
 }
