@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="custom-dropdown">
+  <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page1')">Wähle ein Element</button>
+  <div class="custom-dropdown-content" id="dropdown-content-page1">
+    <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+  </div>
+</div>
+<div class="custom-dropdown">
+  <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page2')">Wähle ein Element</button>
+  <div class="custom-dropdown-content" id="dropdown-content-page2">
+    <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+  </div>
+</div>
+
+<div id="output">
+  <h2>Ausgabe:</h2>
+  <p id="output-text"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

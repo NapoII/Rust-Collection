@@ -1,0 +1,3 @@
+stones
+sulfur
+metal.fragments

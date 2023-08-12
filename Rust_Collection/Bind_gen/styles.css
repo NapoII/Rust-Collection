@@ -1,0 +1,66 @@
+/* Define the 'Rust' font from rust.ttf in the same folder */
+@font-face {
+  font-family: 'Rust';
+  src: url('Rust.ttf') format('truetype');
+}
+
+:root {
+  --bg1: #0D0D0D; /* Background color 1 */
+  --bg2: #272322; /* Background color 2 */
+  --font: #A4A5A7; /* Font color */
+  --modulBg: rgba(15, 14, 14, 1); /* Transparent background of the cards */
+  --h: #D93E30; /* Heading color */
+}
+
+body {
+  background-color: var(--bg1);
+  color: var(--font); /* Font color for the body */
+  font-family: 'Rust', Arial, sans-serif; /* Use 'Rust' font, then fallback to Arial and sans-serif */
+}
+
+/* Stil für das Dropdown-Menü */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-dropdown-button {
+  background-color: #f1f1f1;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.custom-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.custom-dropdown-item {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.custom-dropdown-item img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Zeigt das Dropdown-Menü an, wenn es geöffnet ist */
+.show {
+  display: block;
+}
+
+/* Stil für ausgewählte Icons */
+.selected-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
