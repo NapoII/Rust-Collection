@@ -39,7 +39,6 @@ table {
 }
 
 th, td {
-  padding: 10x;
   border: 10px solid var(--bg1);
   text-align: center;
   font-family: 'Rust', Arial, sans-serif;
@@ -68,8 +67,6 @@ td img {
   margin-bottom: 10px;
 }
 
-
-}
 
 /* Stil für die Bilder */
 .input-container img {
