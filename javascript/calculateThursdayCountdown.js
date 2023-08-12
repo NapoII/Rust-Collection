@@ -1,9 +1,14 @@
+// https://github.com/NapoII/Rust-Collection
+
+/**
+ * Calculates the countdown until the next Thursday at 8:00 PM.
+ */
 function calculateThursdayCountdown() {
   const now = new Date();
   const nextThursday = new Date(now);
 
   // Find the next Thursday
-  while (nextThursday.getDay() !== 4) {
+  while (nextThursday.getDay() !== 4) { // 4 represents Thursday (Sunday = 0, Monday = 1, ..., Saturday = 6)
     nextThursday.setDate(nextThursday.getDate() + 1);
   }
 
@@ -19,18 +24,25 @@ function calculateThursdayCountdown() {
     difference = nextThursday - now;
   }
 
+  // Calculate the remaining days, hours, and minutes
   const days = Math.floor(difference / (1000 * 60 * 60 * 24));
   const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((difference / (1000 * 60)) % 60);
 
+  // Create the countdown text with the next Thursday's date and time
   const countdownText = `${nextThursday.toDateString()} <hr>  ${days} days<br>${hours} hours<br>${minutes} minutes`;
+  
+  // Update the HTML element with the countdown text
   const countdownElement = document.getElementById("ThursdayCountdown"); // Updated the ID here
   countdownElement.innerHTML = countdownText;
 
-  setTimeout(calculateThursdayCountdown, 1000); // Call the function again after 1 second
+  // Schedule the function to be called again after 1 second
+  setTimeout(calculateThursdayCountdown, 1000);
 }
 
-// Function to update the countdown every second
+/**
+ * Updates the countdown every second.
+ */
 function updateThursdayCountdown() {
   calculateThursdayCountdown();
   setTimeout(updateThursdayCountdown, 1000);

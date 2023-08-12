@@ -1,106 +1,120 @@
+// https://github.com/NapoII/Rust-Collection
+
+// Fetch the CSV data from the provided URL
 fetch('https://raw.githubusercontent.com/NapoII/Rust-Collection/main/Rust_Collection/Raid_Calc/raid.CSV')
     .then(response => response.text())
     .then(data => {
-      const rows = data.trim().split('\n');
-      const table = document.getElementById('csvTable');
+        // Split the fetched data into rows using line breaks
+        const rows = data.trim().split('\n');
 
-      for (let i = 1; i < rows.length; i++) {
-        const row = rows[i];
-        const columns = row.split(';'); // Verwende hier das richtige Trennzeichen (z.B. ; oder ,)
-        const newRow = document.createElement('tr');
+        // Get the table element by its ID
+        const table = document.getElementById('csvTable');
 
-        for (let j = 1; j < columns.length; j++) {
-          const column = columns[j];
-          const newCell = document.createElement('td');
+        // Loop through each row starting from index 1 (skipping the header row)
+        for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            const columns = row.split(';'); // Split row into columns using semicolon as the delimiter (adjust if needed)
 
-          if (column.includes('.jpg') || column.includes('.png') || column.includes('.gif')) {
-            const img = document.createElement('img');
-            img.alt = 'Bild';
-            img.src = column;
+            // Create a new table row
+            const newRow = document.createElement('tr');
 
-            newCell.appendChild(img);
-          } else {
-            newCell.textContent = column;
-          }
+            // Loop through each column starting from index 1 (skipping the first column)
+            for (let j = 1; j < columns.length; j++) {
+                const column = columns[j];
+                const newCell = document.createElement('td');
 
-          newRow.appendChild(newCell);
+                // Check if the column content is an image URL
+                if (column.includes('.jpg') || column.includes('.png') || column.includes('.gif')) {
+                    // Create an image element, set alt text and source
+                    const img = document.createElement('img');
+                    img.alt = 'Image';
+                    img.src = column;
+
+                    // Append the image to the table cell
+                    newCell.appendChild(img);
+                } else {
+                    // If not an image URL, set the cell's text content
+                    newCell.textContent = column;
+                }
+
+                // Append the cell to the current row
+                newRow.appendChild(newCell);
+            }
+
+            // Append the row to the table
+            table.appendChild(newRow);
         }
-
-        table.appendChild(newRow);
-      }
     })
     .catch(error => {
-      console.error('Fehler beim Laden der CSV-Datei:', error);
+        // Handle errors in fetching or processing the CSV data
+        console.error('Error loading CSV file:', error);
     });
 
 
- 
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const sulforInput = document.getElementById('sulforInput');
-        const gunpowderInput = document.getElementById('gunpowderInput');
-        const dieselInput = document.getElementById('dieselInput');
-        const switchInput = document.getElementById('switchInput');
-        const switchLabel = document.getElementById('switchLabel'); // Element für den Schalter-Text
-        const resultElement = document.getElementById('result');
+// Wait for the DOM to be fully loaded before attaching event listeners
+document.addEventListener("DOMContentLoaded", function() {
+  // Get references to input and output elements
+  const sulforInput = document.getElementById('sulforInput');
+  const gunpowderInput = document.getElementById('gunpowderInput');
+  const dieselInput = document.getElementById('dieselInput');
+  const switchInput = document.getElementById('switchInput');
+  const switchLabel = document.getElementById('switchLabel'); // Element for the switch label text
+  const resultElement = document.getElementById('result'); // Element to display the result
+  
+  // Add event listeners for input changes and switch change
+  sulforInput.addEventListener('input', handleInputChange);
+  gunpowderInput.addEventListener('input', handleInputChange);
+  dieselInput.addEventListener('input', handleInputChange);
+  switchInput.addEventListener('change', handleInputChange);
     
-        // Eventlistener für Änderungen in den Eingabefeldern und dem Schalter hinzufügen
-        sulforInput.addEventListener('input', handleInputChange);
-        gunpowderInput.addEventListener('input', handleInputChange);
-        dieselInput.addEventListener('input', handleInputChange);
-        switchInput.addEventListener('change', handleInputChange);
-    
-        // Funktion zur Verarbeitung von Änderungen in den Eingabefeldern und dem Schalter
-        function handleInputChange() {
-            const sulforValue = parseFloat(sulforInput.value) || 0;
-            const gunpowderValue = parseFloat(gunpowderInput.value) || 0;
-            const dieselValue = parseFloat(dieselInput.value) || 0;
-            const switchValue = switchInput.checked;
-    
-            // Berechnungen durchführen
-            let sulfurDiesel;
-            if (switchValue) {
-                sulfurDiesel = dieselValue * 2000;
-            } else {
-                sulfurDiesel = dieselValue * 1000;
-            }
-            
-            // Gesamtsumme berechnen
-            let total = sulforValue + gunpowderValue  + sulfurDiesel;
-            let switchText = switchValue ? 'Giant Excavator' : 'Sulfur Quarry'; // Schalter-Text
-    
-            // Füge die CSS-Klasse hinzu oder entferne sie für die Animation
-            switchInput.classList.toggle('slider', switchValue);
-    
-            // Führe die Java-Berechnung durch
-            let availableSulfur = total; // Gesamtmenge verfügbaren Sulfurs
-            let rocketsPerSet = 4;
-            let ammoPerSet = 30;
-            let sulfurPerRocket = 1400;
-            let sulfurPerAmmo = 25;
-            let set_sulfur = ((rocketsPerSet*sulfurPerRocket)+(ammoPerSet*sulfurPerAmmo))
-    
-            let maxSets = Math.floor(availableSulfur/set_sulfur)
+// Function for processing changes in the input fields and the switch
+function handleInputChange() {
+const sulforValue = parseFloat(sulforInput.value) || 0;
+const gunpowderValue = parseFloat(gunpowderInput.value) || 0;
+const dieselValue = parseFloat(dieselInput.value) || 0;
+const switchValue = switchInput.checked;
 
-            let rockets_ges = rocketsPerSet * maxSets
-            let ammo_ges = ammoPerSet * maxSets
-            let sulfur_rest = availableSulfur % set_sulfur; 
+// Perform calculations
+let sulfurDiesel;
+if (switchValue) {
+    sulfurDiesel = dieselValue * 2000;
+} else {
+    sulfurDiesel = dieselValue * 1000;
+}
 
-            let need_sulf_a = 5 * ammo_ges
-            let need_Gp_a = 10 * ammo_ges
+// Calculate total
+let total = sulforValue + gunpowderValue  + sulfurDiesel;
+let switchText = switchValue ? 'Giant Excavator' : 'Sulfur Quarry'; // Switch text
 
-            let need_sulf_r = (10*10)*ammo_ges
-            let need_Gp_r = (50*10)+150*ammo_ges
+switchInput.classList.toggle('slider', switchValue);
 
-            let need_sulf_ges = need_sulf_r + need_sulf_a
-            let need_Gp_ges = need_Gp_r + need_Gp_a
+// Perform the Java calculation
+let availableSulfur = total; // Total amount of sulphur available
+let rocketsPerSet = 4;
+let ammoPerSet = 30;
+let sulfurPerRocket = 1400;
+let sulfurPerAmmo = 25;
+let set_sulfur = ((rocketsPerSet*sulfurPerRocket)+(ammoPerSet*sulfurPerAmmo))
 
-            let stone_wall_smash = maxSets 
-            let metal_wall_smash = maxSets / 2
-            let hqm_wall_smash = maxSets / 4
-2
-            // Ergebnisse anzeigen
-// Ergebnisse anzeigen
+let maxSets = Math.floor(availableSulfur/set_sulfur)
+
+let rockets_ges = rocketsPerSet * maxSets
+let ammo_ges = ammoPerSet * maxSets
+let sulfur_rest = availableSulfur % set_sulfur; 
+
+let need_sulf_a = 5 * ammo_ges
+let need_Gp_a = 10 * ammo_ges
+
+let need_sulf_r = (10*10)*ammo_ges
+let need_Gp_r = (50*10)+150*ammo_ges
+
+let need_sulf_ges = need_sulf_r + need_sulf_a
+let need_Gp_ges = need_Gp_r + need_Gp_a
+
+let stone_wall_smash = maxSets 
+let metal_wall_smash = maxSets / 2
+let hqm_wall_smash = maxSets / 4
+
 
 resultElement.innerHTML = `
 <div class="section">
@@ -131,7 +145,7 @@ resultElement.innerHTML = `
             switchLabel.textContent = switchText; // Schalter-Text setzen
         }
     
-        // Initialer Aufruf der Funktion, um den aktuellen Zustand zu erfassen
+        // Initial call of the function to capture the current state
         handleInputChange();
     });
     
