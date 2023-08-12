@@ -9,24 +9,13 @@
     content="A collection of Rust tools and instructions for professionals and beginners alike.">
   <meta property="og:image" content="https://raw.githubusercontent.com/NapoII/Rust-Collection/main/img/thumbn.png">
   <meta property="og:url" content="https://napoii.github.io/Rust-Collection/">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
   <title>Rust-Collection</title>
   <link rel="stylesheet" href="styles.css">
 
-  <script src="javascript/calculateThursdayCountdown.js"></script>
-  <script src="javascript/openLink.js"></script>
-  <script src="javascript/performSearch.js"></script>
-  <script src="javascript/calculateWipeCountdown.js"></script>
-  
-  <script>
 
-    // Call the function every second to update the countdown.
-    setInterval(calculateWipeCountdown, 1000);
-    setInterval(calculateThursdayCountdown, 1000);
-    // Update the countdown when the page is loaded
-    updateWipeCountdown();
-    calculateThursdayCountdown();
-
-  </script>
 </head>
 
 
@@ -401,7 +390,24 @@
     </div>
   </div>
 
+  <script src="javascript/calculateThursdayCountdown.js"></script>
+  <script src="javascript/openLink.js"></script>
+  <script src="javascript/performSearch.js"></script>
+  <script src="javascript/calculateWipeCountdown.js"></script>
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", function() {
 
+        // Call the function every second to update the countdown.
+        setInterval(calculateWipeCountdown, 1000);
+        setInterval(calculateThursdayCountdown, 1000);
+        // Update the countdown when the page is loaded
+        updateWipeCountdown();
+        calculateThursdayCountdown();
+    });
+
+
+  </script>
 </body>
 
 </html>
