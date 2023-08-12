@@ -136,7 +136,7 @@ h2 {
   color: var(--h); /* Heading color for h2 element */
 }
 
-#backToTopButton {
+#backToHomeButton {
   position: fixed;
   top: 20px;
   left: 20px;

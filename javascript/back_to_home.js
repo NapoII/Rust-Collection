@@ -1,5 +1,5 @@
 // Get the button element by its ID
-const backToHomeButton = document.getElementById("backToTopButton");
+const backToHomeButton = document.getElementById("backToHomeButton");
 
 // Add a click event to navigate to the home page when the button is clicked
 backToHomeButton.addEventListener("click", () => {

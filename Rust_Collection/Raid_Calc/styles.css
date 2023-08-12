@@ -194,7 +194,7 @@ td img {
   margin: 0 10px; /* Abstand zwischen den Bildern */
 }
 
-#backToTopButton {
+#backToHomeButton {
   position: fixed;
   top: 20px;
   left: 20px;
