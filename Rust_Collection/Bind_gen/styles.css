@@ -1,8 +1,4 @@
 /* Define the 'Rust' font from rust.ttf in the same folder */
-@font-face {
-  font-family: 'Rust';
-  src: url('Rust.ttf') format('truetype');
-}
 
 :root {
   --bg1: #0D0D0D; /* Background color 1 */
@@ -15,7 +11,8 @@
 body {
   background-color: var(--bg1);
   color: var(--font); /* Font color for the body */
-  font-family: 'Rust', Arial, sans-serif; /* Use 'Rust' font, then fallback to Arial and sans-serif */
+  font-family: Arial, sans-serif; /* Use 'Rust' font, then fallback to Arial and sans-serif */
+  align-items: center;
 }
 
 /* Stil für das Dropdown-Menü */

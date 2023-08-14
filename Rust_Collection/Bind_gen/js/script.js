@@ -1,4 +1,4 @@
-// Globale Variable für die ausgewählten Werte
+// Objekt zum Speichern der ausgewählten Werte für jedes Dropdown-Menü
 const selectedValues = {};
 
 // Funktion, um das Dropdown-Menü zu öffnen/schließen
@@ -49,21 +49,8 @@ function selectItem(dropdownId, variable) {
     dropdownButton.innerHTML = `<img src="img/${variable}.png" class="selected-icon">${variable}`;
     selectedValues[dropdownId] = variable;
     console.log("Dropdown ID:", dropdownId); // Hier wird die Dropdown-ID in die Konsole geschrieben
-    updateOutput();
+    console.log("variable:", variable); // Hier wird die Dropdown-ID in die Konsole geschrieben
 }
-
-  
-
-// Funktion, um die Ausgabe zu aktualisieren
-function updateOutput() {
-    const outputTextElement = document.getElementById("output-text");
-    let output = "Ausgewählte Werte:";
-    for (const dropdownId in selectedValues) {
-      output += `<br>${dropdownId}: ${selectedValues[dropdownId]}`;
-    }
-    outputTextElement.innerHTML = output;
-    console.log(output); // Hier wird die Ausgabe in die Konsole geschrieben
-  }
   
 
 // Schließen des Dropdown-Menüs, wenn der Benutzer außerhalb klickt
@@ -77,3 +64,5 @@ window.onclick = function(event) {
     });
   }
 }
+
+

@@ -9,35 +9,126 @@
   <meta property="og:image" content="https://raw.githubusercontent.com/NapoII/Rust-Collection/main/img/thumbn.png">
   <meta property="og:url" content="https://napoii.github.io/Rust-Collection/">
 
-  <link rel="icon" href="Rust-Collection/img/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="Rust-Collection/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
   <title>Rust-Bind-Generator</title>
   
   <link rel="stylesheet" type="text/css" href="styles.css">
+  
+
+  
 </head>
 <body>
 
-<div class="custom-dropdown">
-  <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page1')">Wähle ein Element</button>
-  <div class="custom-dropdown-content" id="dropdown-content-page1">
-    <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
-  </div>
-</div>
-<div class="custom-dropdown">
-  <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page2')">Wähle ein Element</button>
-  <div class="custom-dropdown-content" id="dropdown-content-page2">
-    <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
-  </div>
-</div>
+  <table id="Shop_bind_table>
+    <thead>
+      <tr>
+        <th colspan="2">Your Adversting bind generator</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bind Key</td>
+        <td><input type="text" id="shop_ad_bind" name="textInput" placeholder="Bind Key"></td>
+      </tr>
+      <tr>
+        <td>Shop name</td>
+        <td><input type="text" id="shop_name" name="textInput" placeholder="Shop name"></td>
+      </tr>
+      <tr>
+        <td>Shop position</td>
+        <td><input type="text" id="shop_pos" name="textInput" placeholder="Shop position"></td>
+      </tr>
+      <tr>
+        <td>Your advertising slogan<br></td>
+        <td><input type="text" id="shop_ad_sell_text" name="textInput" placeholder="Your advertising slogan"></td>
+      </tr>
+      <tr>
+        <td colspan="2">To sell</td>
+      </tr>
+      <tr>
+        <td><div class="custom-dropdown">
+          <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page1')">Wähle ein Element</button>
+          <div class="custom-dropdown-content" id="dropdown-content-page1">
+            <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+          </div>
+        </div></td>
+        <td><input type="number" id="item_num_1" name="numberInput" min="1" max="9999"></td>
+      </tr>
+      <tr>
+        <td colspan="2">for</td>
+      </tr>
+      <tr>
+        <td><div class="custom-dropdown">
+          <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page2')">Wähle ein Element</button>
+          <div class="custom-dropdown-content" id="dropdown-content-page2">
+            <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+          </div>
+        </div></td>
+        <td><input type="number" id="item_num_2" name="numberInput" min="1" max="9999"></td>
+      </tr>
+      <tr>
+        <td><div class="custom-dropdown">
+          <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page3')">Wähle ein Element</button>
+          <div class="custom-dropdown-content" id="dropdown-content-page3">
+            <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+          </div>
+        </div></td>
+        <td><input type="number" id="item_num_3" name="numberInput" min="1" max="9999"></td>
+      </tr>
+      <tr>
+        <td><div class="custom-dropdown">
+          <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page4')">Wähle ein Element</button>
+          <div class="custom-dropdown-content" id="dropdown-content-page4">
+            <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+          </div>
+        </div></td>
+        <td><input type="number" id="item_num_4" name="numberInput" min="1" max="9999"></td>
+        <tr>
+          <td><div class="custom-dropdown">
+            <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page5')">Wähle ein Element</button>
+            <div class="custom-dropdown-content" id="dropdown-content-page5">
+              <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+            </div>
+          </div></td>
+          <td><input type="number" id="item_num_5" name="numberInput" min="1" max="9999"></td>
+        </tr>
+        <tr>
+          <td><div class="custom-dropdown">
+            <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page6')">Wähle ein Element</button>
+            <div class="custom-dropdown-content" id="dropdown-content-page6">
+              <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+            </div>
+          </div></td>
+          <td><input type="number" id="item_num_6" name="numberInput" min="1" max="9999"></td>
+        </tr>
+        <tr>
+          <td><div class="custom-dropdown">
+            <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page7')">Wähle ein Element</button>
+            <div class="custom-dropdown-content" id="dropdown-content-page7">
+              <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+            </div>
+          </div></td>
+          <td><input type="number" id="item_num_7" name="numberInput" min="1" max="9999"></td>
+        </tr>
+        <tr>
+          <td><div class="custom-dropdown">
+            <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page8')">Wähle ein Element</button>
+            <div class="custom-dropdown-content" id="dropdown-content-page8">
+              <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+            </div>
+          </div></td>
+          <td><input type="number" id="item_num_8" name="numberInput" min="1" max="9999"></td>
+        </tr>
+      </tr>
+    </tbody>
+    </table>
 
-<div id="output">
-  <h2>Ausgabe:</h2>
-  <p id="output-text"></p>
-</div>
-
-<script src="script.js"></script>
-<script src="/javascript/console_alert.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/console_alert.js"></script>
+    <script src="js/separate_script.js"></script>
+    <script src="js/hide_menu.js"></script>
 
 </body>
 </html>
