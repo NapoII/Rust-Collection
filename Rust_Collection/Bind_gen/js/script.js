@@ -22,7 +22,7 @@ const dropdowns = document.querySelectorAll('.custom-dropdown');
 dropdowns.forEach((dropdown, index) => {
   const dropdownContent = dropdown.querySelector('.custom-dropdown-content');
   const dropdownId = dropdownContent.id;
-  fetch('/Rust_Collection/Bind_gen/items.txt')
+  fetch('items.txt')
     .then(response => response.text())
     .then(textContent => {
       const entries = textContent.trim().split("\n");
