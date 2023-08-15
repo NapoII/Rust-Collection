@@ -33,7 +33,7 @@ dropdowns.forEach((dropdown, index) => {
         dropdownContent.innerHTML = '';
 
         items.filter(item => item.toLowerCase().includes(query)).forEach(item => {
-          const imagePath = `img/${item}.png`;
+          const imagePath = `../img/${item}.png`;
           const optionDiv = document.createElement("div");
           optionDiv.classList.add("custom-dropdown-item");
           optionDiv.innerHTML = `<img src="${imagePath}" alt="Icon">${item}`;
