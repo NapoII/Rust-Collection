@@ -5,7 +5,7 @@ const selectedValues = {};
 function toggleDropdown(dropdownId) {
   const dropdownContent = document.getElementById(dropdownId);
   const otherDropdownContents = document.querySelectorAll('.custom-dropdown-content');
-  
+
   otherDropdownContents.forEach(content => {
     if (content !== dropdownContent) {
       content.classList.remove('show');
@@ -27,31 +27,43 @@ dropdowns.forEach((dropdown, index) => {
     .then(textContent => {
       const entries = textContent.trim().split("\n");
 
-      entries.forEach(entry => {
-        const itemName = entry.trim();
-        const imagePath = `img/${itemName}.png`;
-        const optionDiv = document.createElement("div");
-        optionDiv.classList.add("custom-dropdown-item");
-        optionDiv.innerHTML = `<img src="${imagePath}" alt="Icon">${itemName}`;
-        optionDiv.setAttribute("data-variable", itemName);
-        optionDiv.addEventListener("click", function() { selectItem(dropdownId, itemName); });
-        dropdownContent.appendChild(optionDiv);
+      const items = entries.map(entry => entry.trim());
+
+      function filterItems(query) {
+        dropdownContent.innerHTML = '';
+
+        items.filter(item => item.toLowerCase().includes(query)).forEach(item => {
+          const imagePath = `img/${item}.png`;
+          const optionDiv = document.createElement("div");
+          optionDiv.classList.add("custom-dropdown-item");
+          optionDiv.innerHTML = `<img src="${imagePath}" alt="Icon">${item}`;
+          optionDiv.setAttribute("data-variable", item);
+          optionDiv.addEventListener("click", function() { selectItem(dropdownId, item); });
+          dropdownContent.appendChild(optionDiv);
+        });
+      }
+
+      // Event Listener für Tastatureingaben im Dropdown-Menü
+      dropdown.addEventListener('input', function () {
+        const filterText = this.innerText.trim().toLowerCase();
+        filterItems(filterText);
       });
+
+      // Initialisiere Dropdown-Elemente
+      filterItems('');
     })
     .catch(error => console.error('Fehler beim Laden der Textdatei:', error));
 });
 
-
 // Funktion, um das ausgewählte Element zu verarbeiten
 function selectItem(dropdownId, variable) {
-    const dropdownContent = document.getElementById(dropdownId);
-    const dropdownButton = dropdownContent.previousElementSibling;
-    dropdownButton.innerHTML = `<img src="img/${variable}.png" class="selected-icon">${variable}`;
-    selectedValues[dropdownId] = variable;
-    console.log("Dropdown ID:", dropdownId); // Hier wird die Dropdown-ID in die Konsole geschrieben
-    console.log("variable:", variable); // Hier wird die Dropdown-ID in die Konsole geschrieben
+  const dropdownContent = document.getElementById(dropdownId);
+  const dropdownButton = dropdownContent.previousElementSibling;
+  dropdownButton.innerHTML = `<img src="img/${variable}.png" class="selected-icon">${variable}`;
+  selectedValues[dropdownId] = variable;
+  console.log("Dropdown ID:", dropdownId);
+  console.log("variable:", variable);
 }
-  
 
 // Schließen des Dropdown-Menüs, wenn der Benutzer außerhalb klickt
 window.onclick = function(event) {
@@ -63,6 +75,15 @@ window.onclick = function(event) {
       }
     });
   }
-}
+};
 
-
+// Positionierung beim Scrollen berücksichtigen
+window.addEventListener('scroll', () => {
+  const openDropdown = document.querySelector('.custom-dropdown-content.show');
+  if (openDropdown) {
+    const dropdownButton = openDropdown.previousElementSibling;
+    const dropdownButtonRect = dropdownButton.getBoundingClientRect();
+    openDropdown.style.left = `${dropdownButtonRect.left}px`;
+    openDropdown.style.top = `${dropdownButtonRect.bottom}px`;
+  }
+});

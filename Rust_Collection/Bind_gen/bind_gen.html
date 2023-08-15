@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,122 +14,167 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
   <title>Rust-Bind-Generator</title>
-  
   <link rel="stylesheet" type="text/css" href="styles.css">
-  
 
-  
 </head>
-<body>
 
-  <table id="Shop_bind_table>
-    <thead>
-      <tr>
-        <th colspan="2">Your Adversting bind generator</th>
+<body>
+  <div class="generator-card">
+    <div class="background-image" style="--background-image: url('img/Vendig.png');"></div>
+    <div class="content">
+      <table id="Shop_bind_table">
+        <thead>
+          <tr>
+            <th colspan="2"><h2>Chat Advertising Bind</h2></th>
       </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Bind Key</td>
-        <td><input type="text" id="shop_ad_bind" name="textInput" placeholder="Bind Key"></td>
-      </tr>
-      <tr>
-        <td>Shop name</td>
-        <td><input type="text" id="shop_name" name="textInput" placeholder="Shop name"></td>
-      </tr>
-      <tr>
-        <td>Shop position</td>
-        <td><input type="text" id="shop_pos" name="textInput" placeholder="Shop position"></td>
-      </tr>
-      <tr>
-        <td>Your advertising slogan<br></td>
-        <td><input type="text" id="shop_ad_sell_text" name="textInput" placeholder="Your advertising slogan"></td>
-      </tr>
-      <tr>
-        <td colspan="2">To sell</td>
-      </tr>
-      <tr>
-        <td><div class="custom-dropdown">
-          <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page1')">Wähle ein Element</button>
-          <div class="custom-dropdown-content" id="dropdown-content-page1">
-            <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
-          </div>
-        </div></td>
-        <td><input type="number" id="item_num_1" name="numberInput" min="1" max="9999"></td>
-      </tr>
-      <tr>
-        <td colspan="2">for</td>
-      </tr>
-      <tr>
-        <td><div class="custom-dropdown">
-          <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page2')">Wähle ein Element</button>
-          <div class="custom-dropdown-content" id="dropdown-content-page2">
-            <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
-          </div>
-        </div></td>
-        <td><input type="number" id="item_num_2" name="numberInput" min="1" max="9999"></td>
-      </tr>
-      <tr>
-        <td><div class="custom-dropdown">
-          <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page3')">Wähle ein Element</button>
-          <div class="custom-dropdown-content" id="dropdown-content-page3">
-            <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
-          </div>
-        </div></td>
-        <td><input type="number" id="item_num_3" name="numberInput" min="1" max="9999"></td>
-      </tr>
-      <tr>
-        <td><div class="custom-dropdown">
-          <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page4')">Wähle ein Element</button>
-          <div class="custom-dropdown-content" id="dropdown-content-page4">
-            <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
-          </div>
-        </div></td>
-        <td><input type="number" id="item_num_4" name="numberInput" min="1" max="9999"></td>
+      </thead>
+      <tbody>
         <tr>
-          <td><div class="custom-dropdown">
-            <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page5')">Wähle ein Element</button>
-            <div class="custom-dropdown-content" id="dropdown-content-page5">
-              <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+          <td>Bind Key</td>
+          <td><input type="text" id="shop_ad_bind" name="textInput" placeholder="Bind Key"></td>
+        </tr>
+        <tr>
+          <td>Shop name</td>
+          <td><input type="text" id="shop_name" name="textInput" placeholder="Shop name"></td>
+        </tr>
+        <tr>
+          <td>Shop position</td>
+          <td><input type="text" id="shop_pos" name="textInput" placeholder="Shop position"></td>
+        </tr>
+        <tr>
+          <td>Your advertising slogan<br></td>
+          <td><input type="text" id="shop_ad_sell_text" name="textInput" placeholder="Your advertising slogan"></td>
+        </tr>
+        <tr>
+          <td colspan="2">To sell</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="custom-dropdown">
+              <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page1')">Wähle ein
+                Element</button>
+              <div class="custom-dropdown-content" id="dropdown-content-page1">
+                <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+              </div>
             </div>
-          </div></td>
+          </td>
+          <td><input type="number" id="item_num_1" name="numberInput" min="1" max="9999"></td>
+        </tr>
+        <tr>
+          <td colspan="2">for</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="custom-dropdown">
+              <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page2')">Wähle ein
+                Element</button>
+              <div class="custom-dropdown-content" id="dropdown-content-page2">
+                <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+              </div>
+            </div>
+          </td>
+          <td><input type="number" id="item_num_2" name="numberInput" min="1" max="9999"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="custom-dropdown">
+              <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page3')">Wähle ein
+                Element</button>
+              <div class="custom-dropdown-content" id="dropdown-content-page3">
+                <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+              </div>
+            </div>
+          </td>
+          <td><input type="number" id="item_num_3" name="numberInput" min="1" max="9999"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="custom-dropdown">
+              <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page4')">Wähle ein
+                Element</button>
+              <div class="custom-dropdown-content" id="dropdown-content-page4">
+                <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+              </div>
+            </div>
+          </td>
+          <td><input type="number" id="item_num_4" name="numberInput" min="1" max="9999"></td>
+        <tr>
+          <td>
+            <div class="custom-dropdown">
+              <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page5')">Wähle ein
+                Element</button>
+              <div class="custom-dropdown-content" id="dropdown-content-page5">
+                <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+              </div>
+            </div>
+          </td>
           <td><input type="number" id="item_num_5" name="numberInput" min="1" max="9999"></td>
         </tr>
         <tr>
-          <td><div class="custom-dropdown">
-            <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page6')">Wähle ein Element</button>
-            <div class="custom-dropdown-content" id="dropdown-content-page6">
-              <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+          <td>
+            <div class="custom-dropdown">
+              <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page6')">Wähle ein
+                Element</button>
+              <div class="custom-dropdown-content" id="dropdown-content-page6">
+                <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+              </div>
             </div>
-          </div></td>
+          </td>
           <td><input type="number" id="item_num_6" name="numberInput" min="1" max="9999"></td>
         </tr>
         <tr>
-          <td><div class="custom-dropdown">
-            <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page7')">Wähle ein Element</button>
-            <div class="custom-dropdown-content" id="dropdown-content-page7">
-              <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+          <td>
+            <div class="custom-dropdown">
+              <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page7')">Wähle ein
+                Element</button>
+              <div class="custom-dropdown-content" id="dropdown-content-page7">
+                <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+              </div>
             </div>
-          </div></td>
+          </td>
           <td><input type="number" id="item_num_7" name="numberInput" min="1" max="9999"></td>
         </tr>
         <tr>
-          <td><div class="custom-dropdown">
-            <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page8')">Wähle ein Element</button>
-            <div class="custom-dropdown-content" id="dropdown-content-page8">
-              <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+          <td>
+            <div class="custom-dropdown">
+              <button class="custom-dropdown-button" onclick="toggleDropdown('dropdown-content-page8')">Wähle ein
+                Element</button>
+              <div class="custom-dropdown-content" id="dropdown-content-page8">
+                <!-- Hier wird der Inhalt des Dropdown-Menüs dynamisch generiert -->
+              </div>
             </div>
-          </div></td>
+          </td>
           <td><input type="number" id="item_num_8" name="numberInput" min="1" max="9999"></td>
         </tr>
-      </tr>
-    </tbody>
+        </tr>
+      </tbody>
     </table>
+    <div class="Bind_to_copy" id="bind_shop_1">
+      Dein Bind-Text hier
+    </div>
+  </div>
+  </div>
+  </div>
 
-    <script src="js/script.js"></script>
-    <script src="js/console_alert.js"></script>
-    <script src="js/separate_script.js"></script>
-    <script src="js/hide_menu.js"></script>
+  <div class="generator-card">
+    <div class="background-image" style="--background-image: url('dein-bild-pfad.jpg');"></div>
+    <div class="content">
+      <!-- Hier kannst du den Inhalt der Karte einfügen -->
+    </div>
+  </div>
+
+  <div class="generator-card">
+    <div class="background-image" style="--background-image: url('dein-bild-pfad.jpg');"></div>
+    <div class="content">
+      <!-- Hier kannst du den Inhalt der Karte einfügen -->
+    </div>
+  </div>
+  
+  <script src="js/script.js"></script>
+  <script src="js/console_alert.js"></script>
+  <script src="js/bind_gen.js"></script>
+  <script src="js/hide_menu.js"></script>
 
 </body>
+
 </html>

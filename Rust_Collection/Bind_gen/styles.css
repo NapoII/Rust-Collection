@@ -1,18 +1,37 @@
 /* Define the 'Rust' font from rust.ttf in the same folder */
+@font-face {
+  font-family: 'Rust';
+  src: url('Rust.ttf') format('truetype');
+}
 
 :root {
   --bg1: #0D0D0D; /* Background color 1 */
   --bg2: #272322; /* Background color 2 */
   --font: #A4A5A7; /* Font color */
-  --modulBg: rgba(15, 14, 14, 1); /* Transparent background of the cards */
+  --modulBg: rgba(15, 14, 14, 0.9); /* Slightly transparent background of the cards */
   --h: #D93E30; /* Heading color */
 }
 
 body {
   background-color: var(--bg1);
-  color: var(--font); /* Font color for the body */
-  font-family: Arial, sans-serif; /* Use 'Rust' font, then fallback to Arial and sans-serif */
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  color: var(--font);
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  font-family: 'Rust', sans-serif;
+  color: var(--h);
 }
 
 /* Stil für das Dropdown-Menü */
@@ -30,11 +49,18 @@ body {
 
 .custom-dropdown-content {
   display: none;
-  position: absolute;
+  left: 0; /* Positioniere das Dropdown am linken Rand der Karte */
+  position: absolute; /* Stelle auf absolute Position um */
   background-color: #f9f9f9;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 2; /* Setze den Z-Index auf eine höhere Zahl als die .generator-card */
+  max-height: 300px; /* Beispielwert anpassen */
+  overflow-y: auto; /* Scrollleiste bei Bedarf anzeigen */
+  top: calc(100% + 10px); /* Positioniere das Dropdown unter dem Button */
+  max-height: 200px; /* Beispielwert anpassen */
+  overflow-y: auto;
+  z-index: 3; /* Höherer Z-Index-Wert als der der .generator-card */
 }
 
 .custom-dropdown-item {
@@ -49,15 +75,44 @@ body {
   margin-right: 10px;
 }
 
-/* Zeigt das Dropdown-Menü an, wenn es geöffnet ist */
 .show {
   display: block;
 }
 
-/* Stil für ausgewählte Icons */
 .selected-icon {
   display: inline-block;
   width: 20px;
   height: 20px;
   margin-right: 10px;
+}
+
+/* Stil für generator-card */
+.generator-card {
+  position: relative;
+  overflow: visible;
+  background-color: var(--modulBg);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add shadow to the cards */
+  z-index: 1; /* Setze Z-Index auf 1 */
+}
+
+.generator-card .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.generator-card .content {
+  padding: 20px;
+
+  position: relative; /* Füge relative Position hinzu */
+  z-index: 2; /* Setze Z-Index auf 2 */
 }
