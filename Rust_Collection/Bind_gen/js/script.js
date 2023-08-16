@@ -22,7 +22,7 @@ const dropdowns = document.querySelectorAll('.custom-dropdown');
 dropdowns.forEach((dropdown, index) => {
   const dropdownContent = dropdown.querySelector('.custom-dropdown-content');
   const dropdownId = dropdownContent.id;
-  fetch('items.txt')
+  fetch('Rust_Collection/Bind_gen/js/items.txt')
     .then(response => response.text())
     .then(textContent => {
       const entries = textContent.trim().split("\n");
@@ -34,6 +34,7 @@ dropdowns.forEach((dropdown, index) => {
 
         items.filter(item => item.toLowerCase().includes(query)).forEach(item => {
           const imagePath = `../img/${item}.png`;
+          // console.log("imagePath:", imagePath);
           const optionDiv = document.createElement("div");
           optionDiv.classList.add("custom-dropdown-item");
           optionDiv.innerHTML = `<img src="${imagePath}" alt="Icon">${item}`;
@@ -61,8 +62,8 @@ function selectItem(dropdownId, variable) {
   const dropdownButton = dropdownContent.previousElementSibling;
   dropdownButton.innerHTML = `<img src="img/${variable}.png" class="selected-icon">${variable}`;
   selectedValues[dropdownId] = variable;
-  console.log("Dropdown ID:", dropdownId);
-  console.log("variable:", variable);
+  // console.log("Dropdown ID:", dropdownId);
+  // console.log("variable:", variable);
 }
 
 // Schließen des Dropdown-Menüs, wenn der Benutzer außerhalb klickt
