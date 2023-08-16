@@ -54,6 +54,7 @@ body {
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Add a red glow with some transparency */
   z-index: 1; /* Bring the hovered card above other cards */
+  cursor: pointer;
 }
 
 .card-container {
@@ -151,6 +152,7 @@ button {
 }
 
 button:hover {
+  cursor: pointer;
   background-color: darken(var(--h), 90%);
 }
 
@@ -166,4 +168,12 @@ button:hover {
 
 hr {
   margin: 10px 0; /* 10px oben und unten */
+}
+
+.card.no-pointer-cursor {
+  cursor: auto; /* Deaktiviert den Mauszeiger "Zeiger" nur für Karten mit .no-pointer-cursor */
+}
+
+.card.no-pointer-cursor:hover {
+  cursor: auto; /* Standard-Mauszeiger für gehoverte Karten mit .no-pointer-cursor */
 }
