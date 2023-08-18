@@ -18,7 +18,7 @@
 
 </head>
 <body>
-
+    <hr>
   <h1>Raid table</h1> 
 
   <button id="backToHomeButton">Back to Home</button>
@@ -27,62 +27,201 @@
 
     </table>
 
+<hr>
+
+
+
+
+
+
+
+
+
+
+
 
 <h1>Calculator</h1>
-<div>
-    <table>
-        <tr>
-            <td>
-                <div class="input-container">
-                    <label for="sulforInput">
-                        <div class="input-image2">
-                            <img src="img/sulfur.png" alt="Sulfor">
-                        </div>
-                    </label>
-                    <input type="number" id="sulforInput" min="0" value="0">
-                </div>
-            </td>
-            <td rowspan="4">
-                <p id="result"></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="input-container">
-                    <label for="gunpowderInput">
-                        <div class="input-image2">
-                            <img src="img/gunpowder.png" alt="Gunpowder">
-                        </div>
-                    </label>
-                    <input type="number" id="gunpowderInput" min="0" value="0">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="input-container">
-                    <label for="dieselInput">
-                        <div class="input-image2">
-                            <img src="img/diesel_barrel.png" alt="Diesel">
-                        </div>
-                    </label>
-                    <input type="number" id="dieselInput" min="0" value="0">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="switch-container">
-                    <label class="switch">
-                        <input type="checkbox" id="switchInput">
-                        <span class="slider"></span>
-                    </label>
-                    <span id="switchLabel">Sulfur Quarry</span>
-                </div>
-            </td>
-        </tr>
+
+<table class="Calculator_1">
+    <thead>
+      <tr>
+        <th colspan="8"><h2>Calc your boom</h2></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="8">
+            <p>How many resources do you have at the moment?</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <div class="resource-container">
+                <img src="img/sulfur.png" alt="Sulfur:">
+                <input type="number" id="Sulfor_input" placeholder="Sulfur you have">
+            </div>
+        </td>
+        <td>
+            <div class="resource-container">
+                <img src="img/gunpowder.png" alt="Gun Powder:">
+                <input type="number" id="Gun_Powder_input" placeholder="Gun Powder you have">
+            </div>
+        </td>
+        <td>
+            <div class="resource-container">
+                <img src="img/explosives.png" alt="explosives:">
+                <input type="number" id="explosives_input" placeholder="explosives you have">
+            </div>
+        </td>
+        <td>
+            <div class="resource-container">
+                <img src="img/lowgradefuel.png" alt="Glowgradefuel:">
+                <input type="number" id="lowgradefuel_input" placeholder="lowgradefuel you have">
+            </div>
+        </td>
+        <td>
+            <div class="resource-container">
+                <img src="img/diesel_barrel.png" alt="diesel barrel:">
+                <input type="number" id="diesel_barrel_input" placeholder="diesel barrel you have">
+                
+            </div>
+        </td>
+        <td colspan="3">
+            <div class="switch-container">
+                <label class="switch">
+                    <input type="checkbox" id="switchInput">
+                    <span class="slider"></span>
+                </label>
+                <span id="switchLabel">Q_to_G_switch</span>
+            </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="8"><p>Boom you can Craft</p></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+            <img src="img/grenade.molotov.png" alt="molotov"><div id="molow_sum"></div>
+        </td>
+        <td>
+            <img src="img/explosive.satchel.png" alt="satchel"><div id="satchel_sum"></div>
+        </td>
+        <td>
+          <img src="img/ammo.rocket.basic.png" alt="rocket"><div id="rocket_sum"></div>
+        </td>
+        <td>
+          <img src="img/ammo.rifle.explosive.png" alt="rocket"><div id="explo_ammo_sum"></div>
+        </td>
+        <td>
+          <img src="img/explosive.timed.png" alt="c4"><div id="c4_sum"></div>
+        </td>
+        <td>
+          <img src="img/ammo.rocket.hv.png" alt="hv"><div id="hv_sum"></div>
+        </td>
+        <td>
+          <img src="img/ammo.rocket.fire.png" alt="Incendiary Rocket"><div id="ir_sum"></div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="8"><p>Materials you need for crafting</p></td>
+      </tr>
+      <tr>
+        <td><img src="img/gunpowder.big.png" alt="gunpowder"></td>
+        <td></td>
+        <td><div id="satchel_material_gunpowder"></div></td>
+        <td><div id="rocket_material_gunpowder"></div></td>
+        <td><div id="explo_ammo_material_gunpowder"></div></td>
+        <td><div id="c4_material_gunpowder"></div></td>
+        <td><div id="hv_material_gunpowder"></div></td>
+        <td><div id="ir_material_gunpowder"></div></td>
+      </tr>
+      <tr>
+        <td><img src="img/sulfur.big.png" alt="sulfur"></td>
+        <td></td>
+        <td></div></td>
+        <td></div></td>
+        <td><div id="explo_ammo_material_sulfur"></div></td>
+        <td><div id="c4_material_sulfur"></div></td>
+        <td><div id="hv_material_sulfur"></div></td>
+        <td><div id="ir_material_sulfur"></div></td>
+      </tr>
+      <tr>
+        <td><img src="img/charcoal.png" alt="charcoal"></td>
+        <td></td>
+        <td><div id="satchel_material_charcoal"></div></td>
+        <td><div id="rocket_material_charcoal"></div></td>
+        <td><div id="explo_ammo_material_charcoal"></div></td>
+        <td><div id="c4_material_charcoal"></div></td>
+        <td><div id="hv_material_charcoal"></div></td>
+        <td><div id="ir_material_charcoal"></div></td>
+      </tr>
+      <tr>
+        <td><img src="img/metal.fragments.png" alt="metal"></td>
+        <td></td>
+        <td><div id="satchel_material_metal"></div></td>
+        <td><div id="rocket_material_metal"></div></td>
+        <td><div id="explo_ammo_material_metal"></div></td>
+        <td><div id="c4_material_metal"></div></td>
+        <td></div></td>
+        <td><div id="ir_material_metal"></div></td>
+      </tr>
+      <tr>
+        <td><img src="img/lowgradefuel_big.png" alt="fuel"></td>
+        <td><div id="molow_material_fuel"></div></td>
+        <td></div></td>
+        <td><div id="rocket_material_fuel"></div></td>
+        <td></div></td>
+        <td><div id="c4_material_fuel"></div></td>
+        <td></td>
+        <td><div id="ir_material_fuel"></div></td>
+      </tr>
+      <tr>
+        <td><img src="img/cloth.png" alt="cloth"></td>
+        <td><div id="molow_material_cloth"></div></td>
+        <td><div id="satchel_material_cloth"></div></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><img src="img/metalpipe.png" alt="pipe">
+          <td></td>
+          <td></td>
+          <td><div id="rocket_material_pipe"></div></td>
+          <td></td>
+          <td></td>
+          <td><div id="hv_material_pipe"></div></td>
+          <td><div id="ir_material_pipe"></div></td>
+      </tr>
+      <tr>
+        <td><img src="img/techparts.png" alt="techparts">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><div id="c4_material_tech_trash"></div></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><img src="img/rope.png" alt="robe">
+        <td><div id="satchel_material_rope"></div></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+
+      
     </table>
-</div>
+
 
 <div class="bottom-images">
     <a href="https://github.com/NapoII/Rust-Collection/"><img src="https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F" alt="website"></a>
@@ -92,9 +231,12 @@
 </div>
 
 
-<script src="js/script.js"></script>
+<script src="js/text_to_tab.js"></script>
 <script src="js/console_alert.js"></script>
 <script src="js/back_to_home.js"></script>
+<script src="js/q_g_switch.js"></script>
+<script src="js/raid_calc.js"></script>
+
 
 </body>
 
