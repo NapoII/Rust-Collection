@@ -176,3 +176,30 @@ hr {
 .card.no-pointer-cursor:hover {
   cursor: auto; /* Standard-Mauszeiger für gehoverte Karten mit .no-pointer-cursor */
 }
+
+.card {
+  position: relative;
+}
+
+.banderole {
+  position: absolute;
+  top: 0;
+  right: -200px; /* Anpassen, um die Bandarole in der Ecke zu halten */
+  width: 500px; /* Breite der Bandarole vergrößern */
+  height: 40px; /* Höhe der Bandarole anpassen */
+  background-color: #ff0000; /* Farbe der Bandarole anpassen */
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 45px; /* Platz auf der linken Seite hinzufügen */
+  z-index: 5; /* Die Bandarole über dem Karteninhalt positionieren */
+}
+
+
+.banderole-text {
+  color: white; /* Textfarbe anpassen */
+  font-weight: bold;
+  font-family: 'Roboto', Arial, sans-serif;
+
+}
