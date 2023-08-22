@@ -181,4 +181,10 @@ function updateValues() {
     document.getElementById('ir_material_metal').textContent = `${ir_material_metal}`;
     document.getElementById('ir_material_fuel').textContent = `${ir_material_fuel}`;
     document.getElementById('ir_material_pipe').textContent = `${ir_material_pipe}`;
+
+
+    /////////// From Boom to craft
+
+    
+
 }
