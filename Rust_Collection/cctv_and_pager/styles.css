@@ -47,8 +47,7 @@ body {
     display: block; /* Hier die Änderung */
     cursor: pointer;
     padding: 10px 0;
-    text-align: left;
-    border: none;
+    text-align: center; /* Text horizontal zentriert */    border: none;
     outline: none;
     transition: 0.4s;
   }
@@ -78,20 +77,23 @@ body {
     background-color: var(--h);
     color: white;
     border: none;
-    padding: 100px 200px; /* Hier habe ich das padding für links/rechts erhöht */
+    padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.1s ease;
     opacity: 0.7;
+    width: 200px; /* Feste Breite für die Buttons */
+    text-align: center; /* Text horizontal zentriert */
   }
-  
-  
   
   button:hover {
     cursor: pointer;
     background-color: darken(var(--h), 90%);
   }
+  
+  
+  
 
 
   .link-button {
