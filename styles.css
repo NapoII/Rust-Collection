@@ -202,5 +202,11 @@ hr {
   color: white; /* Textfarbe anpassen */
   font-weight: bold;
   font-family: 'Roboto', Arial, sans-serif;
+}
 
+.sticky-title {
+  position: sticky;
+  top: 0;
+  background-color: var(--h); /* Hintergrundfarbe, um den Text lesbar zu machen */
+  z-index: 100; /* Falls andere Elemente darüber liegen, um den Titel sichtbar zu halten */
 }
