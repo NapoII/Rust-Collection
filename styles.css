@@ -2,8 +2,8 @@
 @font-face {
   font-family: 'Rust';
   src: url('Rust.ttf') format('truetype');
-  letter-spacing: 1px; /* Adjust the value as needed */
 }
+
 
 @font-face {
   font-family: 'Roboto';
@@ -92,6 +92,7 @@ body {
 .top-section {
   font-family: 'Rust', Arial, sans-serif; /* Use 'Rust' font for headings */
   flex: 1;
+  letter-spacing: 1.5px; /* Anpassung des Zeichenabstands */
   display: flex;
   flex-direction: column;
   justify-content: center;
