@@ -65,25 +65,36 @@
     </div>
 
 
+
+
+
+
+
+
+
+
     <div class="card" onclick="openLink('https://twitch.facepunch.com/#drops')">
       <div class="background-image" style="background-image: url('img/twitch-logo.png');"></div>
       <div class="content">
-        <div class="top-section">
-          <h2>Twitch Drops</h2>
-          <div class="card-info">
-            <hr>
-            Event
+          <div class="top-section">
+              <h2>Twitch Drops</h2>
+              <div class="card-info">
+                  <hr>
+                  Event
+              </div>
           </div>
-        </div>
-        <div class="bottom-section">
-          <p>Pick up your Free Rust Skins at Events</p>
-          <div class="card-info">
-            <hr>
-            3
+          <div class="bottom-section">
+              <p>Pick up your Free Rust Skins at Events</p>
+              <div class="twitch-bandarole">
+              <span id="countdown_twitch"></span>
+              </div>
+              <div class="card-info">
+                  <hr>
+                  3
+              </div>
           </div>
-        </div>
       </div>
-    </div>
+  </div>
 
   </div>
 
@@ -91,7 +102,7 @@
 
   <div class="card-section">
     <h2 class="sticky-title">Tools</h2>
-  
+
     <div class="card no-pointer-cursor">
       <div class="background-image" style="background-image: url('img/labs.png');"></div>
       <div class="content">
@@ -115,10 +126,11 @@
     </div>
 
 
+
     <div class="card" onclick="openLink('Rust_Collection/Raid_Calc/raid_calc.html')">
-      <!-- <div class="banderole">
-        <span class="banderole-text">"UPDATE</span>
-      </div> -->
+      <!-- '      <div class="banderole">
+      <span class="banderole-text">"UPDATE</span>
+    </div> -->
       <div class="background-image" style="background-image: url('img/raid.png');"></div>
       <div class="content">
         <div class="top-section">
@@ -293,7 +305,7 @@
   <hr>
 
   <div class="card-section">
-    <h2 class="sticky-title"> Guides</h2> 
+    <h2 class="sticky-title"> Guides</h2>
 
     <div class="card" onclick="openLink('https://steamcommunity.com/sharedfiles/filedetails/?id=2493654016')">
       <div class="background-image" style="background-image: url('img/bind.png');"></div>
@@ -384,7 +396,7 @@
   <hr>
 
   <div class="card-section">
-    <h2 class="sticky-title"> News</h2> 
+    <h2 class="sticky-title"> News</h2>
 
     <div class="card" onclick="openLink('https://rust.facepunch.com/changes')">
       <div class="background-image" style="background-image: url('img/update.png');"></div>
@@ -466,6 +478,7 @@
   <script src="js/performSearch.js"></script>
   <script src="js/calculateWipeCountdown.js"></script>
   <script src="js/console_alert.js"></script>
+  <script src="js/twitch_drops_countdown.js"></script>
   <script>
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -477,7 +490,6 @@
       updateWipeCountdown();
       calculateThursdayCountdown();
     });
-
 
   </script>
 </body>

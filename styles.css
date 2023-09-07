@@ -210,3 +210,23 @@ hr {
   background-color: var(--h); /* Hintergrundfarbe, um den Text lesbar zu machen */
   z-index: 100; /* Falls andere Elemente darüber liegen, um den Titel sichtbar zu halten */
 }
+
+
+ /* Twitch-Farben */
+ .twitch-bandarole {
+  background-color: #6441A4; /* Purple */
+  color: white;
+  padding: 30px;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+
+/* Stile für den Countdown-Text */
+#countdown_twitch {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

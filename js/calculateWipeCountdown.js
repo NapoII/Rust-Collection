@@ -1,46 +1,59 @@
-// https://github.com/NapoII/Rust-Collection
-
-
-/**
- * Calculates the countdown until the next scheduled event (wipe) at 8:00 PM on the first Thursday of the next month.
- */
 function calculateWipeCountdown() {
   const now = new Date();
   const nextMonth = new Date(now);
   nextMonth.setMonth(nextMonth.getMonth() + 1);
   nextMonth.setDate(1);
 
-  // Find the first Thursday of the next month
-  while (nextMonth.getDay() !== 4) { // 4 represents Thursday (Sunday = 0, Monday = 1, ..., Saturday = 6)
-    nextMonth.setDate(nextMonth.getDate() + 1);
-  }
-
+  // Setzen Sie die Uhrzeit auf 20:00 Uhr und 0 Minuten und 0 Sekunden
   nextMonth.setHours(20);
   nextMonth.setMinutes(0);
   nextMonth.setSeconds(0);
 
+  // Suchen Sie nach dem ersten Donnerstag im nächsten Monat
+  while (nextMonth.getDay() !== 4) { // 4 entspricht Donnerstag (Sonntag = 0, Montag = 1, ..., Samstag = 6)
+    nextMonth.setDate(nextMonth.getDate() + 1);
+  }
+
+  // Überprüfen Sie, ob der erste Donnerstag in der Zukunft liegt
+  if (nextMonth < now) {
+    nextMonth.setMonth(nextMonth.getMonth() + 1);
+    nextMonth.setDate(1);
+
+    // Suchen Sie erneut nach dem ersten Donnerstag im nächsten Monat
+    while (nextMonth.getDay() !== 4) {
+      nextMonth.setDate(nextMonth.getDate() + 1);
+    }
+  }
+
   const difference = nextMonth - now;
 
-  // Calculate the remaining days, hours, and minutes
-  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((difference / (1000 * 60)) % 60);
+  // Überprüfen Sie, ob die aktuelle Zeit bereits in der Vergangenheit liegt
+  if (difference <= 0) {
+    // Wenn ja, fügen Sie einen weiteren Monat hinzu und suchen Sie nach dem ersten Donnerstag
+    nextMonth.setMonth(nextMonth.getMonth() + 1);
+    nextMonth.setDate(1);
 
-  // Create the countdown text with the next scheduled event date and time
-  const countdownText = `${nextMonth.toDateString()} <hr>  ${days} days<br>${hours} hours<br>${minutes} minutes`;
-  
-  // Update the HTML element with the countdown text
+    while (nextMonth.getDay() !== 4) {
+      nextMonth.setDate(nextMonth.getDate() + 1);
+    }
+  }
+
+  const newDifference = nextMonth - now;
+
+  const days = Math.floor(newDifference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((newDifference / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((newDifference / (1000 * 60)) % 60);
+
+  const countdownText = `${nextMonth.toDateString()} <hr> ${days} Tage<br>${hours} Stunden<br>${minutes} Minuten`;
+
   const countdownElement = document.getElementById("countdown");
   countdownElement.innerHTML = countdownText;
 
-  // Schedule the function to be called again after 1 second
   setTimeout(calculateWipeCountdown, 1000);
 }
 
-/**
- * Updates the countdown for the scheduled event every second.
- */
 function updateWipeCountdown() {
   calculateWipeCountdown();
-  setTimeout(updateWipeCountdown, 1000);
 }
+
+updateWipeCountdown();
