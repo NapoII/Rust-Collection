@@ -44,7 +44,7 @@ function calculateWipeCountdown() {
   const hours = Math.floor((newDifference / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((newDifference / (1000 * 60)) % 60);
 
-  const countdownText = `${nextMonth.toDateString()} <hr> ${days} Tage<br>${hours} Stunden<br>${minutes} Minuten`;
+  const countdownText = `${nextMonth.toDateString()} <hr> ${days} Days<br>${hours} Hours<br>${minutes} Minutes`;
 
   const countdownElement = document.getElementById("countdown");
   countdownElement.innerHTML = countdownText;
