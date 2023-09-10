@@ -75,25 +75,25 @@
     <div class="card" onclick="openLink('https://twitch.facepunch.com/#drops')">
       <div class="background-image" style="background-image: url('img/twitch-logo.png');"></div>
       <div class="content">
-          <div class="top-section">
-              <h2>Twitch Drops</h2>
-              <div class="card-info">
-                  <hr>
-                  Event
-              </div>
+        <div class="top-section">
+          <h2>Twitch Drops</h2>
+          <div class="card-info">
+            <hr>
+            Event
           </div>
-          <div class="bottom-section">
-              <p>Pick up your Free Rust Skins at Events</p>
-              <div class="twitch-bandarole">
-              <span id="countdown_twitch"></span>
-              </div>
-              <div class="card-info">
-                  <hr>
-                  3
-              </div>
+        </div>
+        <div class="bottom-section">
+          <p>Pick up your Free Rust Skins at Events</p>
+          <div class="twitch-bandarole">
+            <span id="countdown_twitch"></span>
           </div>
+          <div class="card-info">
+            <hr>
+            3
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
 
   </div>
 
@@ -450,16 +450,19 @@
           </div>
         </div>
         <div class="bottom-section">
-          <p>online:
-            <span class="BZonline"></span>
-            today:
-            <span class="BZheute"></span>
-            yesterday:
-            <span class="BZgestern"></span>
-            Total:
-            <span class="BZgesamt"></span>
-            since:
-            <span class="BZseit"></span> </p>
+
+          <p>
+          <div class="counter-container">
+            <p> Visitors since 10.09.2023</p>
+            <div class="counterapi" noIcon="true" noCss="true" label="- Total" abbreviate="true" noLink="ture"></div>
+            <div class="counterapi" key="visitors-today" label="- Today" noIcon="true" noCss="true" abbreviate="true"
+              noLink="ture"></div>
+            <div class="counterapi" key="visits-last-10min" label="- Last 10 min" timeline="10m" noIcon="true"
+              noCss="true" abbreviate="true" noLink="ture"></div>
+          </div>
+
+          </p>
+
           <a href="https://github.com/NapoII/Rust-Collection/"><img
               src="https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F"
               alt="website"></a>
@@ -470,26 +473,6 @@
               src="https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social" alt="github/stars"></a>
           <a href="https://discord.gg/knTKtKVfnr"><img src="https://img.shields.io/discord/190307701169979393"
               alt="discord"></a>
-
-
-
-
-
-
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           <div class="card-info">
             <hr>
@@ -508,7 +491,9 @@
   <script src="js/calculateWipeCountdown.js"></script>
   <script src="js/console_alert.js"></script>
   <script src="js/twitch_drops_countdown.js"></script>
-  <script language="JavaScript" src="https://www.besucherzaehler-kostenlos.de/js/counter.js.php?count=1&id=qLm5MBlI0r&start=0&design=1g"></script>
+
+  <script src="https://counterapi.com/c.js?ns=Rust-Collection" async></script>
+
   <script>
 
     document.addEventListener("DOMContentLoaded", function () {

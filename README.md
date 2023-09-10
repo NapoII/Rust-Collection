@@ -7,6 +7,8 @@
 [Rust-Collection](https://napoii.github.io/Rust-Collection/)
 https://napoii.github.io/Rust-Collection/
 
+[Visitor statistics](https://counterapi.com/stats/Rust-Collection)
+
 This website is a comprehensive collection of links related to the game Rust. Here you will find a variety of useful resources, guides and community servers that can help you better understand the game and improve your skills.
 
 [Rust-Collection](https://napoii.github.io/Rust-Collection/)
