@@ -443,18 +443,28 @@
         </div>
         <div class="bottom-section">
 
-          <p>
-          <div class="counter-container">
-            <p> Visitors since 10.09.2023</p>
-            <div class="counterapi" key="total-visitors" noIcon="true" noCss="true" label="- Total" abbreviate="true"
-              noLink="ture"></div>
-            <div class="counterapi" key="visitors-today" label="- Today" noIcon="true" noCss="true" abbreviate="true"
-              noLink="ture"></div>
-            <div class="counterapi" key="visits-last-10min" label="- Last 10 min" timeline="10m" noIcon="true"
-              noCss="true" abbreviate="true" noLink="ture"></div>
-          </div>
-
-          </p>
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2">Visitors since 10.09.2023</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Now</td>
+                <td><div class="counterapi" key="now"  timeline="60m" noIcon="true" noCss="true" abbreviate="true" noLink="ture"></td>
+              </tr>
+              <tr>
+                <td>Today</td>
+                <td><div class="counterapi" key="visitors-today" noIcon="true" noCss="true" abbreviate="true"noLink="ture"></div>                </td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td><div class="counterapi" key="total-visitors" noIcon="true" noCss="true" abbreviate="true"noLink="ture"></div>
+                </td>
+              </tr>
+            </tbody>
+            </table>
 
           <a href="https://github.com/NapoII/Rust-Collection/"><img
               src="https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F"
@@ -465,13 +475,15 @@
           <a href="https://discord.gg/knTKtKVfnr"><img src="https://img.shields.io/discord/190307701169979393"
               alt="discord"></a>
 
-          <div class="card-info">
-            <hr>
-            3
+              <p></p>
+              <div class="card-info">
+                <hr>
+                3
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+    
 
   </div>
 
