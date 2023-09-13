@@ -22,8 +22,14 @@
   <div class="card-section">
     <h2 class="sticky-title"> Events</h2>
 
-    <div class="card" id="countdown-card" onclick="openLink('https://just-wiped.net/')">
+
+
+    
+    <div class="card" onclick="openLink('https://just-wiped.net/')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/nuke.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/nuke.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>Next Force Wipe</h2>
@@ -43,8 +49,11 @@
     </div>
 
 
-    <div class="card" id="countdown-card" onclick="openLink('https://www.reddit.com/user/Rusty-Helper-Bot/?sort=new')">
+    <div class="card" onclick="openLink('https://www.reddit.com/user/Rusty-Helper-Bot/?sort=new')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/skins.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/skins.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>New Skins in Store</h2>
@@ -64,8 +73,11 @@
     </div>
 
 
-    <div class="card" onclick="openLink('https://twitch.facepunch.com/#drops')">
+    <div class="card" onclick="openLink('https://twitch.facepunch.com/#drops')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/twitch-logo.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/twitch-logo.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>Twitch Drops</h2>
@@ -94,8 +106,12 @@
   <div class="card-section">
     <h2 class="sticky-title">Tools</h2>
 
-    <div class="card no-pointer-cursor">
+
+    <div class="card no-pointer-cursor" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/labs.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/labs.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>Rust-Labs</h2>
@@ -117,12 +133,14 @@
     </div>
 
 
-
-    <div class="card" onclick="openLink('Rust_Collection/Raid_Calc/raid_calc.html')">
+    <div class="card" onclick="openLink('Rust_Collection/Raid_Calc/raid_calc.html')" onmouseover="showVideo()" onmouseout="hideVideo()">
+      <div class="background-image" style="background-image: url('img/raid.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/raid.mp4" type="video/mp4">
+      </video>
       <!-- '      <div class="banderole">
       <span class="banderole-text">"UPDATE</span>
     </div> -->
-      <div class="background-image" style="background-image: url('img/raid.png');"></div>
       <div class="content">
         <div class="top-section">
           <h2>Raid Calc</h2>
@@ -141,12 +159,12 @@
       </div>
     </div>
 
-
-    <div class="card" onclick="openLink('Rust_Collection/cctv_and_pager/cctv_and_pager.html')">
-      <!-- <div class="banderole">
-        <span class="banderole-text">NEW</span>
-      </div> -->
+    
+    <div class="card" onclick="openLink('Rust_Collection/cctv_and_pager/cctv_and_pager.html')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/cctv.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/cctv.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>CCTV Showcase</h2>
@@ -156,7 +174,7 @@
           </div>
         </div>
         <div class="bottom-section">
-          <p>Quick selection for your computer one click right automatically copy code to clipbpard</p>
+          <p>Quick selection for your computer one click right automatically copy code to clipboard</p>
           <div class="card-info">
             <hr>
             2
@@ -164,10 +182,14 @@
         </div>
       </div>
     </div>
+    
 
 
-    <div class="card" onclick="openLink('Rust_Collection/Diesel_Calc/diesel_calc.html')">
+    <div class="card" onclick="openLink('Rust_Collection/Diesel_Calc/diesel_calc.html')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/diesel_barrel.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video//diesel_barrel.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>Diesel Calc</h2>
@@ -187,8 +209,11 @@
     </div>
 
 
-    <div class="card" onclick="openLink('https://www.rustbreeder.com/')">
+    <div class="card" onclick="openLink('https://www.rustbreeder.com/')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/clone.hemp.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/clone.hemp.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>Clone Calc</h2>
@@ -208,8 +233,11 @@
     </div>
 
 
-    <div class="card" onclick="openLink('https://www.battlemetrics.com/')">
+    <div class="card" onclick="openLink('https://www.battlemetrics.com/')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/BM.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/BM.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>Battle metrics</h2>
@@ -229,8 +257,11 @@
     </div>
 
 
-    <div class="card" onclick="openLink('https://www.rustrician.io/')">
+    <div class="card" onclick="openLink('https://www.rustrician.io/')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/wiretool.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/wiretool.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>Electrical Planner</h2>
@@ -250,8 +281,11 @@
     </div>
 
 
-    <div class="card" onclick="openLink('https://rustmaps.com/')">
+    <div class="card" onclick="openLink('https://rustmaps.com/')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/map.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/map.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>Rust Maps</h2>
@@ -271,8 +305,11 @@
     </div>
 
 
-    <div class="card" onclick="openLink('https://rusttips.com/rust-aim-training/')">
+    <div class="card" onclick="openLink('https://rusttips.com/rust-aim-training/')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/aim.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/aim.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>Aim Sim</h2>
@@ -298,8 +335,11 @@
   <div class="card-section">
     <h2 class="sticky-title"> Guides</h2>
 
-    <div class="card" onclick="openLink('https://steamcommunity.com/sharedfiles/filedetails/?id=2493654016')">
+    <div class="card" onclick="openLink('https://steamcommunity.com/sharedfiles/filedetails/?id=2493654016')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/bind.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/bind.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>Must-have Extra Bind</h2>
@@ -319,8 +359,11 @@
     </div>
 
 
-    <div class="card" onclick="openLink('https://steamcommunity.com/sharedfiles/filedetails/?id=2428742835')">
+    <div class="card" onclick="openLink('https://steamcommunity.com/sharedfiles/filedetails/?id=2428742835')" onmouseover="showVideo()" onmouseout="hideVideo()">
       <div class="background-image" style="background-image: url('img/monoment_guide.png');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="/video/monoment_guide.mp4" type="video/mp4">
+      </video>
       <div class="content">
         <div class="top-section">
           <h2>Monument Guides</h2>
@@ -412,6 +455,7 @@
 
     <div class="card" onclick="openLink('https://commits.facepunch.com/r/rust_reboot')">
       <div class="background-image" style="background-image: url('img/git.png');"></div>
+      
       <div class="content">
         <div class="top-section">
           <h2>Rust Facepunch Git</h2>

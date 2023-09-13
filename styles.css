@@ -50,6 +50,26 @@ body {
   color: var(--font); /* Textfarbe in var(--font) */
 }
 
+/* Standardmäßig das Video ausblenden */
+.background-video {
+  display: none;
+}
+
+/* Standardmäßig das Bild anzeigen */
+.background-image {
+  display: block;
+}
+
+/* Zeigen Sie das Video an, wenn der Benutzer mit der Maus über die Karte schwebt */
+.card:hover .background-video {
+  display: block;
+}
+
+/* Verbergen Sie das Bild, wenn der Benutzer mit der Maus über die Karte schwebt */
+.card:hover .background-image {
+  display: none;
+}
+
 
 .card:hover {
   /* transform: scale(1.35) rotateX(15deg) rotateY(15deg);*/
@@ -75,6 +95,17 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Stellt sicher, dass das Video den gesamten Container abdeckt */
   opacity: 0.2;
   z-index: -1;
 }
