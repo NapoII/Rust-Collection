@@ -10,7 +10,7 @@ function startCountdown() {
 
         // Überprüfen, ob das Ziel-Datum erreicht wurde
         if (timeDifference <= 0) {
-            document.getElementById('countdown_twitch').textContent = 'Event has started!';
+            document.getElementById('countdown_twitch').textContent = 'The event is over!';
             clearInterval(countdownInterval); // Countdown beenden
         } else {
             // Countdown aktualisieren
