@@ -297,3 +297,9 @@ hr {
   cursor: pointer;
   border-radius: 5px;
 }
+
+iframe {
+  width: 100%;
+  height: 500px; /* Hier kannst du die Höhe anpassen */
+  border: none; /* Entfernt den Rahmen des IFrames */
+}
