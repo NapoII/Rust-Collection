@@ -1,10 +1,10 @@
 import discord
 
 # Deine Discord-Bot-Token hier einfügen
-TOKEN = "MTEwMzQwNzU1MDkxOTA4NjE1MQ.G62_r9.JlToa3sMEkAUJ-pimiMu5a72oXgLJ0INSDkrRA"
+TOKEN = ""
 
 # Deine vorgegebene Channel-ID hier einfügen
-CHANNEL_ID = 1152314539757555724  # Hier die richtige Channel-ID eintragen
+CHANNEL_ID =   # Hier die richtige Channel-ID eintragen
 
 website_url = "https://napoii.github.io/Rust-Collection/"
 
@@ -51,7 +51,8 @@ Happy suggesting! 🌐
 
     # Add a field with a link
     website_url = "https://napoii.github.io/Rust-Collection/"
-    embed.add_field(name="Rust-Collection", value=f"[Lets go to Rust-Collection]({website_url})")
+    embed.add_field(name="Rust-Collection",
+                    value=f"[Lets go to Rust-Collection]({website_url})")
 
     await channel.send(embed=embed)
 
