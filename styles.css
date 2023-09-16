@@ -78,7 +78,7 @@ body {
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Add a red glow with some transparency */
   z-index: 1; /* Bring the hovered card above other cards */
-  cursor: pointer;
+  cursor: pointer
 }
 
 .card-container {
@@ -101,6 +101,7 @@ body {
   z-index: -1;
 }
 
+
 .background-video {
   position: absolute;
   top: 0;
@@ -108,7 +109,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Stellt sicher, dass das Video den gesamten Container abdeckt */
-  opacity: 0.2;
+  opacity: 0.5;
   z-index: -1;
 }
 
@@ -125,15 +126,17 @@ body {
 }
 
 .top-section {
-  font-family: 'Rust', Arial, sans-serif; /* Use 'Rust' font for headings */
+  font-family: 'Rust', Arial, sans-serif;
   flex: 1;
-  letter-spacing: 1.5px; /* Anpassung des Zeichenabstands */
+  letter-spacing: 1.5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--h);
+  background-color: rgba(0, 0, 0, 0.35); /* Schwarzer Hintergrund mit 20% Transparenz */
 }
+
 
 .bottom-section {
   flex: 2;
@@ -151,6 +154,7 @@ body {
   font-size: 10px; /* Kleiner Schriftgrad */
   color: var(--font); /* Farbe des Texts */
   opacity: 0.5;
+
 }
 
 .top-section .card-info {
@@ -158,6 +162,7 @@ body {
   bottom: 0;
   left: 0;
   padding: 5px;
+
 }
 
 .bottom-section .card-info {
@@ -165,6 +170,7 @@ body {
   bottom: 0;
   right: 0;
   padding: 5px;
+
 }
 
 input[type="text"] {
@@ -188,7 +194,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: darken(var(--h), 90%);
+  background-color: darken(var(--h), 50%);
 }
 
 .card-section {
@@ -266,14 +272,6 @@ hr {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-:root {
-  --bg1: #0D0D0D; /* Background color 1 */
-  --bg2: #272322; /* Background color 2 */
-  --font: #d7cdc4; /* Font color */
-  --modulBg: rgba(15, 14, 14, 1); /* Transparent background of the cards */
-  --h: #D93E30; /* Heading color */
 }
 
 
