@@ -2,3 +2,15 @@ console.log("%cHello, curious explorer! 👋\n%cIf you've ventured into the cons
 "color: #f8f8f2; background-color: #282a36; font-size: 16px; font-weight: bold; padding: 8px;",
 "color: #50fa7b; font-size: 14px;"
 );
+
+console.log(
+    "%cDiscord: %chttps://discord.gg/Gd23KJ76Tq",
+    "color: #f8f8f2; background-color: #282a36; font-size: 16px; font-weight: bold; padding: 8px;",
+    "color: #50fa7b; text-decoration: underline;"
+  );
+  
+  console.log(
+    "%cGitHub: %chttps://github.com/NapoII/Rust-Collection",
+    "color: #f8f8f2; background-color: #282a36; font-size: 16px; font-weight: bold; padding: 8px;",
+    "color: #50fa7b; text-decoration: underline;"
+  );
