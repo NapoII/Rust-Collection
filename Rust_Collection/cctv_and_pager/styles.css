@@ -113,3 +113,22 @@ body {
     background-color: #C33429;
   }
   
+
+  .clipboard-notification {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bg2);
+    color: var(--font);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+    z-index: 9999;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .clipboard-notification:hover {
+    opacity: 1;
+  }
+  

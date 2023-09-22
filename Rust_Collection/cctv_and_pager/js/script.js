@@ -43,4 +43,15 @@ function copyToClipboard(text) {
   textarea.select();
   document.execCommand("copy");
   document.body.removeChild(textarea);
+
+  // Benachrichtigung anzeigen
+  const notification = document.createElement("div");
+  notification.innerText = `"${text}" was added to the clipboard`;
+  notification.classList.add("clipboard-notification");
+  document.body.appendChild(notification);
+
+  // Benachrichtigung nach 3 Sekunden ausblenden
+  setTimeout(function () {
+    document.body.removeChild(notification);
+  }, 3000);
 }
