@@ -5,9 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
       let mouseX = 0;
       let mouseY = 0;
       let isHovered = false;
+      let rotateX = 0;
+      let rotateY = 0;
   
       card.addEventListener('mouseenter', () => {
         isHovered = true;
+        requestAnimationFrame(animateCard);
       });
   
       card.addEventListener('mousemove', (event) => {
@@ -20,24 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
   
       card.addEventListener('mouseleave', () => {
         isHovered = false;
+        requestAnimationFrame(animateCard);
       });
   
-      function updateCardPosition() {
+      function animateCard() {
         const maxRotation = 30; // Maximaler Rotationswinkel in Grad
   
         if (isHovered) {
-          const rotateX = -mouseY * maxRotation;
-          const rotateY = mouseX * maxRotation;
-  
-          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
+          rotateX = -mouseY * maxRotation;
+          rotateY = mouseX * maxRotation;
         } else {
-          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+          rotateX = 0;
+          rotateY = 0;
         }
   
-        requestAnimationFrame(updateCardPosition);
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.1)`;
+  
+        if (isHovered || Math.abs(rotateX) > 1 || Math.abs(rotateY) > 1) {
+          requestAnimationFrame(animateCard);
+        }
       }
   
-      updateCardPosition(); // Starte die Aktualisierung der Kartenposition
+      animateCard(); // Starte die Animation
     });
   });
   

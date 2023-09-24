@@ -16,6 +16,7 @@
 
 
 :root {
+  --mainbg: #161618;
   --bg1: #0D0D0D; /* Background color 1 */
   --bg2: #272322; /* Background color 2 */
   --font: #d7cdc4; /* Font color */
@@ -24,7 +25,7 @@
 }
 
 body {
-  background-color: var(--bg1);
+  background-color: var(--mainbg);
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -47,8 +48,8 @@ body {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 20px; /* Abstand nach unten zur nächsten Karte */
-  border: 1px solid black; /* Transparenter Rahmen */
+  margin-bottom: 50px; /* Abstand nach unten zur nächsten Karte */
+  border: 1px solid var(--bg1); /* Transparenter Rahmen */
   color: var(--font); /* Textfarbe in var(--font) */
 }
 
@@ -74,11 +75,47 @@ body {
 
 
 .card:hover {
-  transform: perspective(1000px) rotateX(10deg) rotateY(10deg) scale(1.1);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  z-index: 1;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transform: scale(1.35) rotateX(15deg) rotateY(15deg);*/
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Add a red glow with some transparency */
+  z-index: 1; /* Bring the hovered card above other cards */
+  cursor: pointer
+}
+
+
+/* Fügen Sie die Klasse .holo-card hinzu */
+.holo-card {
+  /* ... Ihre anderen Karten-Stile bleiben unverändert ... */
+  background-color: transparent; /* Hintergrundfarbe transparent machen */
+  box-shadow: none; /* Schatten entfernen */
+  position: relative; /* Erforderlich, um das Overlay zu positionieren */
+}
+
+/* Stil für das Overlay */
+.holo-card .holo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/holo/rainbow.jpg'); /* Ihre Holo-Textur */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1; /* Einstellen der gewünschten Transparenz */
+  z-index: -1; /* Hinter das Karten-Element setzen */
+}
+
+/* Fügen Sie die Klasse .holo-card hinzu */
+.holo-card .background-image {
+  opacity: 0.3; /* Vollständige Anzeige des Hintergrunds */
+}
+
+.holo-card:hover .background-image {
+  opacity: 0.5; /* Reduzieren Sie die Hintergrundtransparenz beim Schweben */
+}
+
+.holo-card:hover .holo-overlay {
+  opacity: 0.5; /* Zeigen Sie das Holo-Overlay an, wenn die Karte schwebt */
 }
 
 
@@ -92,7 +129,7 @@ body {
 
 .background-image {
   position: absolute;
-  top: 0;
+  top: 50px; /* Passen Sie den Wert entsprechend an, um das Video tiefer zu positionieren */
   left: 0;
   width: 100%;
   height: 100%;
@@ -105,7 +142,7 @@ body {
 
 .background-video {
   position: absolute;
-  top: 0;
+  top: 50px; /* Passen Sie den Wert entsprechend an, um das Video tiefer zu positionieren */
   left: 0;
   width: 100%;
   height: 100%;
@@ -113,6 +150,7 @@ body {
   opacity: 0.5;
   z-index: -1;
 }
+
 
 
 .content {
@@ -131,11 +169,11 @@ body {
   flex: 1;
   letter-spacing: 1.5px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   color: var(--h);
-  background-color: rgba(0, 0, 0, 0.35); /* Schwarzer Hintergrund mit 20% Transparenz */
+  background-color: var(--bg1); /* Schwarzer Hintergrund mit 20% Transparenz */
 }
 
 
@@ -143,18 +181,21 @@ body {
   flex: 2;
   padding: 20px;
   text-align: center;
+  
 }
 
 .top-section h2 {
   text-align: center;
   margin: 0;
+  
 }
 
 
 .card-info {
   font-size: 10px; /* Kleiner Schriftgrad */
   color: var(--font); /* Farbe des Texts */
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  background-color: rgba(0, 0, 0); /* Schwarzer Hintergrund mit 20% Transparenz */
 
 }
 
@@ -195,7 +236,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: darken(var(--h), 50%);
+  background-color: darken(var(--h), 10%);
 }
 
 .card-section {
@@ -251,6 +292,7 @@ hr {
   top: 0;
   background-color: var(--h); /* Hintergrundfarbe, um den Text lesbar zu machen */
   z-index: 100; /* Falls andere Elemente darüber liegen, um den Titel sichtbar zu halten */
+  margin-bottom: 30px; /* Fügt Abstand nach unten zur nächsten Sektion hinzu */
 }
 
 
