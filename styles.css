@@ -282,7 +282,7 @@ hr {
 
 
 .banderole-text {
-  color: white; /* Textfarbe anpassen */
+  color: var(--font); /* Textfarbe anpassen */
   font-weight: bold;
   font-family: 'Roboto', Arial, sans-serif;
 }
@@ -298,10 +298,10 @@ hr {
 
  /* Twitch-Farben */
  .twitch-bandarole {
-  background-color: rgba(100, 65, 164, 0.4); /* Purple mit 70% Transparenz */
+  background-color: rgba(100, 65, 164, 0.25); /* Purple mit 70% Transparenz */
   color: white;
   color: white;
-  padding: 30px;
+  padding: 5px;
   font-size: 18px;
   text-align: center;
   position: relative;
