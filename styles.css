@@ -44,8 +44,6 @@ body {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  height: 300px;
-  position: relative;
   transform-style: preserve-3d;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 50px; /* Abstand nach unten zur nächsten Karte */
@@ -118,7 +116,6 @@ body {
   opacity: 0.5; /* Zeigen Sie das Holo-Overlay an, wenn die Karte schwebt */
 }
 
-
 .card-container {
   display: flex;
   flex-direction: column;
@@ -138,7 +135,6 @@ body {
   opacity: 0.2;
   z-index: -1;
 }
-
 
 .background-video {
   position: absolute;

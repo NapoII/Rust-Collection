@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Rust-Collection">
+  <meta property="og:description" content="Calculation of possible yield from diesel in Rust">
+  <meta property="og:image" content="https://raw.githubusercontent.com/NapoII/Rust-Collection/main/img/thumbn.png">
+  <meta property="og:url" content="https://napoii.github.io/Rust-Collection/">
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <title>Upgrade-Calc</title>
+  <link rel="stylesheet" href="rust.css">
+
+
+</head>
+
+<body>
+
+
+  <h1>Upgrade Calc</h1>
+  <button id="backToHomeButton">Back to Home</button>
+
+
+  <div class="card-section">
+
+    <div class="card">
+      <h1>1x1</h1>
+      <img src="img/1x1_foundation.png" alt="1x1:"> <img src="img/1x1.png" alt="1x1 F:">
+      <table>
+        <td>Twig </td>
+        <td> 250</td>
+        <tr>
+          <td><img src="img/wood.png" alt="wood"></td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td><img src="img/stones.png" alt="stone"></td>
+          <td>1500</td>
+        </tr>
+        <tr>
+          <td><img src="img/metal.fragments.png" alt="metal"></td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td><img src="img/metal.refined.png" alt="hqm"></td>
+          <td>126</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h1>1x2</h1>
+      <img src="img/1x2_foundation.png" alt="1x1 F:"> <img src="img/1x2.png" alt="1x1 F:">
+      <table>
+        <td>Twig </td>
+        <td> 425</td>
+        <tr>
+          <td><img src="img/wood.png" alt="wood"></td>
+          <td>1700</td>
+        </tr>
+        <tr>
+          <td><img src="img/stones.png" alt="stone"></td>
+          <td>2550</td>
+        </tr>
+        <tr>
+          <td><img src="img/metal.fragments.png" alt="metal"></td>
+          <td>1700</td>
+        </tr>
+        <tr>
+          <td><img src="img/metal.refined.png" alt="hqm"></td>
+          <td>214</td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class="card">
+      <h1>2x2</h1>
+      <img src="img/2x2_foundation.png" alt="1x1 F:"> <img src="img/2x2.png" alt="1x1 F:">
+      <table>
+        <td>Twig </td>
+        <td> 675</td>
+        <tr>
+          <td><img src="img/wood.png" alt="wood"></td>
+          <td>2700</td>
+        </tr>
+        <tr>
+          <td><img src="img/stones.png" alt="stone"></td>
+          <td>4050</td>
+        </tr>
+        <tr>
+          <td><img src="img/metal.fragments.png" alt="metal"></td>
+          <td>2700</td>
+        </tr>
+        <tr>
+          <td><img src="img/metal.refined.png" alt="hqm"></td>
+          <td>340</td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class="card">
+      <h1>airlock</h1>
+
+      <img src="img/airlock_foundation.png" alt="1x1 F:"> <img src="img/airlock.png" alt="1x1 F:">
+
+      <table>
+        <td>Twig </td>
+        <td> 158</td>
+
+        <tr>
+          <td><img src="img/wood.png" alt="wood"></td>
+          <td>530</td>
+        </tr>
+        <tr>
+          <td><img src="img/stones.png" alt="stone"></td>
+          <td>795</td>
+        </tr>
+        <tr>
+          <td><img src="img/metal.fragments.png" alt="metal"></td>
+          <td>530</td>
+        </tr>
+        <tr>
+          <td><img src="img/metal.refined.png" alt="hqm"></td>
+          <td>68</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+  </div>
+
+  <div class="calculator">
+    <h2>Calculator</h2>
+
+
+    <table>
+      <tr>
+        <th rowspan="4">
+
+          <div class="input-group">
+            <label for="input1"><img src="img/foundation.png" alt="foundation"></label>
+            <input type="number" id="foundation" name="foundation" required>
+          </div>
+    
+          <div class="input-group">
+            <label for="input1"><img src="img/foundation.triangel.png" alt="foundation"></label>
+            <input type="number" id="foundation_triangel" name="foundation_triangel" required>
+          </div>
+    
+          <div class="input-group">
+            <label for="input1"><img src="img/flor.png" alt="flor"></label>
+            <input type="number" id="flor" name="flor" required>
+          </div>
+    
+          <div class="input-group">
+            <label for="input1"><img src="img/flor.triangel.png" alt="flor_triangel"></label>
+            <input type="number" id="flor_triangel" name="flor_triangel" required>
+          </div>
+
+          <div class="input-group">
+            <label for="input1"><img src="img/wall.png" alt="wall"></label>
+            <input type="number" id="wall" name="wall" required>
+          </div>
+    
+          <div class="input-group">
+            <label for="input1"><img src="img/doorway.png" alt="doorway"></label>
+            <input type="number" id="doorway" name="doorway" required>
+          </div>
+    
+          <div class="input-group">
+            <label for="input1"><img src="img/window.png" alt="window"></label>
+            <input type="number" id="window" name="window" required>
+          </div>
+    
+          <div class="input-group">
+            <label for="input1"><img src="img/wallframe.png" alt="wallframe"></label>
+            <input type="number" id="wallframe" name="wallframe" required>
+          </div>
+
+        </th>
+        <td><img src="img/wood.png" alt="wood"> <span id="output_wood">0</span></td>
+      </tr>
+      <tr>
+        <td><img src="img/stones.png" alt="stone"> <span id="output_stone">0</span></td>
+      </tr>
+      <tr>
+        <td><img src="img/metal.fragments.png" alt="metal"> <span id="output_metal">0</span></td>
+      </tr>
+      <tr>
+        <td><img src="img/metal.refined.png" alt="hqm"> <span id="output_hqm">0</span></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<p></p>
+<p></p>
+<div class="center">
+  <a href="https://github.com/NapoII/Rust-Collection/"><img src="https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F" alt="website"></a>
+  <a href="https://img.shields.io/github/issues-raw/NapoII/Rust-Collection"><img src="https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic" alt="github/issues_open"></a>
+  <a href="https://discord.gg/knTKtKVfnr"><img src="https://img.shields.io/discord/1152254593850417234" alt="discord"></a>
+  </div>
+
+  <script src="js/console_alert.js"></script>
+  <script src="js/back_to_home.js"></script>
+  <script src="js/upgrade_calc.js"></script>
+  
+
+</body>
+
+</html>
