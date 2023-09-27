@@ -4,7 +4,7 @@ import discord
 TOKEN = ""
 
 # Deine vorgegebene Channel-ID hier einfügen
-CHANNEL_ID =   # Hier die richtige Channel-ID eintragen
+CHANNEL_ID =
 
 website_url = "https://napoii.github.io/Rust-Collection/"
 
@@ -24,29 +24,21 @@ async def on_ready():
     embed = discord.Embed(
         title='Hello on the Rust Collection Discord',
         description="""Hello on the Rust Collection Discord
-📣 Welcome to the Suggestions Channel!
+🌟 Explore Our New Feature: Upgrade Calc!
 
-This is the place where you can have a direct impact on our Rust information website. We're always looking for ways to improve and expand, and your suggestions play a crucial role in making that happen.
+Greetings, Rust Enthusiasts!
 
-🚀 What Can You Suggest?
-Feel free to share any ideas or suggestions related to our Rust information hub. Whether it's a concept for a new guide, a web tool that would be useful for Rust players, or any other improvement you can think of, your input is highly valuable.
+We are excited to introduce a fantastic addition to our Rust information website - the Starter Base Materials Calculator! Your feedback and suggestions have driven us to create this indispensable tool that will make your Rust gaming experience even more enjoyable.
 
-✍️ How to Share Your Suggestions
-To submit your suggestion, simply create a new post in this channel. Be as detailed as possible so that we can understand your idea clearly. Your fellow community members and our team will be here to discuss, refine, and appreciate your contributions.
-
-🌟 Recognition
-We greatly appreciate your involvement in enhancing our Rust resource. Outstanding suggestions may even receive special recognition, and contributors will be credited for their valuable contributions on our website.
-
-Thank you for being part of our community and helping us make our Rust information hub the best it can be. Your creativity and insight are what drive us forward!
-
-Happy suggesting! 🌐
+🏡 What Does the Starter Base Materials Calculator Do?
+With this new tool, you can effortlessly and swiftly calculate the materials required for your starter base construction. No more guesswork or tedious manual calculations! Know exactly how much you need to gather before you embark on your building adventure.
 
 """,
         color=discord.Color.blue()  # Farbe des Embeds
     )
 
     # Set the image URL in the embed
-    image_url = "https://raw.githubusercontent.com/NapoII/Rust-Collection/main/discord/suggestion.jpeg"
+    image_url = "https://i.imgur.com/APz0sxZ.png"
     embed.set_image(url=image_url)
 
     # Add a field with a link
