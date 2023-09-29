@@ -1,8 +1,8 @@
 /**
- * Funktion, um den Countdown anzuzeigen
+ * Function to display the countdown
  */
 function startCountdown() {
-    // Ziel-Datum und Zeit aus der Textdatei auslesen
+    // Read out the target date and time from the text file.
     fetch('countdown_data.txt')
         .then(response => response.text())
         .then(data => {

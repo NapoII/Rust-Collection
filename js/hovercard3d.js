@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   
       function animateCard() {
-        const maxRotation = 30; // Maximaler Rotationswinkel in Grad
+        const maxRotation = 30; // Maximum rotation angle in degrees
   
         if (isHovered) {
           rotateX = -mouseY * maxRotation;
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
   
-      animateCard(); // Starte die Animation
+      animateCard();
     });
   });
   

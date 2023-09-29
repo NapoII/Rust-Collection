@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rust Techtree Visualizer</title>
+    <style>
+        #techtree {
+            width: 800px;
+            height: 400px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rust Techtree Visualizer</h1>
+    <div id="techtree"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript">
+        // Daten für den Techtree
+        var nodes = [
+            { id: 1, label: 'Hammer', shape: 'box' },
+            { id: 2, label: 'Sichel', shape: 'box' },
+            { id: 3, label: 'Axt', shape: 'box' },
+            { id: 4, label: 'Speer', shape: 'box' },
+            { id: 5, label: 'Ball', shape: 'box' }
+        ];
+
+        var edges = [
+            { from: 1, to: 2 },
+            { from: 1, to: 3 },
+            { from: 3, to: 4 },
+            { from: 2, to: 5 }
+        ];
+
+        // Konfiguration des Diagramms
+        var container = document.getElementById('techtree');
+        var data = {
+            nodes: nodes,
+            edges: edges
+        };
+        var options = {};
+
+        // Erstellen Sie das Diagramm
+        var network = new vis.Network(container, data, options);
+    </script>
+</body>
+</html>

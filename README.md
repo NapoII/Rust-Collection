@@ -1,21 +1,60 @@
 
 
-![downloads/total](README_img/titel.gif)
 
 [![downloads/total](https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F)](https://napoii.github.io/Rust-Collection/) [![github/repo-size](https://img.shields.io/github/repo-size/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/archive/refs/heads/main.zip) [![github/license](https://img.shields.io/github/license/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/blob/main/LICENSE) [![github/issues_open](https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic)](https://img.shields.io/github/issues-raw/NapoII/Rust-Collection) [![github/stars](https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social)](https://github.com/NapoII/Rust-Collection/stargazers) [![discord](https://img.shields.io/discord/1152254593850417234)](https://discord.gg/fSTfQ6mJtA)
-# Rust-Collection
-[Rust-Collection](https://napoii.github.io/Rust-Collection/)
-https://napoii.github.io/Rust-Collection/
 
-[Discord](https://discord.gg/fSTfQ6mJtA) [![discord](https://img.shields.io/discord/1152254593850417234)](https://discord.gg/fSTfQ6mJtA)
+
+
+
+
+# Rust-Collection 🎮
+
+[Welcome to the Rust-Collection! 🚀](https://napoii.github.io/Rust-Collection/)
+
+
+![Rust Game Guides Collection](img/thumbn.webp)
+
+Are you ready to level up your Rust gaming experience? Look no further! This repository is your one-stop-shop for mastering the art of survival in the harsh world of Rust. Our collection of guides, tools, and resources will equip you with everything you need to dominate the game.
 
 [Visitor statistics](https://counterapi.com/stats/Rust-Collection)
 
-This website is a comprehensive collection of links related to the game Rust. Here you will find a variety of useful resources, guides and community servers that can help you better understand the game and improve your skills.
 
-[Rust-Collection](https://napoii.github.io/Rust-Collection/)
 
-## 📚 Lizenz <a name = "Lizenz"></a>
+🃏 **About This Repository**
+
+Each card in this repository represents a valuable resource for Rust players. Just like in a trading card game, you can use these cards to enhance your Rust gameplay. Whether you're a seasoned Rust veteran or a newcomer to the game, you'll find something here to elevate your skills and knowledge.
+
+
+🌟 **Contribute and Collect**
+
+This repository thrives on community contributions. If you have a Rust guide, tool, or resource that you think would benefit fellow Rust players, don't hesitate to contribute. It's as easy as submitting a new card to our collection.
+
+🤖 **Get in Touch**
+
+Have questions or suggestions? Want to connect with other Rust enthusiasts? Join our community on Discord and stay updated with the latest developments.
+
+[![Discord](https://img.shields.io/discord/1152254593850417234?label=Discord&style=for-the-badge)](https://discord.gg/Gd23KJ76Tq)
+
+👏 **Acknowledgments**
+
+A huge thank you to all the contributors who have helped make this repository a valuable resource for the Rust gaming community. Together, we're building an incredible collection of Rust guides and tools.
+
+📝 **License**
+
+This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Enjoy your Rust journey and may your cards always be in your favor! 🃏🌟
+
+
+
+
+
+
+
+
+
+
+
 
 MIT License
 

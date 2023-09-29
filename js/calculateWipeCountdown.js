@@ -4,22 +4,22 @@ function calculateWipeCountdown() {
   nextMonth.setMonth(nextMonth.getMonth() + 1);
   nextMonth.setDate(1);
 
-  // Setzen Sie die Uhrzeit auf 20:00 Uhr und 0 Minuten und 0 Sekunden
+  // Set the time to 20:00 and 0 minutes and 0 seconds
   nextMonth.setHours(20);
   nextMonth.setMinutes(0);
   nextMonth.setSeconds(0);
 
-  // Suchen Sie nach dem ersten Donnerstag im nächsten Monat
-  while (nextMonth.getDay() !== 4) { // 4 entspricht Donnerstag (Sonntag = 0, Montag = 1, ..., Samstag = 6)
+  // Look for the first Thursday of the next month
+  while (nextMonth.getDay() !== 4) { // 4 corresponds to Thursday (Sunday = 0, Monday = 1, ..., Saturday = 6)
     nextMonth.setDate(nextMonth.getDate() + 1);
   }
 
-  // Überprüfen Sie, ob der erste Donnerstag in der Zukunft liegt
+  // Check if the first Thursday is in the future
   if (nextMonth < now) {
     nextMonth.setMonth(nextMonth.getMonth() + 1);
     nextMonth.setDate(1);
 
-    // Suchen Sie erneut nach dem ersten Donnerstag im nächsten Monat
+    // Search again for the first Thursday of the next month
     while (nextMonth.getDay() !== 4) {
       nextMonth.setDate(nextMonth.getDate() + 1);
     }
@@ -27,9 +27,9 @@ function calculateWipeCountdown() {
 
   const difference = nextMonth - now;
 
-  // Überprüfen Sie, ob die aktuelle Zeit bereits in der Vergangenheit liegt
+  // Check whether the current time is already in the past  
   if (difference <= 0) {
-    // Wenn ja, fügen Sie einen weiteren Monat hinzu und suchen Sie nach dem ersten Donnerstag
+    // If yes, add another month and look for the first Thursday
     nextMonth.setMonth(nextMonth.getMonth() + 1);
     nextMonth.setDate(1);
 

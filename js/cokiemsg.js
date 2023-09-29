@@ -1,16 +1,16 @@
-// Funktion zum Überprüfen, ob der Cookie-Akzeptanz-Status bereits gesetzt ist
+// Function to check whether the cookie acceptance status is already set
 function isCookieAccepted() {
     return localStorage.getItem('cookieAccepted') === 'true';
   }
   
-  // Funktion zum Anzeigen des Popups, wenn der Cookie-Akzeptanz-Status nicht gesetzt ist
+  // Function to display the pop-up if the cookie acceptance status is not set
   function showCookiePopup() {
     if (!isCookieAccepted()) {
       document.getElementById('cookie-popup').style.display = 'block';
     }
   }
   
-  // Funktion zum Ausblenden des Popups und zum Setzen des Cookie-Akzeptanz-Status
+  // Function to hide the pop-up and set the cookie acceptance status
   function acceptCookie() {
     document.getElementById('cookie-popup').style.display = 'none';
     localStorage.setItem('cookieAccepted', 'true');
@@ -19,5 +19,5 @@ function isCookieAccepted() {
   // Event-Listener für den OK-Button
   document.getElementById('accept-cookie').addEventListener('click', acceptCookie);
   
-  // Initialisierung: Zeige das Popup, wenn der Cookie-Akzeptanz-Status nicht gesetzt ist
+  // Initialisation: show the pop-up if the cookie acceptance status is not set
   showCookiePopup();
