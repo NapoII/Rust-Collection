@@ -1,59 +1,57 @@
-function calculateWipeCountdown() {
+function getNextFirstThursday() {
   const now = new Date();
-  const nextMonth = new Date(now);
-  nextMonth.setMonth(nextMonth.getMonth() + 1);
-  nextMonth.setDate(1);
+  let year = now.getFullYear();
+  let month = now.getMonth();
+  let day = 1;
 
-  // Set the time to 20:00 and 0 minutes and 0 seconds
-  nextMonth.setHours(20);
-  nextMonth.setMinutes(0);
-  nextMonth.setSeconds(0);
-
-  // Look for the first Thursday of the next month
-  while (nextMonth.getDay() !== 4) { // 4 corresponds to Thursday (Sunday = 0, Monday = 1, ..., Saturday = 6)
-    nextMonth.setDate(nextMonth.getDate() + 1);
+  while (true) {
+      const date = new Date(year, month, day, 20, 0, 0); // Stellen Sie die Uhrzeit auf 20:00 Uhr
+      if (date.getDay() === 4 && date.getMonth() === month) { // Erster Donnerstag im aktuellen Monat
+          return date;
+      }
+      day++;
+      if (day > 31) {
+          day = 1;
+          month++;
+          if (month > 11) {
+              month = 0;
+              year++;
+          }
+      }
   }
-
-  // Check if the first Thursday is in the future
-  if (nextMonth < now) {
-    nextMonth.setMonth(nextMonth.getMonth() + 1);
-    nextMonth.setDate(1);
-
-    // Search again for the first Thursday of the next month
-    while (nextMonth.getDay() !== 4) {
-      nextMonth.setDate(nextMonth.getDate() + 1);
-    }
-  }
-
-  const difference = nextMonth - now;
-
-  // Check whether the current time is already in the past  
-  if (difference <= 0) {
-    // If yes, add another month and look for the first Thursday
-    nextMonth.setMonth(nextMonth.getMonth() + 1);
-    nextMonth.setDate(1);
-
-    while (nextMonth.getDay() !== 4) {
-      nextMonth.setDate(nextMonth.getDate() + 1);
-    }
-  }
-
-  const newDifference = nextMonth - now;
-
-  const days = Math.floor(newDifference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((newDifference / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((newDifference / (1000 * 60)) % 60);
-
-  const countdownText = `${nextMonth.toDateString()} <hr> ${days} Days<br>${hours} Hours<br>${minutes} Minutes`;
-
-  const countdownElement = document.getElementById("countdown");
-  countdownElement.innerHTML = countdownText;
-
-  setTimeout(calculateWipeCountdown, 1000);
 }
 
-function updateWipeCountdown() {
-  calculateWipeCountdown();
+
+function updateCountdown() {
+  const nextThursday = getNextFirstThursday();
+  const now = new Date();
+
+  if (nextThursday > now) {
+      const timeDifference = nextThursday - now;
+      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+      const countdownElement = document.getElementById("countdown");
+      countdownElement.innerHTML = nextThursday.toDateString() + "<hr>" + days + " Days " + "<br>" + hours + " Hours " + "<br>" + minutes + " Minutes";
+  } else {
+      // Wenn der Donnerstag in dieser Woche bereits vorbei ist, berechne den Countdown für den nächsten Monat.
+      const nextMonth = new Date(nextThursday);
+      nextMonth.setMonth(nextMonth.getMonth() + 1);
+      nextMonth.setDate(1);
+
+      const timeDifference = nextMonth - now;
+      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+      const countdownElement = document.getElementById("countdown");
+      countdownElement.innerHTML = nextMonth.toDateString() + "<hr>" + days + " Days " + hours + " Hours " + minutes + " Minutes";
+  }
 }
 
-updateWipeCountdown();
+// Aktualisiere den Countdown alle Sekunde
+setInterval(updateCountdown, 1000);
+
+// Initialen Countdown aufrufen
+updateCountdown();
