@@ -1,49 +1,257 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Rust Techtree Visualizer</title>
-    <style>
-        #techtree {
-            width: 800px;
-            height: 400px;
-            margin: auto;
-        }
-    </style>
-</head>
-<body>
-    <h1>Rust Techtree Visualizer</h1>
-    <div id="techtree"></div>
+<!--  Begin First Tier  -->
+<link rel="stylesheet" href="styles.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css"/>
+https://codepen.io/therealdylanmartin/pen/yjpjOe
 
-    <script type="text/javascript">
-        // Daten für den Techtree
-        var nodes = [
-            { id: 1, label: 'Hammer', shape: 'box' },
-            { id: 2, label: 'Sichel', shape: 'box' },
-            { id: 3, label: 'Axt', shape: 'box' },
-            { id: 4, label: 'Speer', shape: 'box' },
-            { id: 5, label: 'Ball', shape: 'box' }
-        ];
+<ul class="first-tier">
+    <li>
+        <div class="first-tier">
+            <img src="/Rust_Collection/Tech_Tree/img/hammer.salvaged.png">
+            <h2>Slage hammer</h2>
+        </div>
+        <div class="bottom-connector"></div>
+    </li>
+</ul>
 
-        var edges = [
-            { from: 1, to: 2 },
-            { from: 1, to: 3 },
-            { from: 3, to: 4 },
-            { from: 2, to: 5 }
-        ];
+<!--  End First Tier  -->
 
-        // Konfiguration des Diagramms
-        var container = document.getElementById('techtree');
-        var data = {
-            nodes: nodes,
-            edges: edges
-        };
-        var options = {};
+<div class="top-connector__source"></div>
 
-        // Erstellen Sie das Diagramm
-        var network = new vis.Network(container, data, options);
-    </script>
-</body>
-</html>
+<!--  Begin Second Tier  -->
+
+<ul class="second-tier">
+    <li>
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="/Rust_Collection/Tech_Tree/img/paddle.png">
+            <h2>Paddle</h2>
+        </div>
+
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="/Rust_Collection/Tech_Tree/img/paddle.png">
+            <h2>Kajak</h2>
+        </div>
+
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="/Rust_Collection/Tech_Tree/img/paddle.png">
+            <h2>Harpune</h2>
+        </div>
+
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="/Rust_Collection/Tech_Tree/img/paddle.png">
+            <h2>Harpune ammor</h2>
+        </div>
+
+        <!--  Begin Nested Tier  -->
+
+        <ul class="nested-tier">
+            <li>
+                </div>
+
+                <!--  End Double Nested Tier  -->
+
+            </li>
+            <li>
+                <div class="left-connector__source"></div>
+                <div class="left-connector"></div>
+                <div class="nested-tier">
+
+                </div>
+
+                <!--  Begin Double Nested Tier  -->
+
+                <ul class="double-nested-tier">
+                    <li>
+                        <div class="left-connector__bypass"></div>
+                        <div class="sub-connector__source"></div>
+                        <div class="left-connector"></div>
+                        <div class="double-nested-tier">
+                            <h2>Team Person</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left-connector__bypass"></div>
+                        <div class="sub-connector__source"></div>
+                        <div class="left-connector"></div>
+                        <div class="double-nested-tier">
+                            <h2>Team Person</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left-connector__bypass"></div>
+                        <div class="sub-connector__source"></div>
+                        <div class="left-connector"></div>
+                        <div class="double-nested-tier">
+                            <h2>Team Person</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left-connector__bypass"></div>
+                        <div class="sub-connector__source"></div>
+                        <div class="left-connector"></div>
+                        <div class="double-nested-tier">
+                            <h2>Team Person</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left-connector__bypass"></div>
+                        <div class="sub-connector__source"></div>
+                        <div class="left-connector"></div>
+                        <div class="double-nested-tier">
+                            <h2>Team Person</h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left-connector__bypass"></div>
+                        <div class="sub-connector__source final-connector"></div>
+                        <div class="left-connector"></div>
+                        <div class="double-nested-tier">
+                            <h2>Team Person</h2>
+                        </div>
+                    </li>
+                </ul>
+
+                <!--  End Double Nested Tier  -->
+
+            </li>
+            <li>
+                <div class="left-connector__source final-connector"></div>
+                <div class="left-connector"></div>
+                <div class="nested-tier">
+                    <h2>Team Person</h2>
+                    <h3>Nested Tier</h3>
+                </div>
+            </li>
+        </ul>
+
+        <!--  End Nested Tier  -->
+
+    </li>
+    <li>
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="http://via.placeholder.com/75x75">
+            <h2>Axt</h2>
+        </div>
+
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="http://via.placeholder.com/75x75">
+            <h2>wooden spixe</h2>
+        </div>
+        <!--  Begin Nested Tier  -->
+
+        <ul class="nested-tier">
+            <li>
+                <div class="left-connector__source"></div>
+                <div class="left-connector"></div>
+                <div class="nested-tier">
+                    <h2>Team Person</h2>
+                    <h3>Nested Tier</h3>
+                </div>
+            </li>
+            <li>
+                <div class="left-connector__source"></div>
+                <div class="left-connector"></div>
+                <div class="nested-tier">
+                    <h2>Team Person</h2>
+                    <h3>Nested Tier</h3>
+                </div>
+            </li>
+            <li>
+                <div class="left-connector__source"></div>
+                <div class="left-connector"></div>
+                <div class="nested-tier">
+                    <h2>Team Person</h2>
+                    <h3>Nested Tier</h3>
+                </div>
+            </li>
+            <li>
+                <div class="left-connector__source"></div>
+                <div class="left-connector"></div>
+                <div class="nested-tier">
+                    <h2>Team Person</h2>
+                    <h3>Nested Tier</h3>
+                </div>
+            </li>
+            <li>
+                <div class="left-connector__source"></div>
+                <div class="left-connector"></div>
+                <div class="nested-tier">
+                    <h2>Team Person</h2>
+                    <h3>Nested Tier</h3>
+                </div>
+            </li>
+            <li>
+                <div class="left-connector__source final-connector"></div>
+                <div class="left-connector"></div>
+                <div class="nested-tier">
+                    <h2>Team Person</h2>
+                    <h3>Nested Tier</h3>
+                </div>
+            </li>
+        </ul>
+
+        <!--  End Nested Tier  -->
+
+    </li>
+    <li>
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="http://via.placeholder.com/75x75">
+            <h2>Director Person</h2>
+            <h3>Second Tier</h3>
+        </div>
+    </li>
+    <li>
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="http://via.placeholder.com/75x75">
+            <h2>Director Person</h2>
+            <h3>Second Tier</h3>
+        </div>
+    </li>
+    <li>
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="http://via.placeholder.com/75x75">
+            <h2>Director Person</h2>
+            <h3>Second Tier</h3>
+        </div>
+    </li>
+    <li>
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="http://via.placeholder.com/75x75">
+            <h2>Director Person</h2>
+            <h3>Second Tier</h3>
+        </div>
+    </li>
+    <li>
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="http://via.placeholder.com/75x75">
+            <h2>Director Person</h2>
+            <h3>Second Tier</h3>
+        </div>
+    </li>
+    <li>
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="http://via.placeholder.com/75x75">
+            <h2>Director Person</h2>
+            <h3>Second Tier</h3>
+        </div>
+    </li>
+    <li>
+        <div class="top-connector"></div>
+        <div class="second-tier">
+            <img src="http://via.placeholder.com/75x75">
+            <h2>Director Person</h2>
+            <h3>Second Tier</h3>
+        </div>
+    </li>
+</ul>
