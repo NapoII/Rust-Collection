@@ -46,7 +46,7 @@ function updateCountdown() {
       const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
 
       const countdownElement = document.getElementById("countdown");
-      countdownElement.innerHTML = nextMonth.toDateString() + "<hr>" + days + " Days " + hours + " Hours " + minutes + " Minutes";
+      countdownElement.innerHTML = nextMonth.toDateString() + "<hr>" + days + " Days " + "<br>" + hours + " Hours " + "<br>" + minutes + " Minutes";
   }
 }
 
