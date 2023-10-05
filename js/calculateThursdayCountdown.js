@@ -10,7 +10,12 @@ function updateCountdown() {
   const nextThursday = getNextThursday();
   const now = new Date();
 
-  const timeDifference = Math.abs(nextThursday - now); // Verwende den Betrag der Differenz
+  let timeDifference = nextThursday - now;
+
+  // Überprüfen, ob der Donnerstag bereits vorbei ist
+  if (timeDifference < 0) {
+    timeDifference += 7 * 24 * 60 * 60 * 1000; // 7 Tage in Millisekunden
+  }
 
   const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
   const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
