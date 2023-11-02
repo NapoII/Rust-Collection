@@ -1,31 +1,31 @@
 // Function to get the date of the next first Thursday in the future
 function getNextFirstThursday() {
-    const now = new Date(); // Get the current date and time
-    let year = now.getFullYear(); // Get the current year
-    let month = now.getMonth(); // Get the current month
-  
-    while (true) {
-      // Create a date for the 1st day of the next month at 20:00
-      const firstOfMonth = new Date(year, month + 1, 1, 20, 0, 0);
-  
-      // Calculate how many days until the next Thursday
-      const daysUntilThursday = (4 - firstOfMonth.getDay() + 7) % 7;
-  
-      // Get the date of the first Thursday in the next month
-      const firstThursday = new Date(year, month + 1, 1 + daysUntilThursday, 20, 0, 0);
-  
-      if (firstThursday > now) {
-        return firstThursday; // Return the date of the first Thursday in the future
-      }
-  
-      // If the first Thursday in this month has already passed, move to the next month
-      month++;
-      if (month > 11) {
-        month = 0;
-        year++;
-      }
+  const now = new Date(); // Get the current date and time
+  const currentDay = now.getDate();
+  const year = now.getFullYear();
+  let month = now.getMonth();
+
+  // Check if it's the first week of the month
+  if (currentDay <= 7) {
+    // If it's Thursday or later, use the current month
+    if (now.getDay() >= 4) {
+      return new Date(year, month, currentDay, 20, 0, 0);
     }
   }
+
+  // Move to the next month
+  if (month === 11) {
+    month = 0;
+  } else {
+    month++;
+  }
+
+  const firstOfMonth = new Date(year, month, 1, 20, 0, 0);
+  const daysUntilThursday = (4 - firstOfMonth.getDay() + 7) % 7;
+  const firstThursday = new Date(year, month, 1 + daysUntilThursday, 20, 0, 0);
+
+  return firstThursday;
+}
   
   // Function to update the countdown timer
   function updateCountdown() {
