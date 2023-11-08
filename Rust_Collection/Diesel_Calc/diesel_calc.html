@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +15,15 @@
   <title>Diesel-Calc</title>
   <link rel="stylesheet" href="rust.css">
 </head>
+
 <body>
   <h1 class="center">Diesel Calc</h1>
   <div class="calculator">
 
     <button id="backToHomeButton">Back to Home</button>
 
-    <label for="inputValue">Enter a value:</label>
-    <input type="number" id="inputValue" value="1" min="1" oninput="calculate()">
+    <label for="inputValue_diesel">Enter <img src="img/diesel_barrel.png" alt="diesel_barrel"> value:</label>
+    <input type="number" id="inputValue_diesel" value="1" min="1" oninput="calculate_diesel()">
     <!-- Kein separater Calculate Button mehr -->
     <div class="results">
       <div class="result" id="result1"></div>
@@ -38,212 +40,70 @@
       <div class="copy_code" id="copy-text_q"></div>
     </div>
   </div>
+
   <p></p>
-	<div class="center">
-    <a href="https://github.com/NapoII/Rust-Collection/"><img src="https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F" alt="website"></a>
-    <a href="https://img.shields.io/github/issues-raw/NapoII/Rust-Collection"><img src="https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic" alt="github/issues_open"></a>
-    <a href="https://github.com/NapoII/Rust-Collection/stargazers"><img src="https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social" alt="github/stars"></a>
-    <a href="https://discord.gg/knTKtKVfnr"><img src="https://img.shields.io/discord/190307701169979393" alt="discord"></a>
-	  </div>
-    
+  <hr></hr>
+  <p></p>
+
+  <h1 class="center">Fertelizer Calc</h1>
+  <div class="calculator">
+
+
+    <label for="inputValue_fert">Enter <img src="img/fertilizer.png" alt="Fertilizer"> value:</label>
+    <input type="number" id="inputValue_fert" value="0" min="2" oninput="calculate_fert()">
+
+    <label for="inputValue_dung">Enter <img src="img/horsedung.png" alt="horsedung"> value:</label>
+    <input type="number" id="inputValue_dung" value="0" min="0" oninput="calculate_fert()">
+
+    <div class="results">
+      <div class="result_center" id="scrape_result"></div>
+    </div>
+    <div></div>
+    <h2>Copy Text for the chat</h2>
+    <div class="resultss">
+      <div class="copy_code" id="copy-text_s"></div>
+    </div>
+  </div>
+
+  <p> </p>
+  <hr></hr>
+
+  <div class="center-container">
+    <div class="counter-container">
+      Visitors since 08.11.2023 - Now
+      <div class="counterapi khaki" key="now" timeline="60m" noIcon="true" noCss="true" abbreviate="true" noLink="true"></div>
+      Today
+      <div class="counterapi blue" key="24h" timeline="24h" noIcon="true" noCss="true" abbreviate="true" noLink="true"></div>
+      Total
+      <div class="counterapi red" key="total-visitors" noIcon="true" noCss="true" abbreviate="true" noLink="true"></div>
+    </div>
+  </div>
+
+  <p></p>
+  <div class="center">
+    <a href="https://github.com/NapoII/Rust-Collection/"><img
+        src="https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F"
+        alt="website"></a>
+    <a href="https://img.shields.io/github/issues-raw/NapoII/Rust-Collection"><img
+        src="https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic" alt="github/issues_open"></a>
+    <a href="https://github.com/NapoII/Rust-Collection/stargazers"><img
+        src="https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social" alt="github/stars"></a>
+    <a href="https://discord.gg/ZWv8mnNKCq"><img src="https://img.shields.io/discord/1152254593850417234"
+        alt="discord"></a>
+  </div>
+
 
   <script>
 
-    function calculate() {
-      const inputValue = parseFloat(document.getElementById("inputValue").value);
 
-      // Giant Excavator
-      const g_hqm = inputValue * 100;
-      const g_sulfur_ore = inputValue * 2000;
-      const g_stones = inputValue * 10000;
-      const g_metal_fragments = inputValue * 5000;
-      const g_time_min = inputValue * 2;
+  </script>
 
+  <script src="js/console_alert.js"></script>
+  <script src="js/back_to_home.js"></script>
+  <script src="js/diesel_calc.js"></script>
+  <script src="js/fertelizer_calc.js"></script>
 
-      // Boom Calc Giant Excavator
-      const g_gun_powder = (g_sulfur_ore / 20)*10;
-      const g_explosives = g_sulfur_ore / 110;
-      const g_Rocket = g_sulfur_ore / 1400;
-      const g_c4 = g_sulfur_ore / 2200;
-      const g_satchel_charge = g_sulfur_ore / 480;
-      const g_explosive_ammo = g_sulfur_ore / 50;
-
-
-      // Quarry
-      const q_hqm = inputValue * 50;
-      const q_sulfur_ore = inputValue * 1000;
-      const q_Stones = inputValue * 5000;
-      const q_Metal_Fragments = inputValue * 1000;
-      const q_crude_oil = inputValue * 60;
-      const q_low_grade_fuel = inputValue * 170;
-      const q_low_grade_fuel_ges = q_low_grade_fuel +(q_crude_oil*3);
-      const q_time_min = (inputValue * 130)/60;
-
-      // Boom Calc Quarry
-      const q_gun_powder = (q_sulfur_ore / 20)*10;
-      const q_explosives = q_sulfur_ore / 110;
-      const q_Rocket = q_sulfur_ore / 1400;
-      const q_c4 = q_sulfur_ore / 2200;
-      const q_satchel_charge = q_sulfur_ore / 480;
-      const q_explosive_ammo = q_sulfur_ore / 50;
-
-
-      // Generate the text for "copy-text_g" and "copy-text_q"
-      const g_text = `From ${inputValue.toLocaleString()} Diesel in the Giant Excavator you can get in ${g_time_min.toFixed(1)} min:| \n ${g_sulfur_ore.toLocaleString(undefined, {
-  maximumFractionDigits: 0
-})} Sulfur | \n${g_gun_powder.toLocaleString(undefined, { maximumFractionDigits: 0 })} Gun Powder | \n ${g_Rocket.toLocaleString(
-  undefined,
-  { maximumFractionDigits: 0 }
-)} Rockets | \n${g_satchel_charge.toLocaleString(undefined, { maximumFractionDigits: 0 })} Satchels `;
-
-
-
-      const q_text = `From ${inputValue.toLocaleString()} Diesel in the Quarry you can get in ${q_time_min.toFixed(1)} min:| \n ${q_sulfur_ore.toLocaleString(undefined, {
-  maximumFractionDigits: 0
-})} Sulfur | \n${q_gun_powder.toLocaleString(undefined, { maximumFractionDigits: 0 })} Gun Powder | \n ${q_Rocket.toLocaleString(
-  undefined,
-  { maximumFractionDigits: 0 }
-)} Rockets | \n${q_satchel_charge.toLocaleString(undefined, { maximumFractionDigits: 0 })} Satchels `;
-
-
-      // Display the text in respective divs
-      document.getElementById("copy-text_g").textContent = g_text;
-      document.getElementById("copy-text_q").textContent = q_text;
-
-// Display the results in respective divs
-document.getElementById("result1").innerHTML = `
-  <h2>Giant Excavator</h2>
-  <div class="calculation-item">
-    <img src="img/hq.metal.ore.png" alt="HQ Metal Ore">
-    <span>&nbsp;${g_hqm.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/sulfur.ore.png" alt="Sulfur Ore">
-    <span>&nbsp;${g_sulfur_ore.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/stones.png" alt="Stones">
-    <span>&nbsp;${g_stones.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/metal.fragments.png" alt="Metal Fragments">
-    <span>&nbsp;${g_metal_fragments.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/time.png" alt="Time (min)">
-    <span>&nbsp;${g_time_min.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-`;
-
-document.getElementById("result2").innerHTML = `
-  <h2>Quarry</h2>
-  <div class="calculation-item">
-    <img src="img/hq.metal.ore.png" alt="HQ Metal Ore">
-    <span>&nbsp;${q_hqm.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/sulfur.ore.png" alt="Sulfur Ore">
-    <span>&nbsp;${q_sulfur_ore.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/stones.png" alt="Stones">
-    <span>&nbsp;${q_Stones.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/metal.fragments.png" alt="Metal Fragments">
-    <span>&nbsp;${q_Metal_Fragments.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/low.grade.fuel.png" alt="Low Grade Fuel">
-    <span>&nbsp;${q_low_grade_fuel_ges.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/time.png" alt="Time (min)">
-    <span>&nbsp;${q_time_min.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-`;
-
-// Display the calculations in respective divs
-document.getElementById("calculation1").innerHTML = `
-  <h2>Boom</h2>
-  <div class="calculation-item">
-    <img src="img/gun.powder.png" alt="gun.powder">
-    <span>&nbsp;${Math.floor(g_gun_powder).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/explosives.png" alt="explosives">
-    <span>&nbsp;${Math.floor(g_explosives).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/rocket.png" alt="rocket">
-    <span>&nbsp;${Math.floor(g_Rocket).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/c4.png" alt="c4">
-    <span>&nbsp;${Math.floor(g_c4).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/satchel.charge.png" alt="satchel.charge">
-    <span>&nbsp;${Math.floor(g_satchel_charge).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/ammo.rifle.explosive.png" alt="ammo.rifle.explosive">
-    <span>&nbsp;${Math.floor(g_explosive_ammo).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-`;
-
-document.getElementById("calculation2").innerHTML = `
-  <h2>Boom</h2>
-  <div class="calculation-item">
-    <img src="img/gun.powder.png" alt="gun.powder">
-    <span>&nbsp;${Math.floor(q_gun_powder).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/explosives.png" alt="explosives">
-    <span>&nbsp;${Math.floor(q_explosives).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/rocket.png" alt="rocket">
-    <span>&nbsp;${Math.floor(q_Rocket).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/c4.png" alt="c4">
-    <span>&nbsp;${Math.floor(q_c4).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/satchel.charge.png" alt="satchel.charge">
-    <span>&nbsp;${Math.floor(q_satchel_charge).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-  <div class="calculation-item">
-    <img src="img/ammo.rifle.explosive.png" alt="ammo.rifle.explosive">
-    <span>&nbsp;${Math.floor(q_explosive_ammo).toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
-  </div>
-`;
-    }
-    document.getElementById("copy-text_g").addEventListener("click", function () {
-      copyToClipboard(document.getElementById("copy-text_g").textContent);
-    });
-
-    document.getElementById("copy-text_q").addEventListener("click", function () {
-      copyToClipboard(document.getElementById("copy-text_q").textContent);
-    });
-
-    function copyToClipboard(text) {
-      const textarea = document.createElement("textarea");
-      textarea.value = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
-      alert("Text copied to clipboard!");
-    }
-  
-
-    calculate();
-    </script>
-
-<script src="js/console_alert.js"></script>
-<script src="js/back_to_home.js"></script
-
+  <script src="https://counterapi.com/c.js?ns=Rust-Collection-diesel_calc" async></script>
 </body>
+
 </html>

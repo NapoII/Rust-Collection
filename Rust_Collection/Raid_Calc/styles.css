@@ -251,3 +251,40 @@ input[type="number"] {
   max-width: 70%;
 }
 
+
+.center-container {
+    
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Ändere align-items auf flex-end */
+  height: 2vh; /* Ändere die Höhe auf den gewünschten Wert */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg2);
+  padding: 10px;
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+}
+
+.counterapi {
+  margin: 0 10px;
+}
+
+.khaki {
+  color: khaki;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}

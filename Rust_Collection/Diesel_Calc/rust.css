@@ -62,6 +62,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 20px; /* Add margin between the result windows */
 }
 
+/* Styling for individual result windows */
+.result_center {
+  background-color: rgba(91, 87, 86, 0.1); /* Transparenter Hintergrund */
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 20px; /* Abstand zwischen den Ergebnisfenstern hinzufügen */
+  margin-bottom: 20px; /* Abstand zwischen den Ergebnisfenstern in vertikaler Richtung hinzufügen */
+  display: flex;
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+  display: flex;
+  flex-direction: column; /* Elemente in einer Spalte anordnen */
+  align-items: center; /* Zentriert den Inhalt horizontal */
+}
+
 /* Add more spacing between the result windows */
 .results .result:not(:last-child) {
   margin-right: 20px;
@@ -89,6 +103,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 5px; /* Add margin to the right side of the text */
 }
 
+
+
 /* Add margin to the Calculate button, "Enter a value" label, and input field */
 .calculator button,
 .calculator label,
@@ -107,28 +123,30 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Courier New", monospace;
   font-size: 14px;
   color: #5C5857;
-  text-align: center; /* Center-align the text inside the .copy_code elements */
+  text-align: center;
   padding: 5px;
   background-color: #231D1D;
   white-space: pre-wrap;
   flex: 29;
-  padding:1px;
+  padding: 1px;
   border-radius: 5px;
-  margin-right: 20px; /* Add margin between the result windows */
   margin-right: 20px;
-  margin-top: 1px;
+  margin-top: 10px; /* Füge den Abstand nach oben hinzu */
+  margin-bottom: 10px; /* Füge den Abstand nach unten hinzu */
 }
 
 /* Optional: Add a bit of margin to the copied text to separate it from other elements */
-.copy_code::before {
+.copy_code::before,
+.copy_code::after {
   content: "";
   display: block;
   height: 10px;
   display: flex;
-  margin-top: 20px; /* Add margin to the top of the result section */
+  margin: 10px; /* Add margin on all sides of the result section */
 }
 
-#3C3837
+
+
 
 h2 {
   margin-top: 25px; /* Add margin to the top of h2 */
@@ -149,4 +167,32 @@ h2 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   opacity: 1; /* Ensure the button is always visible */
   font-family: 'Rust', Arial, sans-serif;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2vh;
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+}
+
+.counterapi {
+  margin: 0 10px;
+}
+
+.khaki {
+  color: khaki;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
 }
