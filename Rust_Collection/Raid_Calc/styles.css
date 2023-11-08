@@ -251,6 +251,27 @@ input[type="number"] {
   max-width: 70%;
 }
 
+/* Set the background color of all input fields */
+input {
+  background-color: var(--bg1);
+  color: var(--font);
+  border: 1px solid var(--bg2);
+  padding: 8px;
+  text-align: center; /* Zentriert den Text */
+  font-size: 20px; /* Ändert die Schriftgröße nach Bedarf */
+  width: 100px; /* Ändere die Breite nach Bedarf */
+}
+/* Change the color of the input value and cursor for better readability */
+input::placeholder {
+  color: var(--font);
+}
+
+/* Style all input fields when they are focused */
+input:focus {
+  border: 1px solid var(--h);
+  outline: none;
+}
+
 
 .center-container {
     
