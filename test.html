@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Search Page</title>
+</head>
+<body>
+
+    <h1>My Search Page</h1>
+
+    <!-- Eingabefeld -->
+    <input required="" name="search_q" autocomplete="off" type="search" class="profile-search searchDesktop" id="searchInput" placeholder="Search profiles or login with Steam">
+
+    <!-- Suchbutton -->
+    <button onclick="performSearch()">Search</button>
+
+    <script>
+        // JavaScript-Funktion zum Ausführen der Suche
+        function performSearch() {
+            // Wert aus dem Eingabefeld abrufen
+            var searchTerm = document.getElementById('searchInput').value;
+
+            // Überprüfen, ob ein Suchbegriff eingegeben wurde
+            if (searchTerm.trim() !== '') {
+                // URL der Zielseite mit dem Suchbegriff
+                var targetUrl = 'http://ruststats.gg/rust-stats/user/' + encodeURIComponent(searchTerm);
+
+                // Zur Zielseite weiterleiten
+                window.location.href = targetUrl;
+            } else {
+                alert('Bitte geben Sie einen Suchbegriff ein.');
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -164,15 +164,45 @@
     </div>
 
 
+    <div class="card no-pointer-cursor">
+      <div class="background-image" style="background-image: url('img/ruststats.webp');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="video/ruststats.mp4" type="video/mp4">
+      </video>
+
+      <div class="banderole">
+        <span class="banderole-text">NEW</span>
+      </div>
+
+      <div class="content">
+        <div class="top-section">
+          <h2>Rust-Stats</h2>
+          <div class="card-info">
+            Tool
+          </div>
+        </div>
+        <div class="bottom-section">
+          <p>Find out the stats about each Rust player. Just search for their Steam ID.</p>
+          <input required="" name="search_q" autocomplete="off" type="search" class="profile-search searchDesktop"
+            id="searchInputrustStats" placeholder="Steam ID Number">
+          <button onclick="performRustStatsSearch()">Search</button>
+          <div class="card-info">
+            3
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="card" onclick="openLink('Rust_Collection/Diesel_Calc/diesel_calc.html')">
       <div class="background-image" style="background-image: url('img/diesel_barrel.webp');"></div>
       <video autoplay loop muted class="background-video" id="video">
         <source src="video//diesel_barrel.mp4" type="video/mp4">
       </video>
 
-            <div class="banderole">
+      <!-- <div class="banderole">
         <span class="banderole-text">UPDATE</span>
-      </div>
+      </div> -->
 
       <div class="content">
         <div class="top-section">
@@ -186,7 +216,7 @@
           <p>Calculates how much you can generate in resoscen and boom with Diesel or Fertilizer</p>
           <div class="card-info">
 
-            3
+            4
           </div>
         </div>
       </div>
@@ -216,7 +246,7 @@
           <p>Quick selection for your computer one click right automatically copy code to clipboard</p>
           <div class="card-info">
 
-            3
+            5
           </div>
         </div>
       </div>
@@ -245,7 +275,7 @@
           <p>Calculate how much building material you need for your starter</p>
           <div class="card-info">
 
-            4
+            6
           </div>
         </div>
       </div>
@@ -269,7 +299,7 @@
           <p>Find the cross bread combination for your god seed</p>
           <div class="card-info">
 
-            5
+            7
           </div>
         </div>
       </div>
@@ -299,7 +329,7 @@
           <p>Calculate the optimal TC fill</p>
           <div class="card-info">
 
-            6
+            8
           </div>
         </div>
       </div>
@@ -323,7 +353,7 @@
           <p>Get all the information about your server or their enemies</p>
           <div class="card-info">
 
-            7
+            9
           </div>
         </div>
       </div>
@@ -347,7 +377,7 @@
           <p>Create your circuit diagram for Rust online</p>
           <div class="card-info">
 
-            8
+            10
           </div>
         </div>
       </div>
@@ -371,7 +401,7 @@
           <p>Find sweet spots for your base and share information on the map with your colleagues</p>
           <div class="card-info">
 
-            9
+            11
           </div>
         </div>
       </div>
@@ -395,7 +425,7 @@
           <p>a tool to test the Rust Gun Spray online</p>
           <div class="card-info">
 
-            10
+            12
           </div>
         </div>
       </div>
@@ -619,8 +649,8 @@
               <tr>
                 <td>Today</td>
                 <td>
-                  <div class="counterapi" style="color: blue;" key="24h" timeline="24h" noIcon="true" noCss="true" abbreviate="true"
-                    noLink="ture"></div>
+                  <div class="counterapi" style="color: blue;" key="24h" timeline="24h" noIcon="true" noCss="true"
+                    abbreviate="true" noLink="ture"></div>
                 </td>
               </tr>
               <tr>
@@ -670,7 +700,7 @@
   <script src="js/twitch_drops_countdown.js"></script>
   <script src="js/cokiemsg.js"></script>
   <script src="js/hovercard3d.js"></script>
-
+  <script src="js/ruststats_search.js"></script>
   <script src="https://counterapi.com/c.js?ns=Rust-Collection" async></script>
 
 
