@@ -1,12 +1,12 @@
 import discord
 
 # Deine Discord-Bot-Token hier einfügen
-TOKEN = "MTEwMzQwNzU1MDkxOTA4NjE1MQ.GhVJnA.jbgHRDTT7qhCyHnI8ZjAGGjHQet5erv7RcXHR0"
+TOKEN = "MTE3MjAxNzY1MjY1MTI2NjE0MA.GBv9XO.euJBoXegu5t3j7T9dG_L29wHyGj7K26CYrL5Nw"
 
 # Deine vorgegebene Channel-ID hier einfügen
-CHANNEL_ID = 1152263133109424159
+CHANNEL_ID = 859611175032455198
 
-website_url = "https://napoii.github.io/Rust-Collection/"
+website_url = "discord.gg/gGjW9AY"
 
 # Initialisierung des Discord-Clients
 intents = discord.Intents.default()
@@ -15,37 +15,33 @@ intents.presences = False
 client = discord.Client(intents=intents)
 
 
+def create_embed(game, server, when, event, players, description):
+    embed = discord.Embed(title="Server Incident Report", color=0xFF5733)
+    embed.add_field(name="Game", value=game, inline=False)
+    embed.add_field(name="Server", value=server, inline=False)
+    embed.add_field(name="When", value=when, inline=False)
+    embed.add_field(name="Event", value=event, inline=False)
+    embed.add_field(name="Players on the Server", value=players, inline=False)
+    embed.add_field(name="Description", value=description, inline=False)
+    embed.set_footer(text="Incident Report Example")
+
+
 @client.event
 async def on_ready():
     print(f'Eingeloggt als {client.user.name}')
     channel = client.get_channel(CHANNEL_ID)
 
-    # Erstelle ein Embed
-    embed = discord.Embed(
-        title='Hello on the Rust Collection Discord',
-        description="""🚧 Hello, Rust Innovators! 🌟
-🔧 Explore Our Newest Feature: Fertilizer Sales Estimator! 💰
+    embed = discord.Embed(title="Rule",
+                        description="The Rules will append depending on what is happening. Usually we follow a free based rule of respecting each other. Stay legal and treat other like you would treat yourself. That should be all. Oh and dont spam. If somebody is not answering, be patient.",
+                        colour=0x00b0f4)
 
-Greetings, Rust Fanatics!
+    embed.set_image(url="https://i.imgur.com/s2afMEh.png")
 
-We're thrilled to unveil an exciting addition to our Rust gaming toolkit - the Fertilizer Sales Estimator! Your feedback and suggestions have inspired us to create this invaluable feature that will elevate your Rust gaming experience to the next level.
 
-💼 What Can You Do with the Fertilizer Sales Estimator?
-With this latest update, you can now effortlessly and swiftly calculate your profits from selling fertilizers. No more guesswork or tedious manual calculations! Know precisely how much you're making when you cash in your fertilizers. Get ready to maximize your farming profits! 🌾💰🚜
-You can find it in the diesel calculator
-""",
-        color=discord.Color.blue()  # Farbe des Embeds
-    )
-
-    # Set the image URL in the embed
-    image_url = "https://i.imgur.com/XSx2Kfy.png"
-    embed.set_image(url=image_url)
-
-    # Add a field with a link
-    website_url = "https://napoii.github.io/Rust-Collection/"
-    embed.add_field(name="Rust-Collection",
-                    value=f"[Lets go to Rust-Collection]({website_url})")
-
+    content = "  <@&1102063023516033114>"
     await channel.send(embed=embed)
+
+
+
 
 client.run(TOKEN)
