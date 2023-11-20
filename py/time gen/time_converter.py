@@ -1,18 +1,16 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
-def format_countdown_date(input_date):
-    try:
-        # Das Eingabedatum analysieren
-        parsed_date = datetime.strptime(input_date, '%B %dth %Y')
+# Gegebenes Format
+given_format = "%Y-%m-%dT01:00:00+02:00"
+given_date_str = "2023-12-11T01:00:00+02:00"
 
-        # Das Countdown-Datum im gewünschten Format erstellen
-        countdown_date = parsed_date.strftime('%Y-%m-%dT01:00:00+02:00')
-        return countdown_date
-    except ValueError:
-        # Fehlerbehandlung für ungültiges Eingabeformat
-        return "Ungültiges Datum"
+# Wandele das gegebene Datum ins DateTime-Objekt um
+given_date = datetime.strptime(given_date_str, given_format)
 
-# Beispiel-Eingabe: "October 12th 2023"
-input_date = input("Geben Sie das Datum im Format 'Month Dayth Year' ein (z.B. October 12th 2023): ")
-countdown_date = format_countdown_date(input_date)
-print("Countdown-Datum:", countdown_date)
+# Erstelle das gewünschte Format
+desired_format = "%Y-%m-%dT%H:%M:%S%z"
+
+# Füge die Zeitzoneinformation hinzu
+desired_date_str = given_date.strftime(desired_format)
+
+print(desired_date_str)
