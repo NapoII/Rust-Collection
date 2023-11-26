@@ -1,6 +1,3 @@
-
-
-
 [![downloads/total](https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F)](https://napoii.github.io/Rust-Collection/) [![github/repo-size](https://img.shields.io/github/repo-size/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/archive/refs/heads/main.zip) [![github/license](https://img.shields.io/github/license/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/blob/main/LICENSE) [![github/issues_open](https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic)](https://img.shields.io/github/issues-raw/NapoII/Rust-Collection) [![github/stars](https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social)](https://github.com/NapoII/Rust-Collection/stargazers) [![discord](https://img.shields.io/discord/1152254593850417234)](https://discord.gg/fSTfQ6mJtA)
 
 
