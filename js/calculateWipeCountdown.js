@@ -1,18 +1,25 @@
-// Function to get the date of the first Thursday in the next month
+// Funktion, um das Datum des ersten Donnerstags im nächsten Monat zu erhalten
 function getFirstThursdayOfNextMonth() {
-  const now = new Date(); // Get the current date and time
-  const year = now.getFullYear();
-  let month = now.getMonth() + 1; // Add 1 to the current month to get the next month
-
-  if (month > 11) {
-    // If the next month is December, set the year to the next year
-    year++;
-    month = 0;
-  }
+  let now = new Date(); // Aktuelles Datum und Uhrzeit abrufen
+  let year = now.getFullYear();
+  let month = now.getMonth(); // Den aktuellen Monat verwenden, nicht +1
 
   const firstOfMonth = new Date(year, month, 1);
   const daysUntilThursday = (4 - firstOfMonth.getDay() + 7) % 7;
   const firstThursday = new Date(year, month, 1 + daysUntilThursday);
+
+  // Überprüfen, ob der erste Donnerstag im aktuellen Monat bereits vergangen ist
+  if (firstThursday < now) {
+    // Wenn ja, den ersten Donnerstag im nächsten Monat verwenden
+    month++;
+    if (month > 11) {
+      year++;
+      month = 0;
+    }
+    const nextFirstOfMonth = new Date(year, month, 1);
+    const daysUntilNextThursday = (4 - nextFirstOfMonth.getDay() + 7) % 7;
+    return new Date(year, month, 1 + daysUntilNextThursday);
+  }
 
   return firstThursday;
 }
