@@ -1,9 +1,31 @@
 function getNextThursday() {
   const now = new Date();
   const daysUntilNextThursday = (4 - now.getDay() + 7) % 7;
-  const nextThursday = new Date(now.getTime() + daysUntilNextThursday * 24 * 60 * 60 * 1000);
-  nextThursday.setHours(20, 0, 0, 0);
-  return nextThursday;
+  const nextThursday = new Date(now);
+  nextThursday.setDate(now.getDate() + daysUntilNextThursday);
+  nextThursday.setHours(0, 0, 0, 0);
+
+
+  function addTimeToDate(date, hours, minutes) {
+    // Kopiere das Datum, um Seiteneffekte zu vermeiden
+    const newDate = new Date(date);
+
+
+    userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    // Zeitverschiebung basierend auf der Zeitzone des Benutzers erhalten
+    offset = -new Date().getTimezoneOffset() / 60; // Vorzeichen umkehren
+
+    // Füge Stunden und Minuten hinzu
+    newDate.setHours(newDate.getHours() + hours + offset);
+    newDate.setMinutes(newDate.getMinutes() + minutes);
+
+  
+    return newDate;
+  }
+
+  // UTC +0 Time
+  nextThursday_with_time = addTimeToDate(nextThursday, 19, 0);
+  return nextThursday_with_time;
 }
 
 function updateCountdown() {
