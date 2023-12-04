@@ -14,6 +14,7 @@ function getNextThursday() {
     userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     // Zeitverschiebung basierend auf der Zeitzone des Benutzers erhalten
     offset = -new Date().getTimezoneOffset() / 60; // Vorzeichen umkehren
+    console.log("offset:", offset);
 
     // Füge Stunden und Minuten hinzu
     newDate.setHours(newDate.getHours() + hours + offset);
