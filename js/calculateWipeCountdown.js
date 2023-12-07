@@ -1,76 +1,59 @@
-// Funktion, um das Datum des ersten Donnerstags im nächsten Monat zu erhalten
-function getFirstThursdayOfNextMonth() {
+// Funktion, um das Datum des ersten Donnerstags im aktuellen oder nächsten Monat zu erhalten
+function getFirstThursday() {
   let now = new Date(); // Aktuelles Datum und Uhrzeit abrufen
   let year = now.getFullYear();
   let month = now.getMonth(); // Den aktuellen Monat verwenden, nicht +1
 
-  
-
   const firstOfMonth = new Date(year, month, 1);
   const daysUntilThursday = ((4 - firstOfMonth.getDay() + 7) % 7);
   const firstThursday = new Date(year, month, 1 + daysUntilThursday);
-  
 
-  function addTimeToDate(date, hours, minutes) {
-    // Kopiere das Datum, um Seiteneffekte zu vermeiden
-    const newDate = new Date(date);
-  
-    userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    // Zeitverschiebung basierend auf der Zeitzone des Benutzers erhalten
-    offset = -new Date().getTimezoneOffset() / 60; // Vorzeichen umkehren
-
-    // Füge Stunden und Minuten hinzu
-    newDate.setHours(newDate.getHours() + hours + offset);
-    newDate.setMinutes(newDate.getMinutes() + minutes);
-  
-    return newDate;
+  // Überprüfe, ob das berechnete Datum bereits vergangen ist
+  if (firstThursday < now) {
+    // Berechne den ersten Donnerstag im nächsten Monat
+    month = (month + 1) % 12; // Nächster Monat, unter Berücksichtigung des Jahreswechsels
+    year = month === 0 ? year + 1 : year; // Wenn der nächste Monat Januar ist, erhöhe das Jahr um 1
+    firstThursday.setFullYear(year, month, 1);
+    const daysUntilNextThursday = ((4 - firstThursday.getDay() + 7) % 7);
+    firstThursday.setDate(1 + daysUntilNextThursday);
   }
 
-  // in UTC 0
-  firstThursday_with_time = addTimeToDate(firstThursday, 19, 0);
-
-
-  // Überprüfen, ob der erste Donnerstag im aktuellen Monat bereits vergangen ist
-  if (firstThursday_with_time < now) {
-    // Wenn ja, den ersten Donnerstag im nächsten Monat verwenden
-    month++;
-    if (month > 11) {
-      year++;
-      month = 0;
-    }
-    const nextFirstOfMonth = new Date(year, month, 1);
-    const daysUntilNextThursday = (4 - nextFirstOfMonth.getDay() + 7) % 7;
-    return new Date(year, month, 1 + daysUntilNextThursday);
-  }
-
-  return firstThursday_with_time;
+  return firstThursday;
 }
+
+// Funktion, um Stunden und Minuten zu einem Datum hinzuzufügen
+function addTimeToDate(date, hours, minutes) {
+  const newDate = new Date(date);
+  const offset = -new Date().getTimezoneOffset() / 60;
+  newDate.setHours(newDate.getHours() + hours + offset);
+  newDate.setMinutes(newDate.getMinutes() + minutes);
+  return newDate;
+}
+
+// Ersten Donnerstag mit Zeit berechnen und ausgeben
+const firstThursday = getFirstThursday();
+const firstThursdayWithTime = addTimeToDate(firstThursday, 19, 0);
+console.log('Erster Donnerstag mit Zeit:', firstThursdayWithTime);
 
 // Function to update the countdown timer
 function updateCountdown() {
-  const nextThursday = getFirstThursdayOfNextMonth(); // Get the date of the first Thursday in the next month
+  const now = new Date(); // Aktuelles Datum und Uhrzeit abrufen
 
+  if (firstThursdayWithTime > now) {
+    // Zeitdifferenz zwischen jetzt und dem nächsten Donnerstag berechnen
+    const timeDifference = firstThursdayWithTime - now;
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
 
-
-
-  const now = new Date(); // Get the current date and time
-
-  if (firstThursday_with_time > now) {
-    // Calculate the time difference between now and the next Thursday
-    const timeDifference = firstThursday_with_time - now;
-     (firstThursday_with_time > now)
-    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // Calculate days
-    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // Calculate hours
-    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)); // Calculate minutes
-
-    // Display the countdown in an HTML element with the ID "countdown"
+    // Countdown im HTML-Element mit der ID "countdown" anzeigen
     const countdownElement = document.getElementById("countdown");
-    countdownElement.innerHTML = firstThursday_with_time.toDateString() + "<hr>" + days + " Days " + "<br>" + hours + " Hours " + "<br>" + minutes + " Minutes";
+    countdownElement.innerHTML = firstThursdayWithTime.toDateString() + "<hr>" + days + " Days " + "<br>" + hours + " Hours " + "<br>" + minutes + " Minutes";
   }
 }
 
-// Update the countdown every second
+// Countdown alle Sekunde aktualisieren
 setInterval(updateCountdown, 1000);
 
-// Call the initial countdown
+// Initialen Countdown aufrufen
 updateCountdown();
