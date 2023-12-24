@@ -20,14 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    const maxSnowflakes = 800; // Maximale Anzahl von Schneeflocken
     const snowflakes = [];
 
     function Snowflake() {
       this.x = Math.random() * canvas.width;
       this.y = Math.random() * canvas.height;
       this.radius = Math.random() * 5 + 1;
-      this.speed = Math.random() * 3 + 1;
-      this.opacity = Math.random() * 0.5 + 0.1;
+      this.speed = Math.random() +0.2;
+      this.opacity = 0; // Starttransparenz auf 0 setzen
+      this.targetOpacity = Math.random() * 0.5 + 0.1; // Individuelle Zieltransparenz
 
       this.draw = function () {
         ctx.beginPath();
@@ -44,14 +46,21 @@ document.addEventListener("DOMContentLoaded", function () {
         if (this.y > canvas.height) {
           this.y = 0;
           this.x = Math.random() * canvas.width;
+          this.targetOpacity = Math.random() * 0.5 + 0.1; // Neue Zieltransparenz setzen
         }
+
+        // Erhöhe die Transparenz allmählich
+        this.opacity += 0.01;
+
+        // Begrenze die maximale Transparenz
+        this.opacity = Math.min(this.opacity, this.targetOpacity);
 
         this.draw();
       };
     }
 
     function createSnowflakes(count) {
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i < count && snowflakes.length < maxSnowflakes; i++) {
         snowflakes.push(new Snowflake());
       }
     }
