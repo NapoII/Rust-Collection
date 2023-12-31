@@ -9,13 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.appendChild(canvas);
       const ctx = canvas.getContext('2d');
       const particles = [];
-      const maxParticles = 800; // Set the limit for the number of particles
-      const maxExplosionSize = 8; // Set the maximum size of the explosion circles
-      const fadeOutRate = 0.021; // Adjust the rate at which particles fade out
+      const maxParticles = 400; // Set the limit for the number of particles
+      const maxExplosionSize = 10; // Set the maximum size of the explosion circles
+      const fadeOutRate = 0.015; // Adjust the rate at which particles fade out
   
-      canvas.style.position = 'absolute';
+      canvas.style.position = 'fixed'; // Use 'fixed' to cover the entire viewport
       canvas.style.top = '0';
       canvas.style.left = '0';
+      canvas.style.pointerEvents = 'none'; // Allow interactions with elements behind the canvas
   
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         this.y += this.speedY;
         this.opacity -= fadeOutRate; // Adjust the fade out rate
   
-        if (this.size > 0.5) this.size -= 0,1; // Adjust the size reduction rate
+        if (this.size > 0.2) this.size -= 0.1; // Adjust the size reduction rate
       };
   
       Particle.prototype.draw = function () {
