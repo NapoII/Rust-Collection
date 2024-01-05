@@ -37,19 +37,34 @@ body {
 }
 
 .card {
-  width: 220px; /* Ihre gewünschte Breite */
-  height: 300px; /* Ihre gewünschte Höhe */
+  width: 220px;
+  height: 300px;
   display: flex;
   background-color: var(--modulBg);
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 50px; /* Abstand nach unten zur nächsten Karte */
-  border: 1px solid var(--bg1); /* Transparenter Rahmen */
-  color: var(--font); /* Textfarbe in var(--font) */
+  transition: transform 0.5s ease; /* Fügt die Drehanimation hinzu */
+  margin-bottom: 50px;
+  border: 1px solid var(--bg1);
+  color: var(--font);
 }
+
+.card .back {
+  display: none;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card.is-flipped .back {
+  display: block;
+}
+
 
 /* Standardmäßig das Video ausblenden */
 .background-video {
@@ -146,7 +161,6 @@ body {
   opacity: 0.5;
   z-index: -1;
 }
-
 
 
 .content {
@@ -334,4 +348,220 @@ hr {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  padding: 1px;
+  box-shadow: 0 0 1000px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  opacity: 2;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  border-radius: 2px;
+  overflow: hidden;
+  
+}
+
+.popup.show {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--bg2);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: glowDust 3s ease-in-out infinite;
+}
+
+@keyframes glowDust {
+  0% {
+    box-shadow: 0 0 10px rgba(85, 85, 127, 0.5), 0 0 10px rgba(17, 17, 72, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(87, 87, 107, 0.7), 0 0 20px rgba(17, 17, 72, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(106, 106, 141, 0.5), 0 0 10px rgba(17, 17, 72, 0.3);
+  }
+}
+
+.pop_card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content {
+  height: 100%; /* Setze die Höhe der .content-Klasse auf 100% */
+  display: flex;
+  flex-direction: column;
+}
+
+
+.pop_top-section {
+  font-size: 30px;
+  overflow: hidden;
+  font-family: 'Rust', Arial, sans-serif;
+  letter-spacing: 1.5px;
+  color: var(--h);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.pop_top-section.dark-background {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pop_bottom-section {
+  flex-grow: 1; /* Fülle den verbleibenden Platz innerhalb der .content */
+  padding: 20px; /* Füge Padding für den Inhalt hinzu */
+}
+
+.pop_card-info_l,
+.pop_card-info_r {
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  padding: 3px;
+  margin-bottom: 1px;
+  color: var(--font);
+  opacity: 1;
+}
+
+.pop_card-info_l {
+  left: 0;
+  background: var(--bg1);
+  opacity: 1;
+}
+
+.pop_card-info_r {
+  right: 0;
+  background: var(--bg1);
+  opacity: 1;
+}
+
+
+.cover {
+  width: 220px;
+  height: 325px;
+  display: flex;
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border: none;
+  color: var(--font);
+  background: none;
+  position: relative; /* Hinzugefügt, um die Positionierung zu beeinflussen */
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px; /* Höhe des Bördelungsbildes anpassen */
+  background-image: url('img/boerdel.top.png');
+  background-size: cover;
+  z-index: 1; /* Hinzugefügt, um sicherzustellen, dass die Bördelung über dem Inhalt liegt */
+  top: 0;
+}
+
+.cover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px; /* Höhe des Bördelungsbildes anpassen */
+  background-image: url('img/boerdel.bot.png');
+  background-size: cover;
+  z-index: 1; /* Hinzugefügt, um sicherzustellen, dass die Bördelung über dem Inhalt liegt */
+  bottom: 0;
+}
+
+
+.cover::before {
+  top: 0;
+}
+
+.cover::after {
+  bottom: 0;
+}
+
+
+.cover_top-section {
+  font-family: 'Rust', Arial, sans-serif;
+  flex: 1;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--h);
+  background-color: var(--bg1); /* Schwarzer Hintergrund mit 20% Transparenz */
+  text-align: center; /* Zentriert den Text horizontal */
+}
+
+/* Falls notwendig, könnte auch das Elternelement (cover-content) vertikal zentriert werden */
+.cover-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cover_info {
+  color: var(--font); /* Farbe des Texts */
+  letter-spacing: 1.1px;
+  font-size: 10px; /* Kleiner Schriftgrad */
+  color: var(--font); /* Farbe des Texts */
+  opacity: 1;
+  font-size: 14px; /* Kleiner Schriftgrad */
+  text-transform: uppercase; /* Convert text to uppercase */
+}
+
+.cover_bottom-section {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.6); /* Schwarzer Hintergrund mit 60% Transparenz */
+}
+
+/* Zeigen Sie das Video an, wenn der Benutzer mit der Maus über die Karte schwebt */
+.cover:hover .background-video {
+  display: block;
+}
+
+/* Verbergen Sie das Bild, wenn der Benutzer mit der Maus über die Karte schwebt */
+.cover:hover .background-image {
+  display: none;
+}
+
+
+.cover:hover {
+  /* transform: scale(1.35) rotateX(15deg) rotateY(15deg);*/
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Add a red glow with some transparency */
+  z-index: 1; /* Bring the hovered card above other cards */
+  cursor: pointer
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  pointer-events: none;
 }
