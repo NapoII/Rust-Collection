@@ -2,55 +2,55 @@
 {
     "1": {
         "titel": "Buy Cloth in Outpost",
-        "text": "<p>For 40 <img src='img/rust_tipps/scrap.png' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> you can buy 200 <img src='img/rust_tipps/cloth.png' alt='cloth' style='width:8%; height:7%; vertical-align: middle;'></p><p>in the outpost</p><p>1. Buy Tactical Gloves for 40 <img src='img/rust_tipps/scrap.png' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>2. Recycle the gloves and receive 200 <img src='img/rust_tipps/cloth.png' alt='cloth' style='width:8%; height:7%; vertical-align: middle;'>..</p>",
-        "img": "img/rust_tipps/tac.png"
+        "text": "<p>For 40 <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> you can buy 200 <img src='img/rust_tipps/cloth.webp' alt='cloth' style='width:8%; height:7%; vertical-align: middle;'></p><p>in the outpost</p><p>1. Buy Tactical Gloves for 40 <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>2. Recycle the gloves and receive 200 <img src='img/rust_tipps/cloth.webp' alt='cloth' style='width:8%; height:7%; vertical-align: middle;'>..</p>",
+        "img": "img/rust_tipps/tac.webp"
     },
     
     "2": {
         "titel": "Efficient Wood Purchase",
-        "text": "<p>You pay less <img src='img/rust_tipps/scrap.png' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> for <img src='img/rust_tipps/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'> if you buy <img src='img/rust_tipps/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Buying <img src='img/rust_tipps/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'> in the Outpost.</p><p>2. Exchange <img src='img/rust_tipps/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'> for <img src='img/rust_tipps/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'></p><p>     to get more <img src='img/rust_tipps/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'> for less <img src='img/rust_tipps/scrap.png' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p>",
-        "img": "img/rust_tipps/outpost_vendig_stone.png"
+        "text": "<p>You pay less <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> for <img src='img/rust_tipps/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'> if you buy <img src='img/rust_tipps/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Buying <img src='img/rust_tipps/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'> in the Outpost.</p><p>2. Exchange <img src='img/rust_tipps/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'> for <img src='img/rust_tipps/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'></p><p>     to get more <img src='img/rust_tipps/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'> for less <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p>",
+        "img": "img/rust_tipps/outpost_vendig_stone.webp"
     },
 
     "3": {
         "titel": "Avoid Jumping Sounds",
         "text": "<p>Be careful with jumping,</p><p>it produces sound twice as far as regular walking.</p>",
-        "img": "img/rust_tipps/jump.png"
+        "img": "img/rust_tipps/jump.webp"
     },
     
     "4": {
         "titel": "HQ Metal in Bandit Camp",
-        "text": "<p>For 200 <img src='img/rust_tipps/scrap.png' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> you can buy 40 <img src='img/rust_tipps/metal.refined.webp' alt='HQM' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Purchase a 16x Scope in Bandit-Camp</p><p>2. Recycle it to obtain <img src='img/rust_tipps/metal.refined.webp' alt='HQM' style='width:8%; height:7%; vertical-align: middle;'>.</p>",
-        "img": "img/rust_tipps/hqm_stroe.png"
+        "text": "<p>For 200 <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> you can buy 40 <img src='img/rust_tipps/metal.refined.webp' alt='HQM' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Purchase a 16x Scope in Bandit-Camp</p><p>2. Recycle it to obtain <img src='img/rust_tipps/metal.refined.webp' alt='HQM' style='width:8%; height:7%; vertical-align: middle;'>.</p>",
+        "img": "img/rust_tipps/hqm_stroe.webp"
     },
 
     "5": {
         "titel": "Buy Gunpowder at Outpost",
-        "text": "<p>At the Outpost, you can use 50 <img src='img/rust_tipps/scrap.png' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> to purchase 150 <img src='img/rust_tipps/gunpowder.png' alt='gunpowder' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Purchase smoke grenades at the Outpost for 50 <img src='img/rust_tipps/scrap.png' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>2. Recycle the smoke grenades.</p><p>3. Obtain 150 <img src='img/rust_tipps/gunpowder.png' alt='gunpowder' style='width:8%; height:7%; vertical-align: middle;'> and 250 <img src='img/rust_tipps/metal.fragments.webp' alt='fragments' style='width:8%; height:7%; vertical-align: middle;'> from the recycling process.</p>",
-        "img": "img/rust_tipps/buy_smoke.png"
+        "text": "<p>At the Outpost, you can use 50 <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> to purchase 150 <img src='img/rust_tipps/gunpowder.webp' alt='gunpowder' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Purchase smoke grenades at the Outpost for 50 <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>2. Recycle the smoke grenades.</p><p>3. Obtain 150 <img src='img/rust_tipps/gunpowder.webp' alt='gunpowder' style='width:8%; height:7%; vertical-align: middle;'> and 250 <img src='img/rust_tipps/metal.fragments.webp' alt='fragments' style='width:8%; height:7%; vertical-align: middle;'> from the recycling process.</p>",
+        "img": "img/rust_tipps/buy_smoke.webp"
     },
 
     "6": {
         "titel": "Quiet Night Vision with Emotes",
         "text": "<p>When using night vision goggles, you can eliminate the humming sound to hear every step.</p><p>1. Activate your night vision goggles.</p><p>2. Perform an emote, like waving.</p><p>3. Notice the disappearance of the humming sound, allowing you to hear every step.</p>",
-        "img": "img/rust_tipps/night_googels.png"
+        "img": "img/rust_tipps/night_googels.webp"
     },
 
         "7": {
         "titel": "Visibility After Death",
         "text": "<p>When you die in Rust, you can continue to see what's happening around your body.</p><p>1. Die in the game.</p><p>2. As the map fades in, repeatedly press the ESC key.</p><p>3. Observe what's happening around your body and gather valuable information.</p>",
-        "img": "img/rust_tipps/dead.png"
+        "img": "img/rust_tipps/dead.webp"
     },
 
     "8": {
         "titel": "Using Safe Zones as Storage",
         "text": "<p>Use the safe zones as your storage in Rust. If you kill yourself (/kill) in a safe zone, your body will remain there for 1 hour. Fill your inventory with items like nodes before you die, and you can use every slot. This way, you can have up to 37 slots for items stored safely in the safe zone.</p><p>1. Go to a safe zone in the game.</p><p>2. Fill your inventory with items you want to store.</p><p>3. Use the /kill command to kill your character.</p><p>4. Your body, along with the items, will remain in the safe zone for 1 hour.</p>",
-        "img": "img/rust_tipps/safe_zone_storage.png"
+        "img": "img/rust_tipps/safe_zone_storage.webp"
     },
 
         "9": {
         "titel": "Preventing Ladder Climbing with Gates",
         "text": "<p>In Rust, you can prevent others from climbing into your compound by using gates instead of high walls. Ladders cannot be built on gates, making your compound more secure.</p><p>1. Choose to use gates instead of high walls for your compound.</p><p>2. Build your compound with these gates.</p><p>3. Now, others cannot use ladders to climb into your compound.</p>",
-        "img": "img/rust_tipps/gate_no_ladders.png"
+        "img": "img/rust_tipps/gate_no_ladders.webp"
     }
 }

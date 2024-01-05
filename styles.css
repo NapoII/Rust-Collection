@@ -467,7 +467,7 @@ hr {
   position: absolute;
   width: 100%;
   height: 15px; /* Höhe des Bördelungsbildes anpassen */
-  background-image: url('img/boerdel.top.png');
+  background-image: url('img/boerdel.top.webp');
   background-size: cover;
   z-index: 1; /* Hinzugefügt, um sicherzustellen, dass die Bördelung über dem Inhalt liegt */
   top: 0;
@@ -478,7 +478,7 @@ hr {
   position: absolute;
   width: 100%;
   height: 15px; /* Höhe des Bördelungsbildes anpassen */
-  background-image: url('img/boerdel.bot.png');
+  background-image: url('img/boerdel.bot.webp');
   background-size: cover;
   z-index: 1; /* Hinzugefügt, um sicherzustellen, dass die Bördelung über dem Inhalt liegt */
   bottom: 0;
