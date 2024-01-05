@@ -61,7 +61,7 @@ function openPopup() {
 
 function getRandomEntryAndGenerateHTML(callback) {
   console.log("Fetching data...");
-  var jsonFilePath = '/js/rust_trick_list.json';
+  var jsonFilePath = 'js/rust_trick_list.json';
   
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
