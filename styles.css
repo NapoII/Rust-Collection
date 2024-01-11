@@ -392,6 +392,8 @@ hr {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  max-width: 320px;
+  min-height: 400px;
 }
 
 .content {
@@ -419,17 +421,20 @@ hr {
 .pop_bottom-section {
   flex-grow: 1; /* Fülle den verbleibenden Platz innerhalb der .content */
   padding: 20px; /* Füge Padding für den Inhalt hinzu */
+  z-index: 1;
+
 }
 
 .pop_card-info_l,
 .pop_card-info_r {
   font-size: 11px;
-  position: absolute;
+  position:fixed;
   bottom: 0;
   padding: 3px;
   margin-bottom: 1px;
   color: var(--font);
   opacity: 1;
+  
 }
 
 .pop_card-info_l {
