@@ -3,3 +3,5 @@
 2023-12-16T00:59:00+01:00, Twitch Rivels ends
 2023-12-16T01:00:00+02:00, 10 year anniversary begins
 2023-12-31T01:00:00+02:00, 10 year anniversary ends
+2024-01-13T19:00:00+01:00, Trust in Rust - begins
+2024-01-21T00:59:00+01:00, Trust in Rust - ends
