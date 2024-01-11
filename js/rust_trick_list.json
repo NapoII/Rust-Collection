@@ -52,5 +52,15 @@
         "titel": "Preventing Ladder Climbing with Gates",
         "text": "<p>In Rust, you can prevent others from climbing into your compound by using gates instead of high walls. Ladders cannot be built on gates, making your compound more secure.</p><p>1. Choose to use gates instead of high walls for your compound.</p><p>2. Build your compound with these gates.</p><p>3. Now, others cannot use ladders to climb into your compound.</p>",
         "img": "img/rust_tipps/gate_no_ladders.webp"
+    },
+
+        "10": {
+        "titel": "Crafting a Paddle at Outpost",
+        "text": "<p>A paddle can help you destroy barrels and signs in safe zones and collect scrap.</p><p>1. Learn the blueprint for the paddle in the workbeacnh in the outpost </p> <p>2. Buy or collect the raw materials you need.</p> <p>3. Craft the paddle.</p> <p>4. Now use it to farm all the signs in the save zone and scrape them</p>",
+        "img": "img/rust_tipps/paddle.png"
     }
+    
 }
+
+
+
