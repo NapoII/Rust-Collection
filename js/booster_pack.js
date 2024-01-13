@@ -61,7 +61,7 @@ function openPopup() {
 
 function getRandomEntryAndGenerateHTML(callback) {
   console.log("Fetching data...");
-  var jsonFilePath = 'js/rust_trick_list.json';
+  var jsonFilePath = 'js/booster_packs/rust_trick_booster_pack.json';
   
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
@@ -128,8 +128,14 @@ function closePopup() {
   }
 }
 
+// future Bosster pack Idear:
+//    - legenday old bugs
+//    - Bucket list!
 
-// <img src='img/rust_tipps/gunpowder.png' alt='gunpowder' style='width:8%; height:7%; vertical-align: middle;'></img>
+
+// CHAT GPT DATA GEN promt
+
+// {/* <img src='img/rust_tipps/gunpowder.png' alt='gunpowder' style='width:8%; height:7%; vertical-align: middle;'></img>
 
 
 // das ist der aufbau  meine rjson :
@@ -139,4 +145,4 @@ function closePopup() {
 //         "img": "img/rust_tipps/hqm_stroe.png"
 //     }
 
-//     ich brauche mehr tipps ich gebe dir tipps kontext und du erstellst einen neuen jason-eintrag im selben style einem titel im text eine kurze beschreibung des tips ohne erklärung und danach eine erklärung des tipps step by step mit <p>1. .... <p>2. ....
+//     ich brauche mehr tipps ich gebe dir tipps kontext und du erstellst einen neuen jason-eintrag im selben style einem titel im text eine kurze beschreibung des tips ohne erklärung und danach eine erklärung des tipps step by step mit <p>1. .... <p>2. .... */}

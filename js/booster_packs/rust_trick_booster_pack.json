@@ -48,18 +48,56 @@
         "img": "img/rust_tipps/safe_zone_storage.webp"
     },
 
-        "9": {
+    "9": {
         "titel": "Preventing Ladder Climbing with Gates",
         "text": "<p>In Rust, you can prevent others from climbing into your compound by using gates instead of high walls. Ladders cannot be built on gates, making your compound more secure.</p><p>1. Choose to use gates instead of high walls for your compound.</p><p>2. Build your compound with these gates.</p><p>3. Now, others cannot use ladders to climb into your compound.</p>",
         "img": "img/rust_tipps/gate_no_ladders.webp"
     },
 
-        "10": {
+    "10": {
         "titel": "Crafting a Paddle at Outpost",
         "text": "<p>A paddle can help you destroy barrels and signs in safe zones and collect scrap.</p><p>1. Learn the blueprint for the paddle in the workbeacnh in the outpost </p> <p>2. Buy or collect the raw materials you need.</p> <p>3. Craft the paddle.</p> <p>4. Now use it to farm all the signs in the save zone and scrape them</p>",
         "img": "img/rust_tipps/paddle.png"
+    },
+
+    "11": {
+        "titel": "Avoid Animal Chases",
+        "text": "<p>Jump and rub your body against a player's base Wall to stop animals from chasing you.</p><p>Animals will be deterred and run away after interacting with a player's base.</p>",
+        "img": "img/rust_tipps/avoid_animal_chases.png"
+    },
+
+    "12": {
+        "titel": "Online Door Raid Defense",
+        "text": "<p>When facing an online door raid, use a Locker strategically for effective defense.</p><p>1. Equip a Locker in your hand.</p><p>2. Rapidly place Lockers in front of the raided door.</p><p>3. The newly placed Lockers will instantly obstruct raiders, disrupting their progress.</p><p>4. Keep repeat spamming Lockers to create a barrier that raiders struggle to overcome.</p>",
+        "img": "img/rust_tipps/online_door_defense.png"
+    },
+
+    "13": {
+        "titel": "Neighbor Identification",
+        "text": "<p>Identifying your neighbors in Rust is crucial for strategic gameplay.</p><p>1. Approach a neighboring base and open the contact menu.</p><p>2. Filter the list to 'Last Seen' to get recent player activity.</p><p>3. Review the list to discover the names of nearby players.</p><p>4. Keep in mind that this method works only when players are online but not revealing themselves in-game.</p>",
+        "img": "img/rust_tipps/neighbor_identification.png"
+    },
+
+    "14": {
+        "titel": "Fall Damage Prevention",
+        "text": "<p>Escape fall damage by harnessing the power of falling flames through ingenious tactics.</p><p>1. Equip Molotov cocktails or fire shells to create a cascade of falling flames.</p><p>2. Locate a suitable building or cave ledge to initiate the falling flames.</p><p>3. Time your jump to land on the descending flames, effectively turning them into a temporary surf platform.</p><p>4. Safely ride the flames to the ground, skillfully avoiding any potential fall damage.</p>",
+        "img": "img/rust_tipps/flame_surfing.png"
+    },
+
+    "15": {
+        "titel": "Get a Blue Cards Through Fishing",
+        "text": "<p>Having trouble obtaining a blue card? Try to approach by engaging in fishing activities.</p><p>1. Complete the fishing quest in the fishing village to receive a free fishing rod.</p><p>2.  Fish yourself a shark.</p><p>3. Cut the shark and get a Bluecard with 20% chance</p>",
+        "img": "img/rust_tipps/fishing_blue_cards.png"
+    },
+
+    "16": {
+        "titel": "Efficient Hoverloot",
+        "text": "<p>Optimize your item management with a handy shortcut in the hoverloot interface.</p><p>1. While using hoverloot, hold down the 'ALT' key.</p><p>2. All draggable items will seamlessly transfer directly into their corresponding item slots, bypassing the inventory step.</p><p>3. Save time and streamline your looting process with this efficient hoverloot technique.</p>",
+        "img": "img/rust_tipps/hoverloot_efficiency.png"
     }
     
+    
+
 }
 
 
