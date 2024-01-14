@@ -2,103 +2,98 @@
 {
     "1": {
         "titel": "Buy Cloth in Outpost",
-        "text": "<p>For 40 <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> you can buy 200 <img src='img/rust_tipps/cloth.webp' alt='cloth' style='width:8%; height:7%; vertical-align: middle;'></p><p>in the outpost</p><p>1. Buy Tactical Gloves for 40 <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>2. Recycle the gloves and receive 200 <img src='img/rust_tipps/cloth.webp' alt='cloth' style='width:8%; height:7%; vertical-align: middle;'>..</p>",
-        "img": "img/rust_tipps/tac.webp"
+        "text": "<p>For 40 <img src='img/booster/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> you can buy 200 <img src='img/booster/cloth.webp' alt='cloth' style='width:8%; height:7%; vertical-align: middle;'></p><p>in the outpost</p><p>1. Buy Tactical Gloves for 40 <img src='img/booster/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>2. Recycle the gloves and receive 200 <img src='img/booster/cloth.webp' alt='cloth' style='width:8%; height:7%; vertical-align: middle;'>..</p>",
+        "img": "img/booster/tac.webp"
     },
     
     "2": {
         "titel": "Efficient Wood Purchase",
-        "text": "<p>You pay less <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> for <img src='img/rust_tipps/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'> if you buy <img src='img/rust_tipps/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Buying <img src='img/rust_tipps/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'> in the Outpost.</p><p>2. Exchange <img src='img/rust_tipps/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'> for <img src='img/rust_tipps/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'></p><p>     to get more <img src='img/rust_tipps/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'> for less <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p>",
-        "img": "img/rust_tipps/outpost_vendig_stone.webp"
+        "text": "<p>You pay less <img src='img/booster/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> for <img src='img/booster/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'> if you buy <img src='img/booster/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Buying <img src='img/booster/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'> in the Outpost.</p><p>2. Exchange <img src='img/booster/stones.webp' alt='stone' style='width:8%; height:7%; vertical-align: middle;'> for <img src='img/booster/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'></p><p>     to get more <img src='img/booster/wood.webp' alt='wood' style='width:8%; height:7%; vertical-align: middle;'> for less <img src='img/booster/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p>",
+        "img": "img/booster/outpost_vendig_stone.webp"
     },
 
     "3": {
         "titel": "Avoid Jumping Sounds",
         "text": "<p>Be careful with jumping,</p><p>it produces sound twice as far as regular walking.</p>",
-        "img": "img/rust_tipps/jump.webp"
+        "img": "img/booster/jump.webp"
     },
     
     "4": {
         "titel": "HQ Metal in Bandit Camp",
-        "text": "<p>For 300 <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> you can buy 40 <img src='img/rust_tipps/metal.refined.webp' alt='HQM' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Purchase a 16x Scope in Bandit-Camp</p><p>2. Recycle it to obtain <img src='img/rust_tipps/metal.refined.webp' alt='HQM' style='width:8%; height:7%; vertical-align: middle;'>.</p>",
-        "img": "img/rust_tipps/hqm_stroe.webp"
+        "text": "<p>For 300 <img src='img/booster/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> you can buy 40 <img src='img/booster/metal.refined.webp' alt='HQM' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Purchase a 16x Scope in Bandit-Camp</p><p>2. Recycle it to obtain <img src='img/booster/metal.refined.webp' alt='HQM' style='width:8%; height:7%; vertical-align: middle;'>.</p>",
+        "img": "img/booster/hqm_stroe.webp"
     },
 
     "5": {
         "titel": "Buy Gunpowder at Outpost",
-        "text": "<p>At the Outpost, you can use 50 <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> to purchase 150 <img src='img/rust_tipps/gunpowder.webp' alt='gunpowder' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Purchase smoke grenades at the Outpost for 50 <img src='img/rust_tipps/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>2. Recycle the smoke grenades.</p><p>3. Obtain 150 <img src='img/rust_tipps/gunpowder.webp' alt='gunpowder' style='width:8%; height:7%; vertical-align: middle;'> and 250 <img src='img/rust_tipps/metal.fragments.webp' alt='fragments' style='width:8%; height:7%; vertical-align: middle;'> from the recycling process.</p>",
-        "img": "img/rust_tipps/buy_smoke.webp"
+        "text": "<p>At the Outpost, you can use 50 <img src='img/booster/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'> to purchase 150 <img src='img/booster/gunpowder.webp' alt='gunpowder' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>1. Purchase smoke grenades at the Outpost for 50 <img src='img/booster/scrap.webp' alt='scrap' style='width:8%; height:7%; vertical-align: middle;'>.</p><p>2. Recycle the smoke grenades.</p><p>3. Obtain 150 <img src='img/booster/gunpowder.webp' alt='gunpowder' style='width:8%; height:7%; vertical-align: middle;'> and 250 <img src='img/booster/metal.fragments.webp' alt='fragments' style='width:8%; height:7%; vertical-align: middle;'> from the recycling process.</p>",
+        "img": "img/booster/buy_smoke.webp"
     },
 
     "6": {
         "titel": "Quiet Night Vision with Emotes",
         "text": "<p>When using night vision goggles, you can eliminate the humming sound to hear every step.</p><p>1. Activate your night vision goggles.</p><p>2. Perform an emote, like waving.</p><p>3. Notice the disappearance of the humming sound, allowing you to hear every step.</p>",
-        "img": "img/rust_tipps/night_googels.webp"
+        "img": "img/booster/night_googels.webp"
     },
 
         "7": {
         "titel": "Visibility After Death",
         "text": "<p>When you die in Rust, you can continue to see what's happening around your body.</p><p>1. Die in the game.</p><p>2. As the map fades in, repeatedly press the ESC key.</p><p>3. Observe what's happening around your body and gather valuable information.</p>",
-        "img": "img/rust_tipps/dead.webp"
+        "img": "img/booster/dead.webp"
     },
 
     "8": {
         "titel": "Using Safe Zones as Storage",
         "text": "<p>Use the safe zones as your storage in Rust. If you kill yourself (/kill) in a safe zone, your body will remain there for 1 hour. Fill your inventory with items like nodes before you die, and you can use every slot. This way, you can have up to 37 slots for items stored safely in the safe zone.</p><p>1. Go to a safe zone in the game.</p><p>2. Fill your inventory with items you want to store.</p><p>3. Use the /kill command to kill your character.</p><p>4. Your body, along with the items, will remain in the safe zone for 1 hour.</p>",
-        "img": "img/rust_tipps/safe_zone_storage.webp"
+        "img": "img/booster/safe_zone_storage.webp"
     },
 
     "9": {
         "titel": "Preventing Ladder Climbing with Gates",
         "text": "<p>In Rust, you can prevent others from climbing into your compound by using gates instead of high walls. Ladders cannot be built on gates, making your compound more secure.</p><p>1. Choose to use gates instead of high walls for your compound.</p><p>2. Build your compound with these gates.</p><p>3. Now, others cannot use ladders to climb into your compound.</p>",
-        "img": "img/rust_tipps/gate_no_ladders.webp"
+        "img": "img/booster/gate_no_ladders.webp"
     },
 
     "10": {
         "titel": "Crafting a Paddle at Outpost",
         "text": "<p>A paddle can help you destroy barrels and signs in safe zones and collect scrap.</p><p>1. Learn the blueprint for the paddle in the workbeacnh in the outpost </p> <p>2. Buy or collect the raw materials you need.</p> <p>3. Craft the paddle.</p> <p>4. Now use it to farm all the signs in the save zone and scrape them</p>",
-        "img": "img/rust_tipps/paddle.png"
+        "img": "img/booster/paddle.png"
     },
 
     "11": {
         "titel": "Avoid Animal Chases",
         "text": "<p>Jump and rub your body against a player's base Wall to stop animals from chasing you.</p><p>Animals will be deterred and run away after interacting with a player's base.</p>",
-        "img": "img/rust_tipps/avoid_animal_chases.png"
+        "img": "img/booster/avoid_animal_chases.png"
     },
 
     "12": {
         "titel": "Online Door Raid Defense",
         "text": "<p>When facing an online door raid, use a Locker strategically for effective defense.</p><p>1. Equip a Locker in your hand.</p><p>2. Rapidly place Lockers in front of the raided door.</p><p>3. The newly placed Lockers will instantly obstruct raiders, disrupting their progress.</p><p>4. Keep repeat spamming Lockers to create a barrier that raiders struggle to overcome.</p>",
-        "img": "img/rust_tipps/online_door_defense.png"
+        "img": "img/booster/online_door_defense.png"
     },
 
     "13": {
         "titel": "Neighbor Identification",
         "text": "<p>Identifying your neighbors in Rust is crucial for strategic gameplay.</p><p>1. Approach a neighboring base and open the contact menu.</p><p>2. Filter the list to 'Last Seen' to get recent player activity.</p><p>3. Review the list to discover the names of nearby players.</p><p>4. Keep in mind that this method works only when players are online but not revealing themselves in-game.</p>",
-        "img": "img/rust_tipps/neighbor_identification.png"
+        "img": "img/booster/neighbor_identification.png"
     },
 
     "14": {
         "titel": "Fall Damage Prevention",
         "text": "<p>Escape fall damage by harnessing the power of falling flames through ingenious tactics.</p><p>1. Equip Molotov cocktails or fire shells to create a cascade of falling flames.</p><p>2. Locate a suitable building or cave ledge to initiate the falling flames.</p><p>3. Time your jump to land on the descending flames, effectively turning them into a temporary surf platform.</p><p>4. Safely ride the flames to the ground, skillfully avoiding any potential fall damage.</p>",
-        "img": "img/rust_tipps/flame_surfing.png"
+        "img": "img/booster/flame_surfing.png"
     },
 
     "15": {
         "titel": "Get a Blue Cards Through Fishing",
         "text": "<p>Having trouble obtaining a blue card? Try to approach by engaging in fishing activities.</p><p>1. Complete the fishing quest in the fishing village to receive a free fishing rod.</p><p>2.  Fish yourself a shark.</p><p>3. Cut the shark and get a Bluecard with 20% chance</p>",
-        "img": "img/rust_tipps/fishing_blue_cards.png"
+        "img": "img/booster/fishing_blue_cards.png"
     },
 
     "16": {
         "titel": "Efficient Hoverloot",
         "text": "<p>Optimize your item management with a handy shortcut in the hoverloot interface.</p><p>1. While using hoverloot, hold down the 'ALT' key.</p><p>2. All draggable items will seamlessly transfer directly into their corresponding item slots, bypassing the inventory step.</p><p>3. Save time and streamline your looting process with this efficient hoverloot technique.</p>",
-        "img": "img/rust_tipps/hoverloot_efficiency.png"
+        "img": "img/booster/hoverloot_efficiency.png"
     }
-    
-    
 
 }
-
-
-

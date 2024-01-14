@@ -1,0 +1,38 @@
+{
+    "1": {
+        "titel": "Arctic Research Base Domination with a HQM Car",
+        "text": "<p>Conquer the Arctic Research Base by establishing your base near the Monument and get an HQM Car.</p><p>1. Position your base near to the Arctic Research Base.</p><p>2. Secure an HQM Car</p><p>3. Clear the Arctic Monument on cooldown by skillfully driving over NPC enemies with the HQM Car, without firing a single shot..</p><p>4. Profit...</p>",
+        "img": "img/booster/artik.png"
+        },
+
+    "2": {
+        "titel": "This is my Banitcamp now",
+        "text": "<p>Secure your safe zone by constructing a wall around Banitcamp and installing auto turrets along the streets to control access.</p><p>1. Build a wall perimeter to enclose Banitcamp, creating a secure boundary.</p><p>2. Install auto turrets along key streets to deter and eliminate potential intruders, ensuring controlled access points.</p><p>4. Regularly maintain and upgrade your defenses to adapt to evolving raiding tactics and ensure lasting protection.</p><p>5. Profit...</p>",
+        "img": "img/booster/bandit_wall.png"
+        },
+
+    "3": {
+        "titel": "Stairway to Heaven",
+        "text": "<p>Build a tall tower on an iceberg near an Oil Rig for quick access using a parachute during cooldown.</p><p>1. Choose an iceberg location close to an Oil Rig.</p><p>2. Establish a secure base on the iceberg.</p><p>3. Build a tall tower for parachute access to the Oil Rig.</p><p>4. Equip a parachute and descend during cooldown for efficient Oil Rig visits.</p><p>5. Profit...</p>",
+        "img": "img/booster/iceberg.png"
+        },
+
+    "4": {
+        "titel": "How I Learned to Stop Worrying and Love the Bomb",
+        "text": "<p>Establish your dominance by building a base near the Nuclear Missile Silo. Ensure control over this monument with only a pump shotgun and hazmat suit.</p><p>1. Build your base in close proximity to the Nuclear Missile Silo.</p><p>2. Make the monument yours with minimal gear – a pump shotgun and hazmat suit.</p><p>3. Listen for gunfire from the monument, signaling the perfect time to grab your counter gear and jump into the silo.</p><p>4. Navigate the silo, eliminate threats, and claim valuable loot for a successful and strategic monument takeover.</p>",
+        "img": "img/booster/bomb.png"
+        },
+
+    "5": {
+        "titel": "Rust Speedrun: Launch Site Domination",
+        "text": "<p>Establish your dominance by building a base near the Nuclear Missile Silo. Ensure control over this monument with only a pump shotgun and hazmat suit.</p><p>1. Build your base in close proximity to the Nuclear Missile Silo.</p><p>2. Make the monument yours with minimal gear – a pump shotgun and hazmat suit.</p><p>3. Listen for gunfire from the monument, signaling the perfect time to grab your counter gear and jump into the silo.</p><p>4. Navigate the silo, eliminate threats, and claim valuable loot for a successful and strategic monument takeover.</p>",
+        "img": "img/booster/speedrun.png"
+        },
+
+    "6": {
+        "titel": "Hemp Cartel Domination",
+        "text": "<p>Build a farm near a river and sell your products in vending machines. As soon as a conkuret appears on the map, you have your goal.</p><p>1. Set up your base near a river, optimizing it for farming operations.</p><p>2. Focus on tea and cloth production to create a market.</p><p>3. Use vending machines to sell your products with appealing prices to attract a large customer base.</p><p>4. Monitor the market; once competitors start selling tea, you've achieved your goal.</p><p>5. Eliminate rival farmers through strategic raids, establishing dominance as the sole hemp producer on the server.</p>",
+        "img": "img/booster/farm.png"
+        }
+
+}

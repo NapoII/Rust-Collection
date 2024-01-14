@@ -451,20 +451,21 @@ hr {
 
 
 .cover {
-  width: 220px;
-  height: 325px;
+  width: 230px;
+  height: 350px;
   display: flex;
   border-radius: 1px;
   overflow: hidden;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.5s ease;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-top: 0.2px;
+  margin-bottom: 10px;
   border: none;
   color: var(--font);
   background: none;
   position: relative; /* Hinzugefügt, um die Positionierung zu beeinflussen */
+
 }
 
 .cover::before {
@@ -497,7 +498,6 @@ hr {
 .cover::after {
   bottom: 0;
 }
-
 
 .cover_top-section {
   font-family: 'Rust', Arial, sans-serif;

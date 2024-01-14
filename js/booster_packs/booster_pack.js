@@ -1,4 +1,6 @@
 var isPopupOpen = false;
+var jsonFilePath; // Variable für den Dateipfad
+var booster_type
 
 function addOverlay() {
   console.log("Adding overlay");
@@ -16,23 +18,35 @@ function removeOverlay() {
   }
 }
 
-
-document.getElementById("rust_tip").addEventListener("click", function () {
-  console.log("Button clicked");
+document.getElementById("booster_tip").addEventListener("click", function () {
+  console.log("Booster Tip Button clicked");
   if (!isPopupOpen) {
+    jsonFilePath = 'js/booster_packs/booster_tip.json';
+    booster_type = 'Booster: Tip';
     openPopup();
-    isPopupOpen = true;
   }
 });
 
+document.getElementById("booster_wipe").addEventListener("click", function () {
+  console.log("Booster Wipe Button clicked");
+  if (!isPopupOpen) {
+    jsonFilePath = 'js/booster_packs/booster_wipe.json';
+    booster_type = 'Booster: Wipe';
+    openPopup();
+  }
+});
 
 function openPopup() {
+  if (isPopupOpen) {
+    return; // Wenn bereits ein Popup geöffnet ist, beende die Funktion
+  }
+
   getRandomEntryAndGenerateHTML(function (popupContent) {
     var popup = document.createElement("div");
     popup.id = "popup";
     popup.className = "popup";
     popup.innerHTML = popupContent;
-    addOverlay()
+    addOverlay();
     document.body.appendChild(popup);
 
     // Timeout, um die Animation zu starten
@@ -55,13 +69,13 @@ function openPopup() {
         }
       });
     }
-  });
+
+    isPopupOpen = true; // Setze die Variable auf true, um anzuzeigen, dass ein Popup geöffnet ist
+  }, jsonFilePath, booster_type); // jsonFilePath an die Funktion übergeben
 }
 
-
-function getRandomEntryAndGenerateHTML(callback) {
+function getRandomEntryAndGenerateHTML(callback, jsonFilePath) {
   console.log("Fetching data...");
-  var jsonFilePath = 'js/booster_packs/rust_trick_booster_pack.json';
   
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
@@ -75,7 +89,7 @@ function getRandomEntryAndGenerateHTML(callback) {
         var randomEntry = data[randomKey];
 
         // Callback-Funktion aufrufen und den generierten HTML-Teil übergeben
-        callback(generatePopupHTML(randomKey, randomEntry));
+        callback(generatePopupHTML(randomKey, randomEntry, booster_type));
       } else {
         console.error("Failed to fetch data. Status:", xhr.status);
       }
@@ -86,7 +100,7 @@ function getRandomEntryAndGenerateHTML(callback) {
   xhr.send();
 }
 
-function generatePopupHTML(key, entry) {
+function generatePopupHTML(key, entry, booster_type) {
   return `
   <div class="background-image extra" style="background-image: url('${entry.img}'); opacity: 0.5;"></div>
     <div class="pop_card">
@@ -105,7 +119,7 @@ function generatePopupHTML(key, entry) {
             ${key}
           </div>
           <div class="pop_card-info_l">
-            Rust Tip
+            ${booster_type}
           </div>
         </div>
       </div>
@@ -113,13 +127,11 @@ function generatePopupHTML(key, entry) {
   `;
 }
 
-
-
 function closePopup() {
   var popup = document.getElementById("popup");
   if (popup) {
     popup.classList.remove("show");
-    removeOverlay()
+    removeOverlay();
     // Timeout, um die Animation zu beenden und das Popup zu entfernen
     setTimeout(function () {
       document.body.removeChild(popup);
@@ -127,22 +139,3 @@ function closePopup() {
     }, 500); // Dauer der Fade-Out-Animation
   }
 }
-
-// future Bosster pack Idear:
-//    - legenday old bugs
-//    - Bucket list!
-
-
-// CHAT GPT DATA GEN promt
-
-// {/* <img src='img/rust_tipps/gunpowder.png' alt='gunpowder' style='width:8%; height:7%; vertical-align: middle;'></img>
-
-
-// das ist der aufbau  meine rjson :
-//    "4": {
-//         "titel": "HQ Metal in Bandit Camp",
-//         "text": "<p>For 200 scrap you can buy 40 HQM.</p><p>1. Purchase a 16x Scope in Bandit-Camp</p><p>2. Recycle it to obtain HQ Metal.</p>",
-//         "img": "img/rust_tipps/hqm_stroe.png"
-//     }
-
-//     ich brauche mehr tipps ich gebe dir tipps kontext und du erstellst einen neuen jason-eintrag im selben style einem titel im text eine kurze beschreibung des tips ohne erklärung und danach eine erklärung des tipps step by step mit <p>1. .... <p>2. .... */}
