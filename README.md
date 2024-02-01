@@ -1,5 +1,4 @@
-[![downloads/total](https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F)](https://napoii.github.io/Rust-Collection/) [![github/repo-size](https://img.shields.io/github/repo-size/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/archive/refs/heads/main.zip) [![github/license](https://img.shields.io/github/license/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/blob/main/LICENSE) [![github/issues_open](https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic)](https://img.shields.io/github/issues-raw/NapoII/Rust-Collection) [![github/stars](https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social)](https://github.com/NapoII/Rust-Collection/stargazers) [![discord](https://img.shields.io/discord/1152254593850417234)](https://discord.gg/fSTfQ6mJtA)
-
+[![downloads/total](https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F)](https://napoii.github.io/Rust-Collection/) [![github/repo-size](https://img.shields.io/github/repo-size/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/archive/refs/heads/main.zip) [![github/license](https://img.shields.io/github/license/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/blob/main/LICENSE) [![github/issues_open](https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic)](https://img.shields.io/github/issues-raw/NapoII/Rust-Collection) [![github/stars](https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social)](https://github.com/NapoII/Rust-Collection/stargazers) [![discord](https://img.shields.io/discord/1152254593850417234)](https://discord.gg/fSTfQ6mJtA)<a href='https://ko-fi.com/M4M0TS4ZM' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 
 
@@ -38,42 +37,10 @@ A huge thank you to all the contributors who have helped make this repository a 
 
 📝 **License**
 
-This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This repository is licensed under the GPL-3 License - see the [LICENSE](LICENSE) file for details.
 
 Enjoy your Rust journey and may your cards always be in your favor! 🃏🌟
 
-
-
-
-
-
-
-
-
-
-
-
-MIT License
-
-Copyright (c) 2023 NapoII
-<small><small><small>
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
     
 <p align="center">
 <img src="https://raw.githubusercontent.com/NapoII/NapoII/233630a814f7979f575c7f764dbf1f4804b05332/Bottom.svg" alt="Github Stats" />
