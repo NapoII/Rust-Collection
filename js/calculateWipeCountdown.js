@@ -6,17 +6,20 @@ function getFirstThursday() {
 
   const firstOfMonth = new Date(year, month, 1);
   const daysUntilThursday = ((4 - firstOfMonth.getDay() + 7) % 7);
-  const firstThursday = new Date(year, month, 1 + daysUntilThursday);
+  let firstThursday = new Date(year, month, 1 + daysUntilThursday);
 
-  // Überprüfe, ob das berechnete Datum bereits vergangen ist
-  if (firstThursday < now) {
-    // Berechne den ersten Donnerstag im nächsten Monat
+  // Überprüfe, ob es bereits nach 19 Uhr ist
+  if (now.getHours() >= 19) {
+    // Wenn ja, berechne den ersten Donnerstag im nächsten Monat
     month = (month + 1) % 12; // Nächster Monat, unter Berücksichtigung des Jahreswechsels
     year = month === 0 ? year + 1 : year; // Wenn der nächste Monat Januar ist, erhöhe das Jahr um 1
-    firstThursday.setFullYear(year, month, 1);
-    const daysUntilNextThursday = ((4 - firstThursday.getDay() + 7) % 7);
-    firstThursday.setDate(1 + daysUntilNextThursday);
+    const nextMonthFirstOfMonth = new Date(year, month, 1);
+    const daysUntilNextThursday = ((4 - nextMonthFirstOfMonth.getDay() + 7) % 7);
+    firstThursday = new Date(year, month, 1 + daysUntilNextThursday);
   }
+
+  // Setze die Stunden und Minuten auf 19:00 Uhr
+  firstThursday.setHours(19, 0, 0, 0);
 
   return firstThursday;
 }
@@ -31,8 +34,8 @@ function addTimeToDate(date, hours, minutes) {
 }
 
 // Ersten Donnerstag mit Zeit berechnen und ausgeben
-const firstThursday = getFirstThursday();
-const firstThursdayWithTime = addTimeToDate(firstThursday, 19, 0);
+const firstThursdayWithTime = getFirstThursday();
+// const firstThursdayWithTime = addTimeToDate(firstThursday, 19, 0);
 console.log('Erster Donnerstag mit Zeit:', firstThursdayWithTime);
 
 // Function to update the countdown timer
