@@ -19,21 +19,41 @@
 
     "4": {
         "titel": "How I Learned to Stop Worrying and Love the Bomb",
-        "text": "<p>Establish your dominance by building a base near the Nuclear Missile Silo. Ensure control over this monument with only a pump shotgun and hazmat suit.</p><p>1. Build your base in close proximity to the Nuclear Missile Silo.</p><p>2. Make the monument yours with minimal gear – a pump shotgun and hazmat suit.</p><p>3. Listen for gunfire from the monument, signaling the perfect time to grab your counter gear and jump into the silo.</p><p>4. Navigate the silo, eliminate threats, and claim valuable loot for a successful and strategic monument takeover.</p>",
+        "text": "<p>Establish your dominance by building a base near the Nuclear Missile Silo. Ensure control over this monument with only a pump shotgun and hazmat suit.</p><p>1. Build your base in close proximity to the Nuclear Missile Silo.</p><p>2. Make the monument yours with minimal gear – a pump shotgun and hazmat suit.</p><p>3. Listen for gunfire from the monument, signaling the perfect time to grab your counter gear and jump into the silo.</p><p>4. Navigate the silo, eliminate threats, and claim valuable loot for a successful and strategic monument takeover.</p><p>5. Profit...</p>",
         "img": "img/booster/bomb.webp"
         },
 
     "5": {
         "titel": "Rust Speedrun: Launch Site Domination",
-        "text": "<p>Establish your dominance by building a base near the Nuclear Missile Silo. Ensure control over this monument with only a pump shotgun and hazmat suit.</p><p>1. Build your base in close proximity to the Nuclear Missile Silo.</p><p>2. Make the monument yours with minimal gear – a pump shotgun and hazmat suit.</p><p>3. Listen for gunfire from the monument, signaling the perfect time to grab your counter gear and jump into the silo.</p><p>4. Navigate the silo, eliminate threats, and claim valuable loot for a successful and strategic monument takeover.</p>",
+        "text": "<p>Kick off your Rust speedrun at minute 0 on a fresh wipe server with a focused plan for rapid progression.</p><p>1. Immediately secure a green card and a nailgun as essential starting gear.</p><p>2. Coordinate with teammates to execute a swift blue card run, either by acquiring one or purchasing from Outpost.</p><p>3. Obtain a red card to unlock high-tier loot opportunities.</p><p>4. Build your starter base in close proximity to Launch Site for efficient farming.</p><p>5. Gather resources and reach Workbench 2 on Launch Site to craft advanced weaponry.</p><p>6. Strengthen your base to prepare for the server's first Attack Helicopter.</p><p>7. Conquer Bradley to secure a significant advantage.</p><p>8. Be the first on the server to initiate a raid with explosive firepower.</p><p>9. Profit...</p>",
         "img": "img/booster/speedrun.webp"
         },
 
     "6": {
         "titel": "Hemp Cartel Domination",
-        "text": "<p>Build a farm near a river and sell your products in vending machines. As soon as a conkuret appears on the map, you have your goal.</p><p>1. Set up your base near a river, optimizing it for farming operations.</p><p>2. Focus on tea and cloth production to create a market.</p><p>3. Use vending machines to sell your products with appealing prices to attract a large customer base.</p><p>4. Monitor the market; once competitors start selling tea, you've achieved your goal.</p><p>5. Eliminate rival farmers through strategic raids, establishing dominance as the sole hemp producer on the server.</p>",
+        "text": "<p>Build a farm near a river and sell your products in vending machines. As soon as a conkuret appears on the map, you have your goal.</p><p>1. Set up your base near a river, optimizing it for farming operations.</p><p>2. Focus on tea and cloth production to create a market.</p><p>3. Use vending machines to sell your products with appealing prices to attract a large customer base.</p><p>4. Monitor the market; once competitors start selling tea, you've achieved your goal.</p><p>5. Eliminate rival farmers through strategic raids, establishing dominance as the sole hemp producer on the server.</p><p>6. Profit...</p>",
         "img": "img/booster/farm.webp"
-        }
+        },
+
+    "7": {
+        "titel": "King of the Metal: HQM Quarry Domination",
+        "text": "<p>Claim dominance by being the first to conquer the HQM Quarry. Creating a unique economic advantage.</p><p>1. Swiftly capture the HQM Quarry to establish control.</p><p>2. Strategically place multiple Tool Cupboards to secure undisputed ownership.</p><p>3. Launch a shop offering a lucrative exchange rate of 25 HQM for 1 Diesel to attract business.</p><p>4. Improve Quarry efficiency by installing a box and industrial pipes for streamlined operation.</p><p>5. Continuously upgrade and fortify your HQM Quarry setup to maintain your position as the unrivaled King of the Metal.</p><p>6. Profit...</p>",
+        "img": "img/booster/hqm_quarry.webp"
+        },
+
+    "8": {
+        "titel": "Sulfur Wars: A New Quarry",
+        "text": "<p>Be the first to reach the Sulfur Quarry and establish your base. Expand with additional Tool Cupboards and defend your position.</p><p>1. Swiftly secure the Sulfur Quarry to claim dominance in the region.</p><p>2. Strategically place additional Tool Cupboards to fortify and maintain control over the area.</p><p>3. Set up a shop and offer a lucrative exchange rate of 1 Diesel for 500 Sulfur to attract business.</p><p>4. Build a High Wall around the quarry and position a vending machine as close as possible, connecting it to your base with industrial pipes for optimal efficiency.</p><p>5. Continuously upgrade and fortify your Sulfur Quarry setup to ensure maximum production and defend against potential threats.</p><p>6. Profit...</p>",
+        "img": "img/booster/sulfur_quarry.webp"
+    },
+
+    "9": {
+        "titel": "Trap Base Challenge",
+        "text": "<p>An essential experience for every Rust player. Join a Build Server and craft your own unique trap base, or follow a current tutorial for inspiration.</p><p>1. Choose a location near a high-value spot (not closte to a safezone) to maximize potential victims.</p><p>2. Build your trap base with cunning elements to lure unsuspecting players.</p><p>3. Deploy Beacon Grenades within your base to attract curious wanderers.</p><p>4. Test your luck and watch as players fall into your trap.</p><p>5. Profit...</p>",
+        "img": "img/booster/trap_base.webp"
+    }
+    
+        
 
 }
 
