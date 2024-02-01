@@ -18,8 +18,8 @@ function getFirstThursday() {
     firstThursday = new Date(year, month, 1 + daysUntilNextThursday);
   }
 
-  // Setze die Stunden und Minuten auf 19:00 Uhr
-  firstThursday.setHours(19, 0, 0, 0);
+  // Setze die Stunden und Minuten auf 20:00 Uhr  UTC +0 Time
+  firstThursday.setHours(0, 0, 0, 0);
 
   return firstThursday;
 }
@@ -27,15 +27,16 @@ function getFirstThursday() {
 // Funktion, um Stunden und Minuten zu einem Datum hinzuzufügen
 function addTimeToDate(date, hours, minutes) {
   const newDate = new Date(date);
-  const offset = -new Date().getTimezoneOffset() / 60;
-  newDate.setHours(newDate.getHours() + hours + offset);
-  newDate.setMinutes(newDate.getMinutes() + minutes);
+  const offsetInMinutes = -newDate.getTimezoneOffset();
+  
+  newDate.setHours(newDate.getHours() + hours);
+  newDate.setMinutes(newDate.getMinutes() + minutes + offsetInMinutes);
+  
   return newDate;
 }
-
 // Ersten Donnerstag mit Zeit berechnen und ausgeben
-const firstThursdayWithTime = getFirstThursday();
-// const firstThursdayWithTime = addTimeToDate(firstThursday, 19, 0);
+// const firstThursdayWithTime = getFirstThursday();
+const firstThursdayWithTime = addTimeToDate(getFirstThursday(), 19, 0);
 console.log('Erster Donnerstag mit Zeit:', firstThursdayWithTime);
 
 // Function to update the countdown timer
