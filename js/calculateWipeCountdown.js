@@ -29,6 +29,7 @@ function getFirstThursday() {
 
     wipe_time_local = offset + (wipe_time_utc_0_h * 60);
     firstThursday.setHours(0, wipe_time_local, 0, 0);
+    
   }
 
   return firstThursday;
