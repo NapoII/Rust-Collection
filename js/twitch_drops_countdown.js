@@ -1,57 +1,76 @@
 /**
+ * --> twitch_drops_countdown.js
+ * 
+ * 🌟 Creator: Napo_II
+ * 
+ * 🙌 Feel free to support me by donating as a token of appreciation:
+ * 👉 https://ko-fi.com/napo_ii
+ * 
+ * 📜 This project is licensed under the GNU General Public License Version 3 (GNU GPL 3).
+ * ℹ️ More details available at:
+ * 🔗 https://github.com/NapoII/Rust-Collection
+ * 
+ * 💬 Join our Discord server for discussions and updates:
+ * 🚀 https://discord.gg/Gd23KJ76Tq
+ */
+
+
+
+
+
+/**
  * Function to display the countdown
  */
 function startCountdown() {
-    // Read out the target date and time from the text file.
+    // Read the target date and time from the text file.
     fetch('countdown_data.txt')
         .then(response => response.text())
         .then(data => {
             const lines = data.split('\n');
 
-            let futureDateFound = false; // Flag, um festzustellen, ob ein zukünftiges Datum gefunden wurde
+            let futureDateFound = false; // Flag to determine if a future date is found
 
-            // Durchlaufe die Zeilen der Textdatei
+            // Iterate through the lines of the text file
             for (let i = 0; i < lines.length; i++) {
                 const line = lines[i].trim();
 
-                // Überspringe leere Zeilen
+                // Skip empty lines
                 if (line === '') {
                     continue;
                 }
 
-                // Trenne das Datum und die zugehörige Nachricht
+                // Split the date and the corresponding message
                 const [dateString, message] = line.split(',');
 
-                // Konvertiere das Datum in ein Date-Objekt
+                // Convert the date into a Date object
                 const targetDate = new Date(dateString);
                 
-
-                // Überprüfe, ob das Datum in der Zukunft liegt
+                // Check if the date is in the future
                 if (targetDate > new Date()) {
-                    // Starte den Countdown für dieses Datum und die Nachricht anzeigen
+                    // Start the countdown for this date and display the message
                     startIndividualCountdown(targetDate, message);
                     futureDateFound = true;
-                    break; // Nur den nächsten Countdown starten
+                    break; // Start only the next countdown
                 }
             }
 
             if (!futureDateFound) {
-                // Kein zukünftiges Datum gefunden, zeige die Standardnachricht
+                // No future date found, display the default message
                 document.getElementById('countdown_twitch').textContent = 'Pick up your Free Rust Skins at Events';
             }
         })
         .catch(error => {
-            console.error('Fehler beim Laden der Countdown-Daten:', error);
-            // Bei einem Fehler die Standardnachricht anzeigen
+            console.error('Error loading countdown data:', error);
+            // Display the default message in case of an error
             document.getElementById('countdown_twitch').textContent = 'Pick up your Free Rust Skins at Events';
         });
 }
 
-// Countdown starten, wenn die Seite geladen ist
+// Start the countdown when the page is loaded
 window.addEventListener('load', startCountdown);
 
 /**
- * Funktion, um einen individuellen Countdown zu starten
+ * Function to start an individual countdown
  */
 function startIndividualCountdown(targetDate, message) {
     const countdownElement = document.getElementById('countdown_twitch');
@@ -60,19 +79,19 @@ function startIndividualCountdown(targetDate, message) {
         const currentDate = new Date();
         const timeDifference = targetDate - currentDate;
 
-        // Überprüfen, ob das Ziel-Datum erreicht wurde
+        // Check if the target date has been reached
         if (timeDifference <= 0) {
             countdownElement.innerHTML = 'The Event Starts!';
-            clearInterval(countdownInterval); // Countdown beenden
+            clearInterval(countdownInterval); // Stop the countdown
         } else {
-            // Erstelle das Countdown-Textformat mit Nachricht über dem Datum
+            // Create the countdown text format with the message above the date
             const countdownText = `${message}<p>${targetDate.toDateString()}<hr>${formatCountdown(timeDifference)}`;
             countdownElement.innerHTML = countdownText;
         }
-    }, 1000); // Alle 1 Sekunde aktualisieren
+    }, 1000); // Update every 1 second
 }
 
-// Funktion zur Formatierung des Countdowns
+// Function to format the countdown
 function formatCountdown(timeDifference) {
     const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

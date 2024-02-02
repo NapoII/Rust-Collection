@@ -1,7 +1,21 @@
 /**
- * Function to calculate the date and time of the next Thursday.
- * @returns {Date} A Date object representing the next Thursday.
+ * --> calculateThursdayCountdown.js
+ * 
+ * 🌟 Creator: Napo_II
+ * 
+ * 🙌 Feel free to support me by donating as a token of appreciation:
+ * 👉 https://ko-fi.com/napo_ii
+ * 
+ * 📜 This project is licensed under the GNU General Public License Version 3 (GNU GPL 3).
+ * ℹ️ More details available at:
+ * 🔗 https://github.com/NapoII/Rust-Collection
+ * 
+ * 💬 Join our Discord server for discussions and updates:
+ * 🚀 https://discord.gg/Gd23KJ76Tq
  */
+
+// 🚀 Actual JavaScript code starts here.
+// ...
 function getNextThursday() {
   // Set the target time in UTC+0
   const targetTimeUTC0 = 19;
