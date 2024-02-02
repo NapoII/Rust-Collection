@@ -3,7 +3,7 @@ var jsonFilePath; // Variable für den Dateipfad
 var booster_type
 
 function addOverlay() {
-  console.log("Adding overlay");
+
   var overlay = document.createElement("div");
   overlay.id = "overlay";
   overlay.className = "overlay";
@@ -11,7 +11,7 @@ function addOverlay() {
 }
 
 function removeOverlay() {
-  console.log("Removing overlay");
+
   var overlay = document.getElementById("overlay");
   if (overlay) {
     document.body.removeChild(overlay);
@@ -19,7 +19,7 @@ function removeOverlay() {
 }
 
 document.getElementById("booster_tip").addEventListener("click", function () {
-  console.log("Booster Tip Button clicked");
+
   if (!isPopupOpen) {
     jsonFilePath = 'js/booster_packs/booster_tip.json';
     booster_type = 'Booster: Tip';
@@ -28,7 +28,7 @@ document.getElementById("booster_tip").addEventListener("click", function () {
 });
 
 document.getElementById("booster_wipe").addEventListener("click", function () {
-  console.log("Booster Wipe Button clicked");
+
   if (!isPopupOpen) {
     jsonFilePath = 'js/booster_packs/booster_wipe.json';
     booster_type = 'Booster: Wipe';
@@ -75,7 +75,6 @@ function openPopup() {
 }
 
 function getRandomEntryAndGenerateHTML(callback, jsonFilePath) {
-  console.log("Fetching data...");
   
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {

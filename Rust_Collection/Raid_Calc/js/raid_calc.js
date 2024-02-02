@@ -16,12 +16,11 @@ function updateValues() {
     const switchValue = document.getElementById('switchInput').checked;
 
     // Hier kannst du die Werte verwenden oder weiterverarbeiten
-    console.log('Sulfur:', sulfurValue);
+
     // console.log('Gun Powder:', gunPowderValue);
     // console.log('Explosives:', explosivesValue);
     // console.log('Low Grade Fuel:', lowGradeFuelValue);
     // console.log('Diesel Barrel:', dieselBarrelValue);
-    console.log('Switch:', switchValue);
 
     if (switchValue) {
         sulfur_from_diesel = dieselBarrelValue * 2000;

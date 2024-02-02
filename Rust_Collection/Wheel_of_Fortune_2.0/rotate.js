@@ -245,7 +245,6 @@ function calcButtonClicked() {
   var betColor = "nothing";
   var currentColor = "NONE";
   if (betPercentages.has(intvalue)) {
-    console.log("Landed on " + intvalue);
     betPct = betPercentages.get(intvalue).kellyBetPct;
     betColor = betPercentages.get(intvalue).betColor;
     currentColor = betPercentages.get(intvalue).currentColor;

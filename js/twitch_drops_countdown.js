@@ -25,7 +25,6 @@ function startCountdown() {
                 // Konvertiere das Datum in ein Date-Objekt
                 const targetDate = new Date(dateString);
                 
-                console.log("targetDate:", targetDate);
 
                 // Überprüfe, ob das Datum in der Zukunft liegt
                 if (targetDate > new Date()) {
