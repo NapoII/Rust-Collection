@@ -17,23 +17,6 @@
 // 🚀 Actual JavaScript code starts here.
 // ...
 
-console.log("%cHello, curious explorer! 👋\n%cIf you've ventured into the console, I ask kindly that you treat everything with respect. Let's keep things positive and helpful. If you have questions or suggestions, I'd love to hear from you on Discord or GitHub. Thanks for your consideration!",
-"color: #f8f8f2; background-color: #282a36; font-size: 16px; font-weight: bold; padding: 8px;",
-"color: #50fa7b; font-size: 14px;"
-);
-
-console.log(
-    "%cDiscord: %chttps://discord.gg/Gd23KJ76Tq",
-    "color: #f8f8f2; background-color: #282a36; font-size: 16px; font-weight: bold; padding: 8px;",
-    "color: #50fa7b; text-decoration: underline;"
-  );
-  
-  console.log(
-    "%cGitHub: %chttps://github.com/NapoII/Rust-Collection",
-    "color: #f8f8f2; background-color: #282a36; font-size: 16px; font-weight: bold; padding: 8px;",
-    "color: #50fa7b; text-decoration: underline;"
-  );
-
 
 /**
  * GNU GENERAL PUBLIC LICENSE Version 3
@@ -142,6 +125,7 @@ function getRandomEntryAndGenerateHTML(callback, jsonFilePath) {
         var keys = Object.keys(data);
         var randomKey = keys[Math.floor(Math.random() * keys.length)];
         var randomEntry = data[randomKey];
+        
 
         // Invoke the callback function with the generated HTML
         callback(generatePopupHTML(randomKey, randomEntry, booster_type));
@@ -165,7 +149,7 @@ function generatePopupHTML(key, entry, booster_type) {
       <div class="pop_top-section dark-background">
         <div class="pop_top-background"></div>
         <div class="pop_top-text">
-          ${entry.title}
+          ${entry.titel}
         </div>
       </div>
       <div class="content">
