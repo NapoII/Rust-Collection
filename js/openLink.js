@@ -18,6 +18,8 @@
  * Open multiple links in new browser windows or tabs with a slight delay.
  * @param {...string} links - The links to be opened.
  */
+
+
 function openLink(...links) {
   // Iterate through each link in the arguments
   links.forEach(link => {

@@ -15,9 +15,6 @@
  */
 
 
-
-
-
 /**
  * Function to display the countdown
  */

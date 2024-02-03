@@ -124,4 +124,4 @@ document.addEventListener("DOMContentLoaded", function () {
       canvas.height = window.innerHeight;
     });
   }
-});
+);

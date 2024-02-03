@@ -18,7 +18,6 @@
 // ...
 
 
-
 // Get the button element by its ID
 const backToHomeButton = document.getElementById("backToHomeButton");
 

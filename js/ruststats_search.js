@@ -23,6 +23,8 @@
 /**
  * Function to perform the RustStats search.
  */
+
+
 function performRustStatsSearch() {
     // Find the input element by its ID
     var searchInput = document.getElementById("searchInputrustStats");

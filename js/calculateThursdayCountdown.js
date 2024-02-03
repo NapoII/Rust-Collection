@@ -14,6 +14,7 @@
  * 🚀 https://discord.gg/Gd23KJ76Tq
  */
 
+
 // 🚀 Actual JavaScript code starts here.
 // ...
 function getNextThursday() {

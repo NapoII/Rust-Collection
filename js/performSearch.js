@@ -19,6 +19,8 @@
  * Performs a search operation by constructing a URL based on the provided search input,
  * and opens the constructed URL in a new browser window or tab.
  */
+
+
 function performSearch() {
     // Get the value from the input field with the ID 'searchInput'
     var searchInput = document.getElementById('searchInput').value;

@@ -14,6 +14,7 @@
  * 🚀 https://discord.gg/Gd23KJ76Tq
  */
 
+
 // Wait for the DOM content to be fully loaded before executing the script
 document.addEventListener('DOMContentLoaded', function () {
   // Get the current date

@@ -14,6 +14,7 @@
  * 🚀 https://discord.gg/Gd23KJ76Tq
  */
 
+
 // Function to check whether the cookie acceptance status is already set
 function isCookieAccepted() {
   return localStorage.getItem('cookieAccepted') === 'true';

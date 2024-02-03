@@ -14,6 +14,7 @@
  * 🚀 https://discord.gg/Gd23KJ76Tq
  */
 
+
 // Function to get the date of the first Thursday in the current or next month
 function getFirstThursday() {
   // Set the wipe time in UTC to 19:00

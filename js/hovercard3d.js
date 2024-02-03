@@ -14,6 +14,7 @@
  * 🚀 https://discord.gg/Gd23KJ76Tq
  */
 
+
 document.addEventListener('DOMContentLoaded', () => {
   // Select all elements with the class 'card'
   const cards = document.querySelectorAll('.card');
