@@ -1,7 +1,8 @@
 // https://github.com/NapoII/Rust-Collection
 
 // Fetch the CSV data from the provided URL
-fetch('https://raw.githubusercontent.com/NapoII/Rust-Collection/main/Rust_Collection/Raid_Calc/raid.CSV')
+
+fetch('/Rust_Collection/Raid_Calc/raid.CSV')
     .then(response => response.text())
     .then(data => {
         // Split the fetched data into rows using line breaks
@@ -44,10 +45,7 @@ fetch('https://raw.githubusercontent.com/NapoII/Rust-Collection/main/Rust_Collec
             // Append the row to the table
             table.appendChild(newRow);
         }
-    })
-    .catch(error => {
-        // Handle errors in fetching or processing the CSV data
-        console.error('Error loading CSV file:', error);
+
     });
 
 

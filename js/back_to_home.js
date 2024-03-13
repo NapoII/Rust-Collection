@@ -24,7 +24,7 @@ const backToHomeButton = document.getElementById("backToHomeButton");
 // Add a click event to navigate to the home page when the button is clicked
 backToHomeButton.addEventListener("click", () => {
   // Redirect to the home page (assuming index.html is your home page)
-  window.location.href = "https://napoii.github.io/Rust-Collection/";
+  window.location.href = "index.html";
 });
 
 // Position the button at the top left corner and make it follow while scrolling

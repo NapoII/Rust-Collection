@@ -1,11 +1,11 @@
-[![downloads/total](https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F)](https://napoii.github.io/Rust-Collection/) [![github/repo-size](https://img.shields.io/github/repo-size/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/archive/refs/heads/main.zip) [![github/license](https://img.shields.io/github/license/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/blob/main/LICENSE) [![github/issues_open](https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic)](https://img.shields.io/github/issues-raw/NapoII/Rust-Collection) [![github/stars](https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social)](https://github.com/NapoII/Rust-Collection/stargazers) [![discord](https://img.shields.io/discord/1152254593850417234)](https://discord.gg/fSTfQ6mJtA)<a href='https://ko-fi.com/M4M0TS4ZM' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+[![downloads/total](https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F)](http://www.rust-collection.eu/) [![github/repo-size](https://img.shields.io/github/repo-size/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/archive/refs/heads/main.zip) [![github/license](https://img.shields.io/github/license/NapoII/Rust-Collection)](https://github.com/NapoII/Rust-Collection/blob/main/LICENSE) [![github/issues_open](https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic)](https://img.shields.io/github/issues-raw/NapoII/Rust-Collection) [![github/stars](https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social)](https://github.com/NapoII/Rust-Collection/stargazers) [![discord](https://img.shields.io/discord/1152254593850417234)](https://discord.gg/fSTfQ6mJtA)<a href='https://ko-fi.com/M4M0TS4ZM' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 
 
 
 # Rust-Collection 🎮
 
-[Welcome to the Rust-Collection! 🚀](https://napoii.github.io/Rust-Collection/)
+[Welcome to the Rust-Collection! 🚀](http://www.rust-collection.eu/)
 
 
 ![Rust Game Guides Collection](img/thumbn.webp)
