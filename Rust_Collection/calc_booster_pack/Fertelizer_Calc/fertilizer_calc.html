@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Rust-Collection">
+  <meta property="og:description"
+    content="Each card in this Collection represents a valuable resource for Rust players. Just like in a trading card game, you can use these cards to enhance your Rust gameplay. Whether you're a seasoned Rust veteran or a newcomer to the game, you'll find something here to elevate your skills and knowledge.">
+  <meta property="og:image" content="/img/promo/eu_promo.webp">
+  <meta property="og:url" content="http://www.rust-collection.eu/">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <title>Fertilizer Calc</title>
+  <link rel="stylesheet" href="rust.css">
+</head>
+
+<body>
+  <div class="calculator">
+
+    <button id="backToHomeButton">Back to Home</button>
+
+
+
+  <h1 class="center"><img src="/img/fertelizer_calc_logo.webp" alt="fertelizer calc" width="360" height=170"></h1>
+  <div class="calculator">
+
+
+    <label for="inputValue_fert">Enter <img src="img/fertilizer.png" alt="Fertilizer"> value:</label>
+    <input type="number" id="inputValue_fert" value="0" min="2" oninput="calculate_fert()">
+
+    <label for="inputValue_dung">Enter <img src="img/horsedung.png" alt="horsedung"> value:</label>
+    <input type="number" id="inputValue_dung" value="0" min="0" oninput="calculate_fert()">
+
+    <label for="inputValue_dung">Enter <img src="img/bone.fragments.png" alt="Bone Fragments"> value:</label>
+    <input type="number" id="inputValue_bone" value="0" min="0" oninput="calculate_fert()">
+
+    <div class="results">
+      <div class="result_center" id="scrape_result"></div>
+    </div>
+    <div></div>
+    <h2>Copy Text for the chat</h2>
+    <div class="resultss">
+      <div class="copy_code" id="copy-text_s"></div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="center-container">
+      <div class="counter-container">
+        Visitors since 08.11.2023 - Now
+      <div class="counterapi khaki" key="now" timeline="60m" noIcon="true" noCss="true" abbreviate="true" noLink="true"></div>
+      Today
+      <div class="counterapi blue" key="24h" timeline="24h" noIcon="true" noCss="true" abbreviate="true" noLink="true"></div>
+      Total
+      <div class="counterapi red" key="total-visitors" noIcon="true" noCss="true" abbreviate="true" noLink="true"></div>
+    </div>
+    <p></p>
+    <div class="center">
+      <a href="https://github.com/NapoII/Rust-Collection/"><img
+          src="https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F"
+          alt="website"></a>
+      <a href="https://img.shields.io/github/issues-raw/NapoII/Rust-Collection"><img
+          src="https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic" alt="github/issues_open"></a>
+      <a href="https://github.com/NapoII/Rust-Collection/stargazers"><img
+          src="https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social" alt="github/stars"></a>
+      <a href="https://discord.gg/ZWv8mnNKCq"><img src="https://img.shields.io/discord/1152254593850417234"
+          alt="discord"></a>
+    </div>
+  </div>
+  <script src="https://counterapi.com/c.js?ns=Rust-Collection-diesel_calc" async></script>
+
+
+  <script src="js/console_alert.js"></script>
+  <script src="js/back_to_home.js"></script>
+  <script src="js/diesel_calc.js"></script>
+  <script src="js/fertelizer_calc.js"></script>
+
+</body>
+
+</html>

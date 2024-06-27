@@ -1,0 +1,49 @@
+body {
+  height: 90vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/Rust_Collection/wheel_of_fortune_discord_bot_promo/img/bg.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Ändern Sie auf column, um die Elemente untereinander anzuordnen */
+  align-items: center;
+}
+
+#audioPlayer {
+  margin-top: 20px; /* Abstand oben hinzufügen */
+  width: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
+.content {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+.button-link {
+  display: inline-block;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.button-link:hover {
+  transform: scale(1.1); /* Ändere den Wert, um die Größe anzupassen */
+}

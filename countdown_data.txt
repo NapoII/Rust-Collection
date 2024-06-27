@@ -5,3 +5,7 @@
 2023-12-31T01:00:00+02:00, 10 year anniversary ends
 2024-01-13T19:00:00+01:00, Trust in Rust - begins
 2024-01-21T00:59:00+01:00, Trust in Rust - ends
+2024-05-25T21:00:00+02:00, Round 29 - Rust Kingdoms - begins
+2024-05-31T21:00:00+02:00, Round 29 - Rust Kingdoms - ends
+2024-06-10T19:00:00+02:00, Round 30 - Bellum begins
+2024-06-17T19:00:00+02:00, Round 30 - Bellum ends

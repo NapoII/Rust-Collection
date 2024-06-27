@@ -1,47 +1,790 @@
 <!--  index.html
   
-🌟 Creator: Napo_II
-
-🙌 Feel free to support me by donating as a token of appreciation:
-👉 https://ko-fi.com/napo_ii
-
-📜 This project is licensed under the GNU General Public License Version 3 (GNU GPL 3).
-More details available at:
-🔗 https://github.com/NapoII/Rust-Collection
-
-💬 Join our Discord server for discussions and updates:
-🚀 https://discord.gg/Gd23KJ76Tq -->
-
-
-<!DOCTYPE html>
-<html lang="eng">
-
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Rust-Collection">
-  <meta property="og:description"
-    content="Each card in this Collection represents a valuable resource for Rust players. Just like in a trading card game, you can use these cards to enhance your Rust gameplay. Whether you're a seasoned Rust veteran or a newcomer to the game, you'll find something here to elevate your skills and knowledge.">
-  <meta property="og:image" content="img/promo/eu_promo.webp">
-  <meta property="og:url" content="http://www.rust-collection.eu/">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
-  <title>Rust-Collection</title>
-  <link rel="stylesheet" href="styles.css">
-
-</head>
-<body>
-    <a href="https://www.rust-collection.eu/">
-        <img id="main-image" src="https://www.rust-collection.eu/img/promo/eu_promo.webp" alt="Hauptbild">
-    </a>
-    <div id="gif-container">
-        <a href="http://www.discord.gg/Gd23KJ76Tq">
-          <div style="text-align: center;">
-            <img class="gif" src="https://raw.githubusercontent.com/NapoII/My_gif_Icon_collection/main/My_gif_Icon_collection/Platfrom_discord.gif" alt="Erstes GIF" width="50%">
+  🌟 Creator: Napo_II
+  
+  🙌 Feel free to support me by donating as a token of appreciation:
+  👉 https://ko-fi.com/napo_ii
+  
+  📜 This project is licensed under the GNU General Public License Version 3 (GNU GPL 3).
+  More details available at:
+  🔗 https://github.com/NapoII/Rust-Collection
+  
+  💬 Join our Discord server for discussions and updates:
+  🚀 https://discord.gg/Gd23KJ76Tq -->
+  
+  
+  <!DOCTYPE html>
+  <html lang="eng">
+  
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Rust-Collection">
+    <meta property="og:description"
+      content="Each card in this Collection represents a valuable resource for Rust players. Just like in a trading card game, you can use these cards to enhance your Rust gameplay. Whether you're a seasoned Rust veteran or a newcomer to the game, you'll find something here to elevate your skills and knowledge.">
+    <meta property="og:image" content="/img/promo/eu_promo.webp">
+    <meta property="og:url" content="http://www.rust-collection.eu/">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  
+    <title>Rust-Collection</title>
+    <link rel="stylesheet" href="/styles.css">
+  
+  </head>
+  
+  <body>
+  
+    <div class="card-section">
+      <h2 class="sticky-title">Events</h2>
+  
+      <!-- https://rustserverfilter.com/ -->
+    
+  
+    <a href="https://just-wiped.net/">
+      <div class="card">
+  
+        <div class="background-image" style="background-image: url('/img/nuke.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/nuke.mp4" type="video/mp4">
+        </video>
+  
+        <!-- <div class="banderole">
+          <span class="banderole-text">NEW LINK</span>
+        </div> -->
+  
+        <div class="content">
+          <div class="top-section">
+            <h2>Next Force Wipe</h2>
+            <div class="card-info">
+  
+              Event
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p id="countdown"></p>
+            <div class="card-info">
+  
+              1
+            </div>
+          </div>
         </div>
-        
+      </div>
+    </a>
+  
+  
+    <a href="https://rust.scmm.app/">
+      <div class="card" >
+        <div class="background-image" style="background-image: url('/img/skins.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/skins.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>New Skins in Store</h2>
+            <div class="card-info">
+  
+              Event
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p id="ThursdayCountdown"></p>
+            <div class="card-info">
+  
+              2
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+  
+    <a href="https://twitch.facepunch.com/#drops">
+      <div class="card" >
+        <div class="background-image" style="background-image: url('/img/twitch-logo.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/twitch-logo.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>Twitch Drops</h2>
+            <div class="card-info">
+  
+              Event
+            </div>
+          </div>
+          <div class="bottom-section">
+            <div class="twitch-bandarole">
+              <span id="countdown_twitch"></span>
+            </div>
+  
+            <div class="card-info">
+  
+              3
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+  
     </div>
-</body>
-</html>
+  
+    <hr>
+  
+    <div class="card-section">
+      <h2 class="sticky-title">Tools</h2>
+  
+
+
+      <div class="card no-pointer-cursor">
+        <div class="background-image" style="background-image: url('/img/labs.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/labs.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>Rust-Labs</h2>
+            <div class="card-info">
+  
+              Tool
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p>Find any info on any item. Search for anything from Rust.</p>
+            <input type="text" id="searchInput" placeholder="Enter your search term">
+            <button onclick="performSearch()">Search</button>
+            <div class="card-info">
+  
+              1
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <a href="/Rust_Collection/calc_booster_pack/calc_booster_pack.html">
+        <div class="cover"  style="cursor: pointer;">
+          <div class="background-image" style="background-image: url('/img/bosster_calcs.webp'); height: 500px;"></div>
+          <video autoplay loop muted class="background-video" id="video">
+            <source src="video/booster_calcs.mp4" type="video/mp4">
+          </video>
+        
+          <div class="banderole">
+            <span class="banderole-text">NEW</span>
+          </div>
+        
+          <div class="cover_content">
+            <div class="cover_top-section">
+              <h2><img src="/img/calc_booster_pack_logo.webp" alt="Calculators" width="210" height="70"></h2>
+            </div>
+            <div class="cover_info">
+              <p>all the Rust Calculators you need!</p>
+            </div>
+            <div class="cover_bottom-section">   
+              <p>All Rust Calculators</p>
+            </div>
+          </div>
+        </div>
+        </a>
+
+
+
+      <div class="card no-pointer-cursor">
+        <div class="background-image" style="background-image: url('/img/ruststats.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/ruststats.mp4" type="video/mp4">
+        </video>
+  
+        <!-- <div class="banderole">
+          <span class="banderole-text">NEW</span>
+        </div> -->
+  
+        <div class="content">
+          <div class="top-section">
+            <h2>Rust-Stats</h2>
+            <div class="card-info">
+              Tool
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p>Find out the stats about each Rust player. Just search for their Steam ID.</p>
+            <input required="" name="search_q" autocomplete="off" type="search" class="profile-search searchDesktop"
+              id="searchInputrustStats" placeholder="Steam ID Number">
+            <button onclick="performRustStatsSearch()">Search</button>
+            <div class="card-info">
+              3
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+      
+      <a href="/Rust_Collection/cctv_and_pager/cctv_and_pager.html">
+      <div class="card holo-card" >
+        <div class="holo-overlay"></div>
+        <div class="background-image" style="background-image: url('/img/cctv.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/cctv.mp4" type="video/mp4">
+        </video>
+  
+        <!-- <div class="banderole">
+          <span class="banderole-text">UPDATE</span>
+        </div> -->
+  
+        <div class="content">
+          <div class="top-section">
+            <h2>CCTV Showcase</h2>
+            <div class="card-info">
+  
+              Tool
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p>Quick selection for your computer one click right automatically copy code to clipboard</p>
+            <div class="card-info">
+  
+              5
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+  
+  
+    <a href="https://www.battlemetrics.com/">
+      <div class="card" >
+        <div class="background-image" style="background-image: url('/img/BM.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/BM.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>Battle metrics</h2>
+            <div class="card-info">
+  
+              Tool
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p>Get all the information about your server or their enemies</p>
+            <div class="card-info">
+  
+              9
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+  
+    <a href="https://www.rustrician.io/">
+      <div class="card" >
+        <div class="background-image" style="background-image: url('/img/wiretool.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/wiretool.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>Electrical Planner</h2>
+            <div class="card-info">
+  
+              Tool
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p>Create your circuit diagram for Rust online</p>
+            <div class="card-info">
+  
+              10
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+  
+    <a href="https://rustmaps.com/">
+      <div class="card" >
+        <div class="background-image" style="background-image: url('/img/map.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/map.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>Rust Maps</h2>
+            <div class="card-info">
+  
+              Tool
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p>Find sweet spots for your base and share information on the map with your colleagues</p>
+            <div class="card-info">
+  
+              11
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+  
+    <a href="https://rusttips.com/rust-aim-training/">
+      <div class="card" >
+        <div class="background-image" style="background-image: url('/img/aim.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/aim.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>Aim Sim</h2>
+            <div class="card-info">
+  
+              Tool
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p>a tool to test the Rust Gun Spray online</p>
+            <div class="card-info">
+  
+              12
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+    </div>
+  
+    <hr>
+  
+    <div class="card-section">
+      <h2 class="sticky-title"> Guides</h2>
+  
+    
+  
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2493654016">
+      <div class="card">
+        <div class=" background-image" style="background-image: url('/img/bind.webp');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="video/bind.mp4" type="video/mp4">
+      </video>
+      <div class="content">
+        <div class="top-section">
+          <h2>Must-have Extra Bind</h2>
+          <div class="card-info">
+  
+            Steam Guide
+          </div>
+        </div>
+        <div class="bottom-section">
+          <p>Collecting some Must-Have Console Commands that every Rust player needs to know</p>
+          <div class="card-info">
+  
+            1
+          </div>
+        </div>
+      </div>
+    </div>
+    </a>
+  
+  
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2428742835">
+      <div class="card" >
+          <div class=" background-image" style="background-image: url('/img/monoment_guide.webp');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="video/monoment_guide.mp4" type="video/mp4">
+      </video>
+      <div class="content">
+        <div class="top-section">
+          <h2>Monument Guides</h2>
+          <div class="card-info">
+  
+            Steam Guide
+          </div>
+        </div>
+        <div class="bottom-section">
+          <p>Complete guide for all the monuments, in picture form, no videos</p>
+          <div class="card-info">
+  
+            2
+          </div>
+        </div>
+      </div>
+      </div>
+    </a>
+  
+  
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2375732344">
+      <div class="card" >
+          <div class=" background-image" style="background-image: url('/img/cb.webp');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="video/cb.mp4" type="video/mp4">
+      </video>
+      <div class="content">
+        <div class="top-section">
+          <h2>Must have Electronic Circuits</h2>
+          <div class="card-info">
+  
+            Steam Guide
+          </div>
+        </div>
+        <div class="bottom-section">
+          <p>Collection of must-have Electronic Circuits for Rust</p>
+          <div class="card-info">
+  
+            3
+          </div>
+        </div>
+      </div>
+      </div>
+    </a>
+  
+  
+    <a href="https://www.rustrician.io/wiki/index.html">
+    <div class="card" >
+      <div class="background-image" style="background-image: url('/img/eleck_book.webp');"></div>
+      <video autoplay loop muted class="background-video" id="video">
+        <source src="video/eleck_book.mp4" type="video/mp4">
+      </video>
+      <div class="content">
+        <div class="top-section">
+          <h2>The RUST Electrical Handbook</h2>
+          <div class="card-info">
+  
+            Guide
+          </div>
+        </div>
+        <div class="bottom-section">
+          <p>A massive information pool about Rust elektronik</p>
+          <div class="card-info">
+  
+            1
+          </div>
+        </div>
+      </div>
+    </div>
+    </a>
+  
+    </div>
+  
+    <hr>
+  
+    <div class="card-section">
+      <h2 class="sticky-title"> News</h2>
+  
+      <a href="https://rust.facepunch.com/changes">
+      <div class="card" >
+        <div class="background-image" style="background-image: url('/img/update.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/update.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>Rust Update Log</h2>
+            <div class="card-info">
+  
+              News
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p>All Rust update changes listed</p>
+            <div class="card-info">
+  
+              1
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+  
+    <a href="https://commits.facepunch.com/r/rust_reboot">
+      <div class="card" >
+        <div class="background-image" style="background-image: url('/img/git.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/git.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>Rust Facepunch Git</h2>
+            <div class="card-info">
+  
+              News
+            </div>
+          </div>
+          <div class="bottom-section">
+            <p>This is what the dev team is working on at Rust right now</p>
+            <div class="card-info">
+  
+              2
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+  
+    <a href="https://ko-fi.com/napo_ii">
+      <div class="card" >
+        <div class="background-image" style="background-image: url('/img/card_of_fame.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/card_of_fame.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>Card of Fame</h2>
+            <div class="card-info">
+  
+              Donate
+            </div>
+          </div>
+          <div class="bottom-section">
+            <div class="hall_of_fame-bandarole">
+              <span id="hall_of_fame_str"></span>
+            </div>
+  
+            <div class="card-info">
+  
+              2
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+  
+    <a href="https://discord.gg/ZWv8mnNKCq">
+      <div class="card" >
+        <div class="background-image" style="background-image: url('/img/discord.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/discord.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>Discord</h2>
+            <div class="card-info">
+  
+              Community
+            </div>
+          </div>
+          <div class="bottom-section">
+            Join our Discord for any questions or suggestions you may have!
+            <p><img src="https://img.shields.io/discord/1152254593850417234"
+                  alt="discord"></p>
+            <div class="card-info">
+  
+              1
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+  
+    <!-- <a href="https://discord.gg/ZWv8mnNKCq">
+      <div class="card holo-card" >
+        <div class="holo-overlay"></div>
+        <div class="background-image" style="background-image: url('/img/github.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/github.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+          <div class="top-section">
+            <h2>Visitors</h2>
+            <div class="card-info">
+  
+              Stats
+            </div>
+          </div>
+          <div class="bottom-section">
+  
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Visitors since 10.09.2023</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Now</td>
+                  <td>
+  
+                    <div class="counterapi" style="color: rgba(255, 141, 11, 0.744); background-color: #d7cdc4; ";key="now" timeline="60m" noIcon="true" noCss="true"
+                      abbreviate="true" noLink="ture">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Today</td>
+                  <td>
+                    <div class="counterapi" style="color: blue; background-color: #d7cdc4; "key="24h" timeline="24h" noIcon="true" noCss="true" abbreviate="true" noLink="ture"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td>
+                    <div class="counterapi" style="color: red; background-color: #d7cdc4;" key="total-visitors" noIcon="true" noCss="true" abbreviate="true" noLink="true"></div>
+  
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p></p>
+
+            <img src="https://img.shields.io/discord/1152254593850417234"
+                alt="discord">
+  
+            <p></p>
+            <div class="card-info">
+  
+              1
+            </div>
+          </div>
+        </div>
+      </div>
+    </a> -->
+  
+    <a href="https://ko-fi.com/napo_ii">
+      <div class="card" >
+        <div class="background-image" style="background-image: url('/img/buymeacoffe.webp');"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/buymeacoffe.mp4" type="video/mp4">
+        </video>
+  
+              <!-- <div class="banderole">
+        <span class="banderole-text">NEW</span>
+      </div> -->
+   
+        <div class="content">
+          <div class="top-section">
+            <h2>Buy me a Coffee</h2>
+            <div class="card-info">
+  
+              Donate
+            </div>
+          </div>
+          <div class="bottom-section">
+            If you like what you see here, you can donate a coffee to me!
+            <p> <img src="/img/kofi.gif" alt="Description of the image" style="max-width: 120px; max-height: 120px; opacity: 0.6;">          </p>
+            
+            <div class="card-info">
+  
+              1
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  
+  
+  
+  
+    </div>
+  
+  
+    <hr>
+  
+  
+    <div class="card-section">
+      <h2 class="sticky-title">Booster</h2>
+      
+      <a href="/Rust_Collection/wheel_of_fortune_discord_bot_promo/promo.html">
+      <div class="cover"  style="cursor: pointer;">
+        <div class="background-image" style="background-image: url('/img/wheel_of_fortune_discord_bot.webp'); height: 500px;"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/wheel_of_fortune_discord_bot.mp4" type="video/mp4">
+        </video>
+      
+        <!-- <div class="banderole">
+          <span class="banderole-text">NEW</span>
+        </div> -->
+      
+        <div class="cover_content">
+          <div class="cover_top-section">
+            <h2>wheel of fortune</h2>
+          </div>
+          <div class="cover_info">
+            <p>Enhance your community with the wheel of fortune</p>
+          </div>
+          <div class="cover_bottom-section">         
+            <p>Discord Bot</p>
+          </div>
+        </div>
+      </div>
+      </a>
+  
+      <div class="cover" id="booster_tip">
+        <div class="background-image" style="background-image: url('/img/booster_pack.webp'); height: 500px;"></div>
+        <video autoplay loop muted class="background-video" id="video">
+          <source src="video/booster_tipp.mp4" type="video/mp4">
+        </video>
+        <!-- <div class="banderole">
+        <span class="banderole-text">NEW</span>
+      </div> -->
+        <div class="cover_content">
+          <div class="cover_top-section">
+            <h2>Rust Tips</h2>
+          </div>
+          <div class="cover_info">
+            <p>Tips that you may not yet know in Rust</p>
+          </div>
+          <div class="cover_bottom-section">         
+              <p>Booster Pack #1</p>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="cover" id="booster_wipe">
+          <div class="background-image" style="background-image: url('/img/bosster_wipe.webp'); height: 500px;"></div>
+          <video autoplay loop muted class="background-video" id="video">
+            <source src="video/booster_wipe.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="banderole">
+          <span class="banderole-text">NEW</span>
+        </div> -->
+          <div class="cover_content">
+            <div class="cover_top-section">
+              <h2>Rust Wipes</h2>
+            </div>
+            <div class="cover_info">
+              <p>Wipe styles you have to try at least once!</p>
+            </div>
+            <div class="cover_bottom-section">         
+                <p>Booster Pack #2</p>
+              </div>
+            </div>
+          </div>
+    </div>
+  
+  
+  
+    <div id="cookie-popup" class="cookie-popup">
+      <p>We use cookies solely for pageview counting, and we do not collect any user-specific data. By using our website,
+        you agree to the use of cookies...
+      </p>
+      <button id="accept-cookie" class="accept-cookie">OK</button>
+    </div>
+  
+    <!-- <script src="js/intro_vid.js"></script> -->
+    <script src="js/calculateThursdayCountdown.js"></script>
+    <!--  <script src="js/openLink.js"></script> -->
+    <script src="js/performSearch.js"></script>
+    <script src="js/calculateWipeCountdown.js"></script>
+    <script src="js/console_alert.js"></script>
+    <script src="js/twitch_drops_countdown.js"></script>
+    <script src="js/cokiemsg.js"></script>
+    <script src="js/hovercard3d.js"></script>
+    <script src="js/ruststats_search.js"></script>
+    <script src="js/fourseasons.js"></script>
+    <script src="js/new_year.js"></script>
+    <script src="js/booster_packs/booster_pack.js"></script>
+    <script src="https://counterapi.com/c.js?ns=Rust-Collection" async></script>
+    <script src="js/wall_of_fame.js"></script>
+    
+  </body>
+  
+  </html>

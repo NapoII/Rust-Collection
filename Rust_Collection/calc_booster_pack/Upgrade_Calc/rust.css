@@ -1,0 +1,256 @@
+/* Define the 'Rust' font from rust.ttf in the same folder */
+@font-face {
+  font-family: 'Rust';
+  src: url('Rust.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --mainbg: #161618;
+  --bg1: #0D0D0D; /* Background color 1 */
+  --bg2: #272322; /* Background color 2 */
+  --font: #d7cdc4; /* Font color */
+  --modulBg: rgba(15, 14, 14, 1); /* Transparent background of the cards */
+  --h: #D93E30; /* Heading color */
+}
+
+body {
+  background-color: var(--mainbg);
+  color: var(--font);
+  font-family: 'Roboto', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Zentriere den gesamten Inhalt horizontal */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Stellt sicher, dass der Inhalt die volle Höhe der Seite einnimmt */
+  
+  /* Hinzufügen des Hintergrundbildes */
+  background-image: url('/img/upgrade_bg.webp');
+  background-size: cover; /* Stellt sicher, dass das Bild die gesamte Seite abdeckt */
+  background-position: center; /* Zentriert das Bild */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Stellt sicher, dass das Bild beim Scrollen fixiert bleibt */
+  
+  /* Transparenz */
+  background-blend-mode: overlay; /* Setzt den Mischmodus */
+  background-color: var(--mainbg); /* Füge eine halbtransparente weiße Farbe hinzu */
+
+  background-color: var(--bg1); /* Background color for the body */
+  color: var(--font); /* Font color for the body */
+  font-family: 'Rust', Arial, sans-serif; /* Use 'Rust' font, then fallback to Arial and sans-serif */
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--h); /* Heading color for all heading elements */
+  letter-spacing: 1.5px;
+  text-align: center; /* Zentriere den Text horizontal */
+  margin-top: 20px; /* Füge einen oberen Abstand hinzu, um die Überschrift zu zentrieren */
+  font-family: 'Rust'
+}
+
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Zentriere die Karten horizontal */
+  align-items: center; /* Zentriere die Karten vertikal */
+  margin: 2px; /* Füge ein negatives Margin hinzu, um den Abstand zwischen den Karten zu reduzieren */
+}
+
+.card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 220px; /* Ihre gewünschte Breite */
+  margin: 5px; /* Ändere den Abstand zwischen den Karten auf 5px (oder nach Bedarf) */
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase; /* Convert text to uppercase */
+  color: var(--font); /* Textfarbe in var(--font) */
+  background-color: var(--bg1); /* Hintergrundfarbe für die gesamte Karte (wie im Calculator) */
+  border-radius: 10px; /* Abgerundete Ecken mit 10px Radius */
+  overflow: hidden; /* Verhindert, dass der Inhalt über den Kartenbereich hinausragt */
+}
+
+
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card img {
+  max-width: 50%; /* Ändere die maximale Breite für die Bilder in der Karte */
+  max-height: auto; /* Stelle die Höhe automatisch ein */
+}
+
+.card table {
+  flex-grow: 1; /* Lässt die Tabelle die verbleibende Höhe im Kartencontainer ausfüllen */
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg1); /* Hintergrundfarbe für die gesamte Tabelle (wie im Calculator) */
+}
+
+.card table th,
+.card table td {
+  padding: 10px;
+  border: 0px solid var(--bg2); /* Transparenter Rahmen (angepasst an die Hintergrundfarbe der Karte) */
+}
+
+.card table th img,
+.card table td img {
+  max-width: 30px; /* Maximale Breite für die Bilder in der Tabelle (angepasst auf große Icons) */
+  max-height: 30px; /* Maximale Höhe für die Bilder in der Tabelle (angepasst auf große Icons) */
+}
+
+
+#backToHomeButton {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: var(--h);
+  color: var(--font);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1; /* Ensure the button is always visible */
+  font-family: 'Rust', Arial, sans-serif;
+}
+
+.calculator {
+  text-align: center; /* Zentriert den Text im Calculator */
+  margin: 0 auto; /* Zentriert den Calculator horizontal */
+  background-color: var(--bg1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  width: fit-content; /* Passt die Breite an den Inhalt an */
+}
+
+.calculator h2 {
+  font-size: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Zentriert die Icons und Eingabefelder vertikal */
+}
+
+.input-group label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+  height: 30px; /* Hier die Höhe anpassen, um sie an die Input-Feld-Höhe anzupassen */
+  vertical-align: middle; /* Vertikal zentrieren */
+}
+
+.input-group label img {
+  max-height: 100%; /* Das Bild auf die volle Höhe des Labels skalieren */
+  vertical-align: middle; /* Vertikal zentrieren */
+}
+
+.input-group input[type="number"] {
+  flex: 1; /* Nimmt den verfügbaren Platz im Container ein */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 60px; /* Hier die Breite des Eingabefelds anpassen */
+}
+
+/* Stil für die Ausgabewerte */
+table {
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+
+/* Erhöhen Sie die Größe der Bilder für Stone, Wood und HQM */
+td img {
+  max-height: 40px; /* Passen Sie die Höhe der Icons nach Bedarf an */
+  vertical-align: middle;
+}
+
+.center {
+  display: flex;
+  justify-content: center; /* Zentriert die Elemente horizontal */
+  align-items: center; /* Zentriert die Elemente vertikal */
+  /* Weitere Styles für Abstand, Ausrichtung, etc. */
+}
+
+
+/* Set the background color of all input fields */
+input {
+  background-color: var(--bg2);
+  color: var(--font);
+  border: 1px solid var(--bg2);
+  padding: 8px;
+  text-align: center; /* Zentriert den Text */
+  font-size: 20px; /* Ändert die Schriftgröße nach Bedarf */
+  width: 150px; /* Ändere die Breite nach Bedarf */
+}
+/* Change the color of the input value and cursor for better readability */
+input::placeholder {
+  color: var(--font);
+}
+
+/* Style all input fields when they are focused */
+input:focus {
+  border: 1px solid var(--h);
+  outline: none;
+}
+
+.center-container {
+    
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Ändere align-items auf flex-end */
+  height: 2vh; /* Ändere die Höhe auf den gewünschten Wert */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg2);
+  padding: 10px;
+}
+
+.counter-container {
+  display: flex;
+  align-items: center;
+}
+
+.counterapi {
+  margin: 0 10px;
+}
+
+.khaki {
+  color: khaki;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Rust-Collection">
+  <meta property="og:description"
+    content="Each card in this Collection represents a valuable resource for Rust players. Just like in a trading card game, you can use these cards to enhance your Rust gameplay. Whether you're a seasoned Rust veteran or a newcomer to the game, you'll find something here to elevate your skills and knowledge.">
+  <meta property="og:image" content="/img/promo/eu_promo.webp">
+  <meta property="og:url" content="http://www.rust-collection.eu/">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <title>Diesel-Calc</title>
+  <link rel="stylesheet" href="rust.css">
+</head>
+
+<body>
+  <h1 class="center"><img src="/img/diesel_logo.webp" alt="Diesel Calc" width="260" height=120"></h1>
+  <div class="calculator">
+
+    <button id="backToHomeButton">Back to Home</button>
+
+    <label for="inputValue_diesel">Enter <img src="img/diesel_barrel.png" alt="diesel_barrel"> value:</label>
+    <input type="number" id="inputValue_diesel" value="1" min="1" oninput="calculate_diesel()">
+    <!-- Kein separater Calculate Button mehr -->
+    <div class="results">
+      <div class="result" id="result1"></div>
+      <div class="result" id="result2"></div>
+    </div>
+    <div></div>
+    <div class="results">
+      <div class="result" id="calculation1"></div>
+      <div class="result" id="calculation2"></div>
+    </div>
+    <h2>Copy Text for the chat</h2>
+    <div class="results">
+      <div class="copy_code" id="copy-text_g"></div>
+      <div class="copy_code" id="copy-text_q"></div>
+    </div>
+  </div>
+
+ 
+    <p></p>
+    <div class="center">
+      <a href="https://github.com/NapoII/Rust-Collection/"><img
+          src="https://img.shields.io/website?down_color=red&down_message=offline&label=Rust-Collection&up_color=greenb&up_message=Online&url=https%3A%2F%2Fnapoii.github.io%2FRust-Collection%2F"
+          alt="website"></a>
+      <a href="https://img.shields.io/github/issues-raw/NapoII/Rust-Collection"><img
+          src="https://img.shields.io/github/issues/NapoII/Rust-Collection?style=plastic" alt="github/issues_open"></a>
+      <a href="https://github.com/NapoII/Rust-Collection/stargazers"><img
+          src="https://img.shields.io/github/stars/NapoII/Rust-Collection?style=social" alt="github/stars"></a>
+      <a href="https://discord.gg/ZWv8mnNKCq"><img src="https://img.shields.io/discord/1152254593850417234"
+          alt="discord"></a>
+    </div>
+  </div>
+  <script src="https://counterapi.com/c.js?ns=Rust-Collection-diesel_calc" async></script>
+
+
+  <script src="js/console_alert.js"></script>
+  <script src="js/back_to_home.js"></script>
+  <script src="js/diesel_calc.js"></script>
+  <script src="js/fertelizer_calc.js"></script>
+
+</body>
+
+</html>
